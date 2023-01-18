@@ -18,3 +18,6 @@ Optionally, give players the ability to trade items or game-currencies between d
 Keyp is a great fit for social, community, or crowd funding apps. Making sure your app is accessible to more people is important for its success. By giving users the ability to log in with accounts they are familiar with, and only have to onramp themselves once, you can expand your user base.
 
 ## More
+
+Working on something else? Let us know!
+

@@ -14,8 +14,14 @@ Get started by **creating a new Keyp app**.
 
 ## Creating a developer account
 
+Log in to https://dashboard.usekeyp.com
+
 ## Getting an App ID
 
+In your dashboard, create a new `client_id`. You can create any number of these per developer account.
+
 ## Connecting Keyp accounts to your OAuth service
+
+Letting your users log in with Keyp to access an EVM wallet is the same process of connecting with any other regular OAuth provider.
 
 ## Using requests to transfer or airdrop tokens
