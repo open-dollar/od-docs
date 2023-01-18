@@ -52,22 +52,24 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "My Site",
         logo: {
-          alt: "My Site Logo",
+          alt: "Keyp Logo",
           src: "img/logo.svg",
         },
         items: [
           {
-            type: "doc",
-            docId: "intro",
-            position: "left",
-            label: "Tutorial",
+            href: "https://blog.usekeyp.com",
+            label: "Blog",
+            position: "right",
           },
-          {to: "/blog", label: "Blog", position: "left"},
           {
-            href: "https://github.com/facebook/docusaurus",
+            href: "https://github.com/usekeyp/usekeyp-docs",
             label: "GitHub",
+            position: "right",
+          },
+          {
+            href: "https://schedule.usekeyp.com",
+            label: "Partner with us",
             position: "right",
           },
         ],
@@ -80,7 +82,7 @@ const config = {
             items: [
               {
                 label: "Get Started",
-                to: "/docs/intro",
+                to: "/get-started/intro",
               },
             ],
           },
