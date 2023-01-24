@@ -17,4 +17,4 @@ jobs:
         with:
           webhook-url: ${{ secrets.DISCORD_REMINDER_WEBHOOK }} # Required
           provider: "slack" # Required (slack or msteams)
-          github-provider-map: "jschiarizzi:468883290577960980,pi0neerpat:381135787330109441"
+          github-provider-map: ${{ secrets.DISCORD_REMINDER_USERS }}
