@@ -12,7 +12,10 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #005285;
+  --ifm-navbar-link-color: #005285;
+  --ifm-breadcrumb-color-active: #80858E;
+  --ifm-link-hover-color: #1499DA;
+  --ifm-color-primary: #0079AD;
   --ifm-color-primary-dark: #0078c2;
   --ifm-color-primary-darker: #005285;
   --ifm-color-primary-darkest: #005285;
@@ -25,7 +28,10 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
-  --ifm-color-primary: #005285;
+  --ifm-navbar-link-color: #ffffff;
+  --ifm-breadcrumb-color-active: #80858E;
+  --ifm-link-hover-color: #1499DA;
+  --ifm-color-primary: #0079AD;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
   --ifm-color-primary-darkest: #1a8870;
@@ -33,4 +39,9 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.footer__copyright {
+  text-align: left;
+  font-size: 0.8rem;
 }

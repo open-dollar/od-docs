@@ -54,8 +54,19 @@ const config = {
         logo: {
           alt: "Keyp Logo",
           src: "img/logo.svg",
+          srcDark: "img/logo-white.svg",
         },
         items: [
+          {
+            href: "https://usekeyp.com",
+            label: "Website",
+            position: "left",
+          },
+          {
+            href: "https://app.usekeyp.com",
+            label: "App",
+            position: "left",
+          },
           {
             href: "https://blog.usekeyp.com",
             label: "Blog",
