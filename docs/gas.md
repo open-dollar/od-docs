@@ -5,9 +5,9 @@ sidebar_label: "Gas"
 
 # Gas
 
-To make a transaction on a blockchain like Ethereum, Polygon, Arbitrum, etc., users generally have to pay gas fees which are given to block builders for validating the network. This is a poor UX for new users who have to onramp themselves before being able to do anything. The fees can feel often confusing to new users.
+To make a transaction on a blockchain like Ethereum, Polygon or Arbitrum, etc. users typically have to pay gas fees which are distributed to block builders for validating the network. We believe that gas fees are often confusing to new users and does not offer users a great experience who have to onramp themselves before being able to do anything.
 
-Making transactions through Keyp's API and tools will not require a user paying, or even knowing about gas fees. As part of our onboarding stack, transactions are submitted with a combination (depending on the network) of _gasless meta-transactions_ or _Just-In-Time Gas Money_.
+Making transactions through Keyp's API and other Keyp tools will not require a user to interact with gas fees in any way. As part of our onboarding stack, transactions are submitted with a combination (depending on the network) of _gasless meta-transactions_ or _Just-In-Time Gas Money_.
 
 ## Gasless Meta-Transactions
 
@@ -17,4 +17,4 @@ For more info, check out [Open GSN](https://docs.opengsn.org/).
 
 ## Just-In-Time Gas Money
 
-Just-In-Time Gas Money is an internal service that airdrops users just the right amount of gas money to complete their transaction, right before it is submitted to the network.
+Just-In-Time Gas Money is an internal service that airdrops users just the right amount of money for gas to complete their transaction, just as it is submitted to the network.
