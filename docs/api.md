@@ -29,7 +29,7 @@ Coming soon.
 
 ### Get user address
 
-To get the currently logged in user's public address, use one of the following:
+To retrieve the currently logged in user's public address, use one of the following:
 
 1. During authentication, get the user's address from the returned `JWT`.
 2. Get it directly from the API endpoint `/userinfo`.
