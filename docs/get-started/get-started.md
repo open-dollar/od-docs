@@ -5,7 +5,7 @@ id: my-home-doc
 slug: /
 ---
 
-# 🍩 Welcome to Keyp
+# Welcome to Keyp 🍩
 
 Keyp creates developer tools for game studios and app developers to improve the Web3 onboarding experience.
 
