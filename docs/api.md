@@ -9,6 +9,8 @@ The Keyp API can be used for completing transactions that users have signed, con
 <a target="_blank" href="https://www.postman.com/speeding-spaceship-663022/workspace/keyp-public-workspace/collection/25667367-e1156fb2-60c3-4a42-b76b-47902a22512e?ctx=documentation">Check out our Postman Collection</a>
 &nbsp;to explore our API endpoints and see example requests. It's a public collection, so you can fork the collection to make requests via Postman's web or desktop application.
 
+To make API calls you will need an `Access Token`, which can be generated in your [dev portal](https://dev.usekeyp.com). Each `Access Token` is unique to each user per each app.
+
 ## Tokens
 
 ### Get Balance
