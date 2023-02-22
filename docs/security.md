@@ -3,7 +3,7 @@ sidebar_position: 10
 sidebar_label: "User Account Security"
 ---
 
-# Security
+# User Account Security
 
 User accounts created on Keyp are non-custodial in nature: Keyp does not store any private keys nor does it have the ability to.
 

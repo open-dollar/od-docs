@@ -3,35 +3,24 @@ sidebar_position: 3
 sidebar_label: "API v1.0"
 ---
 
-# API
+# Keyp API
 
-The Keyp API can be used for completing transactions that users have signed, connecting on and offramps, and more. 
-<a target="_blank" href="https://www.postman.com/speeding-spaceship-663022/workspace/keyp-public-workspace/collection/25667367-e1156fb2-60c3-4a42-b76b-47902a22512e?ctx=documentation">Check out our Postman Collection</a>
-&nbsp;to explore our API endpoints and see example requests. It's a public collection, so you can fork the collection to make requests via Postman's web or desktop application.
+The API can be used for signing transactions, connecting on/off-ramps, and more. Use our Postman Workspace to start sending API requests.
 
-To make API calls you will need an `Access Token`, which can be generated in your [dev portal](https://dev.usekeyp.com). Each `Access Token` is unique to each user per each app.
+[Keyp Postman Workspace](https://www.postman.com/speeding-spaceship-663022/workspace/keyp-public-workspace/collection/25667367-e1156fb2-60c3-4a42-b76b-47902a22512e?ctx=documentation)
 
-## Tokens
+It's a public collection, so you can fork the collection to make requests via Postman's web or desktop application.
 
-### Get Balance
+To make API calls you will need an **Access Token**, which you view using the [Dev Portal](https://dev.UseKeyp.com). Access Tokens are scoped to a single user, for a single application, for a single set of permissions.
 
-Coming soon.
+### Endpoints
 
-### Airdrops
+- Tokens
+- Transfers
+- On/Off Ramps
+- Balances
 
-Coming soon.
-
-### Transfers
-
-Coming soon.
-
-### Launching your own tokens through Keyp
-
-Coming soon.
-
-## Oauth
-
-### Get user address
+### User Data
 
 To retrieve the currently logged in user's public address, use one of the following:
 
@@ -39,8 +28,4 @@ To retrieve the currently logged in user's public address, use one of the follow
 2. Get it directly from the API endpoint `/userinfo`.
 3. Save it into local storage after OAuth yourself, and read from there.
 
-User private keys are not available to Keyp or apps built on top of Keyp.
-
-## Ramps
-
-Send users to `usekeyp.com/wallet/ramps`
+> NOTE: Private keys for users are never available to Keyp, and are never available to apps built on top of Keyp.

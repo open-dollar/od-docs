@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Keyp Docs",
   tagline: "The no brainer onboarding stack for web3.",
-  url: "https://docs.usekeyp.com",
+  url: "https://docs.UseKeyp.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -63,12 +63,12 @@ const config = {
             position: "left",
           },
           {
-            href: "https://app.usekeyp.com",
+            href: "https://app.UseKeyp.com",
             label: "App",
             position: "left",
           },
           {
-            href: "https://blog.usekeyp.com",
+            href: "https://blog.UseKeyp.com",
             label: "Blog",
             position: "right",
           },
@@ -78,7 +78,7 @@ const config = {
             position: "right",
           },
           {
-            href: "https://schedule.usekeyp.com",
+            href: "https://schedule.UseKeyp.com",
             label: "Partner with us",
             position: "right",
           },
@@ -101,7 +101,7 @@ const config = {
             items: [
               {
                 label: "Discord",
-                href: "https://discord.usekeyp.com",
+                href: "https://discord.UseKeyp.com",
               },
               {
                 label: "Twitter",
@@ -114,7 +114,7 @@ const config = {
             items: [
               {
                 label: "Blog",
-                href: "https://blog.usekeyp.com",
+                href: "https://blog.UseKeyp.com",
               },
               {
                 label: "GitHub",
