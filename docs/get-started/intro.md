@@ -5,11 +5,11 @@ sidebar_label: "Quick Start"
 
 # Getting Started
 
-1. Create an applicaton in the developer portal
+1. Create an applicaton in the Developer Portal
 2. Use an OAuth2.0 library to authenticate users (eg. Passport.js)
 3. Use the API to airdrop tokens to your users
 
-## Creating a developer account
+## Creating a Developer Account
 
 Log in to https://dev.UseKeyp.com and sign-in with Google, Discord, or your Chess.com account.
 
@@ -21,7 +21,7 @@ On your developer account page, select "Create Client", which will generate a ne
 
 ![Client Generation](/img/dev-portal-client-gen.gif)
 
-## Connecting Keyp to your application
+## Connecting Keyp to Your Application
 
 Keyp works like other social login providers (Google, Facebook, etc.) which use OAuth2.0 to authenticate and give access to user accounts. You can also skip this step and start using the API immediately.
 
@@ -52,7 +52,7 @@ _Everything else_ (Swift, Ruby, Kotlin...)
 
 - See list https://oauth.net/code/
 
-### Example applications
+### Example Applications
 
 We created a few example apps which you can use to get started:
 
@@ -61,9 +61,9 @@ We created a few example apps which you can use to get started:
 
 Learn more in the [OAuth](/oauth) section.
 
-## Using the API to move tokens
+## Using the API to Move Tokens
 
-With a user's Access Token, you can see info about their account, and make certain transactions they've authorized.
+With a user's Access Token, you can see info about their account and make certain transactions they've authorized.
 
 To start using the API immediately, copy your own Access Token from your developer account.
 
