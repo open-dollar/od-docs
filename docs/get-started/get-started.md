@@ -16,11 +16,11 @@ After building dozens of apps - we realized we were missing an onboarding platfo
 When we say **interoperable**, we mean:
 
 - Every EVM-compatible network, defi protocol, and smart contract.
-- Any country. Any Bank.
-- Wallets are not isolated to your application, and can be used anywhere.
+- Any country. Any bank.
+- Wallets are not isolated to your application and can be used anywhere.
 
 When we say **onboarding**, we mean:
 
-- Everyone, even those with no web3 experience, can access a wallet, move funds, and accomplish their goals.
+- Everyone, even those with no web3 experience, can access a wallet, move funds and accomplish their goals.
 
 Checkout the [Quick Start](docs/get-started/intro.md) to get started.

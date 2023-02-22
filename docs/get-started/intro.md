@@ -11,7 +11,7 @@ sidebar_label: "Quick Start"
 
 ## Creating a Developer Account
 
-Log in to https://dev.UseKeyp.com and sign-in with Google, Discord, or your Chess.com account.
+Log in to https://dev.UseKeyp.com and sign-in with Google, Discord or your Chess.com account.
 
 ![Login Page](/img/dev-portal-login-page.png)
 
@@ -21,7 +21,7 @@ On your developer account page, select "Create Client", which will generate a ne
 
 ![Client Generation](/img/dev-portal-client-gen.gif)
 
-## Connecting Keyp to Your Application
+## Connecting Keyp to your application
 
 Keyp works like other social login providers (Google, Facebook, etc.) which use OAuth2.0 to authenticate and give access to user accounts. You can also skip this step and start using the API immediately.
 
@@ -52,7 +52,7 @@ _Everything else_ (Swift, Ruby, Kotlin...)
 
 - See list https://oauth.net/code/
 
-### Example Applications
+### Example applications
 
 We created a few example apps which you can use to get started:
 
@@ -61,9 +61,9 @@ We created a few example apps which you can use to get started:
 
 Learn more in the [OAuth](/oauth) section.
 
-## Using the API to Move Tokens
+## Using the API to move tokens
 
-With a user's Access Token, you can see info about their account and make certain transactions they've authorized.
+With a user's Access Token, you can see info about their account, and make certain transactions they've authorized.
 
 To start using the API immediately, copy your own Access Token from your developer account.
 
@@ -71,8 +71,8 @@ To start using the API immediately, copy your own Access Token from your develop
 
 We created a Postman Workspace for your convenience. Under "Environment", enter your access token for the variable `ACCESS_TOKEN`.
 
-- Postman [Keyp Public Workspace](https://www.postman.com/speeding-spaceship-663022/workspace/keyp-public-workspace/collection/25667367-e1156fb2-60c3-4a42-b76b-47902a22512e?ctx=documentation)
+**[Keyp Public Workspace - Postman](https://www.postman.com/speeding-spaceship-663022/workspace/keyp-public-workspace/collection/25667367-e1156fb2-60c3-4a42-b76b-47902a22512e?ctx=documentation)**
 
 ![Postman Environment](/img/dev-portal-postman-environment.png)
 
-Now you can begin receiving and sending tokens to your Wallet on Polygon network. Note that **applications are network-specific**, and therefore the access tokens they generate are also network-specific. In order to use other networks, you'll need to create your own application with your desired network.
+Now you can begin receiving and sending tokens to your Wallet on Polygon network. Note that **applications and access tokens are network-specific**. In order to use other networks, you'll need to create your own application with your desired network.
