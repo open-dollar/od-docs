@@ -67,8 +67,6 @@ With a user's Access Token, you can see info about their account, and make certa
 
 To start using the API immediately, copy your own Access Token from your developer account.
 
-> Access tokens and clients are network-specific. In order to use other networks besides Polygon, you'll need to create a Keyp App, select the desired network, and log in there.
-
 ![Access Token](/img/dev-portal-access-token.png)
 
 We created a Postman Workspace for your convenience. Under "Environment", enter your access token for the variable `ACCESS_TOKEN`.
@@ -77,4 +75,4 @@ We created a Postman Workspace for your convenience. Under "Environment", enter 
 
 ![Postman Environment](/img/dev-portal-postman-environment.png)
 
-Now you can begin receiving and sending tokens to your Wallet on Matic network.
+Now you can begin receiving and sending tokens to your Wallet on Polygon network. Note that **applications are network-specific**, and therefore the access tokens they generate are also network-specific. In order to use other networks, you'll need to create your own application with your desired network.
