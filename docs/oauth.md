@@ -14,15 +14,15 @@ The only things needed to give your users EVM accounts on any network and integr
 
 We use standard industry tools to improve the developer experience. If there is another way you would like to access Keyp logins, please contact us.
 
-## RedwoodJS OAuth
+## Redwood OAuth
 
-[RedwoodJS](https://redwoodjs.com/) is a JavaScript framework that uses the same kind of code on the front end as the back end. We love it.
+[Redwood](https://redwoodjs.com/) is a javascript framework that uses the same kind of code on the front end as the back end. We love them.
 
-Keyp has open sourced a RedwoodJS implementation of a standard OAuth2 server that you can use to add Keyp logins to your app: https://www.npmjs.com/package/oauth2-server-redwood
+Keyp has open sourced a Redwood implementation of a standard OAuth2 server which you can use to add Keyp logins to your app: https://www.npmjs.com/package/oauth2-server-redwood
 
-## Passport.js
+## Passportjs
 
-For React apps, we suggest you follow the Passport.js docs: https://www.passportjs.org/concepts/authentication/oauth/
+For React apps, we suggest you follow the Passport docs: https://www.passportjs.org/concepts/authentication/oauth/
 
 # Login Components
 

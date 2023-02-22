@@ -108,6 +108,3 @@ dist
 .tern-port
 .DS_Store
 build/
-
-# Ignore JetBrains IDE files
-.idea/
