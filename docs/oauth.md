@@ -19,7 +19,7 @@ Here are some great resources if you are new to using OAuth in your application:
 
 ## Integration Examples
 
-### Passportjs
+### Passport.js
 
 For React apps, we suggest you follow the Passport docs: https://www.passportjs.org/concepts/authentication/oauth/
 

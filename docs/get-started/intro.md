@@ -5,7 +5,7 @@ sidebar_label: "Quick Start"
 
 # Getting Started
 
-1. Create an applicaton in the developer portal
+1. Create an application in the developer portal
 2. Use an OAuth2.0 library to authenticate users (eg. Passport.js)
 3. Use the API to airdrop tokens to your users
 
