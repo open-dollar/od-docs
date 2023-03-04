@@ -58,6 +58,7 @@ We created a few example apps which you can use to get started:
 
 - **ExpressJS** - [usekeyp-example-app-express](https://github.com/UseKeyp/usekeyp-example-app-express/)
 - **RedwoodJS** - [usekeyp-example-app-redwood](https://github.com/UseKeyp/usekeyp-example-app-redwood/)
+- **NextJS** - [blood-of-moloch](https://github.com/raid-guild/blood-of-moloch/pull/43)
 
 Learn more in the [OAuth](/oauth) section.
 

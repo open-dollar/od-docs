@@ -19,9 +19,9 @@ Here are some great resources if you are new to using OAuth in your application:
 
 ## Integration Examples
 
-### Passportjs
+### React, JavaScript and Node.js
 
-For React apps, we suggest you follow the Passport docs: https://www.passportjs.org/concepts/authentication/oauth/
+For JavaScript apps like React SPAs, we suggest you follow the Passport docs https://www.passportjs.org/concepts/authentication/oauth/ or for Next.js apps, using https://next-auth.js.org/
 
 ### Redwood OAuth
 
