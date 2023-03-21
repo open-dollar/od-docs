@@ -73,22 +73,27 @@ const config = {
             position: "left",
           },
           {
-            href: "https://app.UseKeyp.com",
+            href: "https://dev.usekeyp.com",
+            label: "Dev Portal",
+            position: "left",
+          },
+          {
+            href: "https://app.usekeyp.com",
             label: "App",
             position: "left",
           },
           {
-            href: "https://blog.UseKeyp.com",
+            href: "https://usekeyp.com/blog",
             label: "Blog",
             position: "right",
           },
           {
-            href: "https://github.com/usekeyp/usekeyp-docs",
+            href: "https://github.com/usekeyp",
             label: "GitHub",
             position: "right",
           },
           {
-            href: "https://schedule.UseKeyp.com",
+            href: "https://schedule.usekeyp.com",
             label: "Partner with us",
             position: "right",
           },
@@ -111,7 +116,7 @@ const config = {
             items: [
               {
                 label: "Discord",
-                href: "https://discord.UseKeyp.com",
+                href: "https://discord.usekeyp.com",
               },
               {
                 label: "Twitter",
@@ -124,7 +129,7 @@ const config = {
             items: [
               {
                 label: "Blog",
-                href: "https://blog.UseKeyp.com",
+                href: "https://blog.usekeyp.com",
               },
               {
                 label: "GitHub",
@@ -133,7 +138,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} UseKeyp. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Keyp. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
