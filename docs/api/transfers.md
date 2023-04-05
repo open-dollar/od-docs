@@ -7,7 +7,7 @@ sidebar_label: "/transfers"
 
 #### POST Transfer Token
 
-In this first example, we will transfer 0.01 ERC20 tokens from Alice's wallet to the wallet of Keyp user patrick@usekeyp.com. The receiving wallet is specified using the argument `toUserId`. 
+In this first example, we will transfer 0.01 ERC20 tokens from Alice's wallet to the wallet of a Discord user. The receiving wallet is specified using the argument `toUserId`. 
 
 Example request
 

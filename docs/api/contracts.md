@@ -67,3 +67,12 @@ axios
     console.error(error)
   })
 ```
+
+Example response - Success
+
+```json
+{
+    "status": "SUCCESS",
+    "hash": "0xabc....."
+}
+```
