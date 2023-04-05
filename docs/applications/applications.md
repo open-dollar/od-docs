@@ -1,17 +1,17 @@
 ---
-sidebar_position: 7
-sidebar_label: "Applications & Redirect URLs"
+sidebar_position: 1
+sidebar_label: "Application & Redirect URLs"
 ---
 
 # Applications & Redirect URLs
 
 ## What is an Application?
 
-An application is OAuth2.0 client, we generate so you can authenticate your users using Keyp. Applications are web3 network-specific.
+An application is an OAuth2.0 client used to authenticate your users with Keyp. Applications are web3 network-specific.
 
 The name, icon, and policy you choose for your application will be displayed on the consent screen during sign-in.
 
-Developers can multiple applications under the same Keyp account. We suggest creating separate applications for testing and production purposes.
+Developers can create multiple applications under the same Keyp account. We suggest creating separate applications for testing and production purposes.
 
 ## What is a redirect URL?
 

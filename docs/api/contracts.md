@@ -1,0 +1,69 @@
+---
+sidebar_position: 5
+sidebar_label: "/contracts"
+---
+
+# /contracts
+
+#### GET Method 
+
+Example request
+
+```js
+const axios = require('axios')
+const ACCESS_TOKEN = 'USER_ACCESS_TOKEN'
+
+const address = '0x9ca6a77c8b38159fd2da9bd25bc3e259c33f5e39'
+method = 'balance'
+args = '0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063' // Comma-separated list
+
+const options = { headers: { Authorization: `Bearer ${ACCESS_TOKEN}` } }
+
+axios
+  .get(
+    `https://api.usekeyp.com/v1/contracts/method?address=${address}&method=${method}&args=${args}`,
+    options
+  )
+  .then((response) => {
+    console.log(response.data)
+  })
+  .catch((error) => {
+    console.error(error)
+  })
+```
+
+#### POST Method 
+
+Example request
+
+```js
+const axios = require('axios')
+const ACCESS_TOKEN = 'USER_ACCESS_TOKEN'
+
+const data = {
+  address: '0x55d4dfb578daa4d60380995fff7a706471d7c719',
+  method: 'pay',
+  args: {
+    _projectId: '1',
+    _amount: '10000000',
+    _token: '0x9ca6a77c8b38159fd2da9bd25bc3e259c33f5e39',
+    // ...
+  },
+}
+
+const options = {
+  headers: {
+    'Content-Type': 'application/json',
+    Authorization: `Bearer ${ACCESS_TOKEN}`,
+  },
+}
+
+axios
+  .post(`https://api.usekeyp.com/v1/contracts/method`, data, options)
+  .then((response) => {
+    console.log(response.data)
+  })
+  .catch((error) => {
+    console.error(error)
+  })
+```

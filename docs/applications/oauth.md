@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 2
 sidebar_label: "OAuth Setup"
 ---
 
@@ -7,7 +7,11 @@ sidebar_label: "OAuth Setup"
 
 OAuth2.0 is a standard protocol that allows users to authorize API access to web, desktop and mobile applications. Once access has been granted, the application can utilize the API on behalf of the user.
 
-**The only thing you need to give your users EVM accounts on any network and integrate with Keyp is a Client ID.**
+**The only thing you need to generate EVM accounts for users on any network is a Client ID.**
+
+Because OAuth2.0 is just a specification, the actual implementation will be up to you. However, there are plenty of examples and open-source libraries available.  
+
+> Want to test out the API before diving in deeper? Check out the API docs.
 
 ## How does OAuth work?
 

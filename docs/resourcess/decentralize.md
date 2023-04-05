@@ -1,5 +1,5 @@
 ---
-sidebar_position: 11
+sidebar_position: 3
 sidebar_label: "Progressive Decentralization"
 ---
 
@@ -15,7 +15,7 @@ Our goal is to continually move Keyp down a path towards decentralizing the enti
 - Users can make onchain approvals to delegate Keyp to do things on their behalf (Account Abstraction)
 - Keyp serviced by a decentralized network of nodes
 
-![keyp decentralization plan diagram](../static/img/Keyp_Architecture_Roadmap_v5.png)
+![keyp decentralization plan diagram](/img/Keyp_Architecture_Roadmap_v5.png)
 
 ## Open Source
 
