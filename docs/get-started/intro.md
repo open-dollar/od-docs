@@ -5,13 +5,13 @@ sidebar_label: "Quick Start"
 
 # Getting Started
 
-1. Create an application in the developer portal
+1. Create an applicaton in the Developer Portal
 2. Use an OAuth2.0 library to authenticate users (eg. Passport.js)
 3. Use the API to airdrop tokens to your users
 
-## Creating a developer account
+## Creating a Developer Account
 
-Log in to https://dev.UseKeyp.com and sign-in with Google, Discord, or your Chess.com account.
+Log in to https://dev.UseKeyp.com and sign-in with Google, Discord or your Chess.com account.
 
 ![Login Page](/img/dev-portal-login-page.png)
 
@@ -68,14 +68,12 @@ With a user's Access Token, you can see info about their account, and make certa
 
 To start using the API immediately, copy your own Access Token from your developer account.
 
-> Access tokens and clients are network-specific. In order to use other networks besides Polygon, you'll need to create a Keyp App, select the desired network, and log in there.
-
 ![Access Token](/img/dev-portal-access-token.png)
 
 We created a Postman Workspace for your convenience. Under "Environment", enter your access token for the variable `ACCESS_TOKEN`.
 
-- Postman [Keyp Public Workspace](https://www.postman.com/speeding-spaceship-663022/workspace/keyp-public-workspace/collection/25667367-e1156fb2-60c3-4a42-b76b-47902a22512e?ctx=documentation)
+**[Keyp Public Workspace - Postman](https://www.postman.com/speeding-spaceship-663022/workspace/keyp-public-workspace/collection/25667367-e1156fb2-60c3-4a42-b76b-47902a22512e?ctx=documentation)**
 
 ![Postman Environment](/img/dev-portal-postman-environment.png)
 
-Now you can begin receiving and sending tokens to your Wallet on Matic network.
+Now you can begin receiving and sending tokens to your Wallet on Polygon network. Note that **applications and access tokens are network-specific**. In order to use other networks, you'll need to create your own application with your desired network.
