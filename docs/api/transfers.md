@@ -93,4 +93,4 @@ const data = {
 // ... (same as above)
 ```
 
-For all available providers and ProviderType, see [Social Login Providers](/oauth/providers).
+For all available providers and ProviderType, see [Social Login Providers](/applications/providers).

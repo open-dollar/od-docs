@@ -60,7 +60,7 @@ We created a few example apps which you can use to get started:
 - **RedwoodJS** - [usekeyp-example-app-redwood](https://github.com/UseKeyp/usekeyp-example-app-redwood/)
 - **NextJS** - [blood-of-moloch](https://github.com/raid-guild/blood-of-moloch/pull/43)
 
-Learn more in the [OAuth](/oauth) section.
+Learn more in the [OAuth](/applications/oauth) section.
 
 ## Using the API to move tokens
 
