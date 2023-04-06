@@ -20,7 +20,7 @@ const axios = require('axios')
 const ACCESS_TOKEN = 'USER_ACCESS_TOKEN'
 
 const data = {
-  toUsername: "pi0neerpat#1337",
+  toUserUsername: "pi0neerpat#1337",
   toUserProviderType: "DISCORD",
   tokenAddress: '0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063',
   tokenType: 'ERC20',
