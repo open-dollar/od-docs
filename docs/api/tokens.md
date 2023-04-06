@@ -1,13 +1,17 @@
 ---
 sidebar_position: 3
-sidebar_label: "/transfers"
+sidebar_label: "/tokens"
 ---
 
-# /transfers
+# /tokens
 
-#### POST Transfer Token
+## Transfer Token
+
+### POST `/tokens/transfers`
 
 In this first example, we will transfer 0.01 ERC20 tokens from Alice's wallet to the wallet of a Discord user. The receiving wallet is specified using the argument `toUserId`. 
+
+> Note that many social providers allow users to update their username.
 
 Example request
 
@@ -16,8 +20,8 @@ const axios = require('axios')
 const ACCESS_TOKEN = 'USER_ACCESS_TOKEN'
 
 const data = {
-  toUsername: "pi0neerpat#4947",
-  toUserPlatform: "DISCORD",
+  toUsername: "pi0neerpat#1337",
+  toUserProviderType: "DISCORD",
   tokenAddress: '0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063',
   tokenType: 'ERC20',
   amount: '.01',

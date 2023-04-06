@@ -5,7 +5,9 @@ sidebar_label: "/users"
 
 # /users
 
-#### GET User 
+## User 
+
+### GET `/users/:userId`
 
 > 💡 TIP: you can also get a user's data during the OAuth flow, using the `/me` endpoint (see the OAuth documentation for more details).
 
@@ -41,7 +43,9 @@ Example response
 }
 ```
 
-#### GET User Balance 
+## Balance 
+
+### GET `/users/:userId/balance`
 
 Example request
 
@@ -83,7 +87,9 @@ Example response
 }
 ```
 
-#### GET User Token Balance 
+## Token Balance 
+
+### GET `/users/:userId/balance/:tokenAddress`
 
 Example request
 

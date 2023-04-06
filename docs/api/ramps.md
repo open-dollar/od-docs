@@ -5,7 +5,22 @@ sidebar_label: "/ramps"
 
 # /ramps
 
-#### GET On Ramp
+## Ramps Available
+
+| Provider   |  RampType  |  On   | Off |
+| ---------- | :--------: | :---: | --- |
+| Wert       |   `WERT`   |   ✅   |     |
+| Ramp       |   `RAMP`   |   ✅   |     |
+| Mt Pelerin | `PELERIN`  |   ✅   |     |
+| Coinbase   | `COINBASE` |       | ✅   |
+
+
+
+We are currently working to add a ramp aggregation service, which means this list will soon include 20+ on/off ramps!
+
+## On Ramp 
+
+### GET `/ramps/on/:rampType`
 
 ```js
 const axios = require('axios')
@@ -35,9 +50,9 @@ Example response
 }
 ```
 
-#### GET Off Ramp
+## Off Ramp 
 
-// GET Off Ramp
+### GET `/ramps/off/:rampType`
 
 ```js
 const axios = require('axios')

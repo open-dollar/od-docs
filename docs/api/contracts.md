@@ -5,7 +5,9 @@ sidebar_label: "/contracts"
 
 # /contracts
 
-#### GET Method 
+## Read  
+
+### GET `/contracts/method`
 
 Example request
 
@@ -32,7 +34,9 @@ axios
   })
 ```
 
-#### POST Method 
+## Write  
+
+### POST `/contracts/method`
 
 Example request
 
