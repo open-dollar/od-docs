@@ -123,9 +123,3 @@ export const onSubmitCode = async (code, { codeVerifier }) => {
   })
 }
 ```
-
-# UI / Frontend Modal
-
-Keyp does not currently inject any frontend code into your app or create interactive modals. The frontend implementation is completely up to you.
-
-More options on this coming soon.
