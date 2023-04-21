@@ -9,14 +9,15 @@ We are always adding more providers. Please contact us if you'd like us to add o
 
 ## Currently Available
 
-| Provider   | `ProviderType` | Usernames mutable |
-| ---------- | :------------: | :---------------: |
-| Google     |    `GOOGLE`    |        No         |
-| Discord    |   `DISCORD`    |        Yes        |
-| Twitter    |   `TWITTER`    |        Yes        |
-| Chess.com  |    `CHESS`     |        Yes        |
-| Twitch     |    `TWITCH`    |        Yes        |
-| Epic Games |  `EPIC_GAMES`  |        Yes        |
+| Provider   | `ProviderType` | Usernames mutable | Email provided |
+|------------|:--------------:|:-----------------:|:--------------:|
+| Google     |    `GOOGLE`    |        No         |      Yes       |
+| Discord    |   `DISCORD`    |        Yes        |      Yes       |
+| Twitter    |   `TWITTER`    |        Yes        |       No       |
+| Chess.com  |    `CHESS`     |        Yes        |      Yes       |
+| Twitch     |    `TWITCH`    |        Yes        |      Yes       |
+| Epic Games |  `EPIC_GAMES`  |        Yes        |       No       |
+| Reddit     |    `REDDIT`    |        Yes        |       No       |
 
 ## Planned
 
