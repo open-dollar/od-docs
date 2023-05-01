@@ -1,16 +1,16 @@
 ---
 sidebar_position: 4
-sidebar_label: "UI Library"
+sidebar_label: "@usekeyp/ui-kit"
 ---
 
-# UI Library
+# `@usekeyp/ui-kit`
 
-The UI Library is a package that allows you to easily integrate pre-built frontend components into your application.
+The UI Kit is a package that allows you to easily integrate pre-built frontend components into your application.
 
 ## Usage 📖
 
 1.  Add package to your project:  
-    `yarn add @usekeyp/ui-library`
+    `yarn add @usekeyp/ui-kit`
 
 2.  Install and configure necessary dependencies.
 
@@ -89,7 +89,7 @@ The UI Library is a package that allows you to easily integrate pre-built fronte
 5.  Utilize components in your project:
 
 ```js
-import { LoginPortal } from "@usekeyp/ui-library";
+import { LoginPortal } from "@usekeyp/ui-kit";
 
 const LoginPage = () => {
 
