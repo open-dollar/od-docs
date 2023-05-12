@@ -1,9 +1,9 @@
 ---
 sidebar_position: 1
-sidebar_label: "AccessToken"
+sidebar_label: "Authentication"
 ---
 
-# Keyp API
+# Authentication
 
 ###  🌟 [Postman Workspace](https://www.postman.com/speeding-spaceship-663022/workspace/keyp-public-workspace/collection/25667367-e1156fb2-60c3-4a42-b76b-47902a22512e?ctx=documentation) 🌟
 

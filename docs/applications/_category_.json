@@ -1,9 +1,0 @@
-{
-  "label": "Applications",
-  "collapsible": false,
-  "position": 2,
-  "link": {
-    "type": "generated-index",
-    "description": "Create a new application using Keyp log-ins"
-  }
-}

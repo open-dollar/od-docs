@@ -1,6 +1,6 @@
 ---
-sidebar_position: 3
-sidebar_label: "Social Login Providers"
+sidebar_position: 1
+sidebar_label: "Login Providers"
 ---
 
 # Social Login Providers
