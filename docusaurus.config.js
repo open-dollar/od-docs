@@ -108,8 +108,12 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Get Started",
-                to: "/get-started/quick-start",
+                label: "Quick Start",
+                to: "/",
+              },
+              {
+                label: "Postman",
+                to: "api/postman",
               },
             ],
           },

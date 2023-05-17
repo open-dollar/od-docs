@@ -5,12 +5,6 @@ sidebar_label: "Authentication"
 
 # Authentication
 
-###  🌟 [Postman Workspace](https://www.postman.com/speeding-spaceship-663022/workspace/keyp-public-workspace/collection/25667367-e1156fb2-60c3-4a42-b76b-47902a22512e?ctx=documentation) 🌟
-
-Fork the workspace and update `ACCESS_TOKEN` in the **Environments** tab.
-
-![Postman Environment](/img/postman-access-token.png)
-
 To use the API in your app, you'll need to provide the `AccessToken` for a specific user:
 
 ```js
