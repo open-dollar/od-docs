@@ -470,4 +470,4 @@ Grab your own access token from the Dev Portal to use Postman.
 
 ![Postman Environment](/img/dev-portal-postman-environment.png)
 
-Learn more in [Authentication](/api)
+Learn more in [Authentication](/api/authentication)
