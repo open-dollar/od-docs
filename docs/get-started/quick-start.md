@@ -1,9 +1,15 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 sidebar_label: "Quick Start"
+id: my-home-doc
+slug: /
 ---
 
-# Getting Started
+# Welcome to Keyp 🍩
+
+Keyp creates developer tools for game studios and app developers to improve the web3 onboarding experience.
+
+We want to create a future where people have universal ownership and autonomy over their digital assets.‍
 
 ## Example applications
 
