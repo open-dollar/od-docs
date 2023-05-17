@@ -1,9 +1,5 @@
 {
-  "label": "Getting Started",
-  "collapsible": false,
+  "label": "⭐ Getting Started",
   "position": 1,
-  "link": {
-    "type": "generated-index",
-    "description": "Learning the basics of building with Keyp."
-  }
+  "link": null
 }

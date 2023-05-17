@@ -24,6 +24,7 @@ On your developer account page, select "Create Client", which will generate a ne
 
 ![Client Generation](/img/dev-portal-client-gen.gif)
 
+<!-- 
 ## 2. Authenticate with Keyp
 
 Add **`@usekeyp/js-sdk`** to your React or Next.js applications
@@ -103,6 +104,258 @@ Create a login page:
 
 ```js
 
+``` -->
+
+
+## 2. Authenticate with Keyp
+
+Here's how to authenticate for different frameworks:
+
+### Next.js
+
+Install dependencies:
+
+```bash
+yarn add next-auth
+```
+
+Add authentication:
+
+```ts
+// pages/api/auth/[...nextauth].ts
+import NextAuth from "next-auth";
+import { OAuthConfig } from "next-auth/providers";
+
+const KEYP_API_DOMAIN = "https://api.usekeyp.com";
+
+const KeypProvider: OAuthConfig<any> = {
+  id: "keyp",
+  name: "Keyp",
+  type: "oauth",
+  version: "2.0",
+  clientId: process.env.KEYP_CLIENT_ID,
+  wellKnown: `${KEYP_API_DOMAIN}/oauth/.well-known/openid-configuration`,
+  checks: ["pkce"],
+  authorization: { params: { scope: "openid email" } },
+  client: { token_endpoint_auth_method: "none" },
+  profile(profile) {
+    return {
+      id: profile.sub,
+      username: profile.username,
+      address: profile.address,
+      email: profile.email,
+      imageSrc: profile.imageSrc,
+    };
+  },
+};
+
+export default NextAuth({
+  secret: process.env.NEXTAUTH_SESSION_COOKIE_SECRET,
+  providers: [KeypProvider],
+  callbacks: {
+    async jwt({ token, account, profile }) {
+      if (account) {
+        // Comes from the returned JWT from Keyp
+        token.accessToken = account.access_token;
+      }
+      if (profile) {
+        // Comes from  the /userinfo endpoint
+        token.username = profile.username;
+        token.address = profile.address;
+      }
+      return token;
+    },
+    async session({ session, token }) {
+      // Send properties to the client, like an access_token from a provider.
+      if (token) {
+        session.user.accessToken = token.accessToken;
+        session.user.username = token.username;
+        session.user.address = token.address;
+        session.user.id = token.sub;
+      }
+      return session;
+    },
+  },
+});
+```
+
+Create a login page:
+
+```tsx
+// pages/login.tsx
+import React, { useState } from "react";
+import {
+  Box,
+  Button,
+  Heading,
+  HStack,
+  Image,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
+import { useSession, signIn } from "next-auth/react";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import { FaDiscord, FaGoogle } from "react-icons/fa";
+
+const Login = () => {
+  const [activeBtn, setActiveBtn] = useState<string>();
+  const session = useSession();
+  const router = useRouter();
+
+  console.log(session);
+
+  const handleGoogleLogin = () => {
+    signIn("keyp", undefined, "login_provider=GOOGLE");
+  };
+
+  const handleDiscordLogin = () => {
+    signIn("keyp", undefined, "login_provider=DISCORD");
+  };
+
+  useEffect(() => {
+    if (session && session.status === "authenticated") {
+      router.push("/");
+    }
+  }, [session, router]);
+
+  return (
+    <>
+      <Box textAlign="center" fontFamily="sharpie" px="0.5rem">
+        <Heading
+          as="h1"
+          color="pink"
+          fontSize={["5rem", "8rem"]}
+          fontWeight="extrabold"
+        >
+          <Text fontFamily="sharpie">My App</Text>
+        </Heading>
+
+        <Box my={"2rem"}>
+          <Text textAlign="center" fontSize="5rem">
+            👋
+          </Text>
+        </Box>
+        <Stack
+          direction="column"
+          m="auto"
+          spacing={3}
+          textAlign="left"
+          px={[0, 0, "10rem", "20rem"]}
+        >
+          <Box
+            w="full"
+            textAlign="left"
+            color="loginBtnGray"
+            fontFamily="inter"
+            fontWeight="normal"
+          >
+            Signup or Login with
+          </Box>
+          <HStack
+            onMouseEnter={() => setActiveBtn("google")}
+            onMouseLeave={() => setActiveBtn("")}
+          >
+            <Button
+              variant="login"
+              onClick={() => handleGoogleLogin()}
+              _hover={{
+                bg: "googleBlue",
+                color: "white",
+              }}
+            >
+              <Image
+                src={
+                  activeBtn === "google"
+                    ? "social-bg-white.svg"
+                    : "social-bg-light.svg"
+                }
+                alt=""
+                w="2.5rem"
+              />
+              <Box position="absolute" ml="0.65rem">
+                <FaGoogle
+                  color={activeBtn === "google" ? "#4285F4" : "white"}
+                  size="20px"
+                />
+              </Box>
+              <Text ml="1rem">Google</Text>
+            </Button>
+          </HStack>
+          <HStack
+            onMouseEnter={() => setActiveBtn("discord")}
+            onMouseLeave={() => setActiveBtn("")}
+          >
+            <Button
+              variant="login"
+              onClick={() => handleDiscordLogin()}
+              _hover={{
+                bg: "discordBlue",
+                color: "white",
+              }}
+            >
+              <Image
+                src={
+                  activeBtn === "discord"
+                    ? "social-bg-white.svg"
+                    : "social-bg-light.svg"
+                }
+                alt=""
+                w="2.5rem"
+              />
+              <Box
+                position="absolute"
+                ml="0.65rem"
+                _hover={{
+                  color: "#5865F2",
+                }}
+              >
+                <FaDiscord
+                  color={activeBtn === "discord" ? "#5865F2" : "white"}
+                  size="20px"
+                />
+              </Box>
+              <Text ml="1rem">Discord</Text>
+            </Button>
+          </HStack>
+          <Box>
+            <Text color="#B0B6C1" fontSize="0.75rem" fontFamily="inter">
+              Powered by 🍩 Keyp
+            </Text>
+          </Box>
+        </Stack>
+      </Box>
+    </>
+  );
+};
+
+export default Login;
+```
+
+Create your environment file `.env`:
+
+```bash
+# Your application Client ID from https://dev.usekeyp.com
+KEYP_CLIENT_ID=
+# Domain where you serve the app
+NEXTAUTH_URL=http://localhost:3000 
+# Random string for NextAuth cookies. Generate using: openssl rand -base64 32
+NEXTAUTH_SESSION_COOKIE_SECRET= 
+```
+
+Update your redirect URLs in the Keyp Dev Portal. In this example, the url would be:
+
+```
+http://localhost:3000/api/auth/callback/keyp
+```
+
+Thats it! You can now authenticate users with Keyp. To view details about the user, grab the session using the `next-auth` hook.
+
+```js
+import { useSession } from "next-auth/react";
+
+const session = useSession();
+const address = session && session.user.address;
 ```
 
 ### Other Platforms
@@ -136,7 +389,7 @@ _Everything else_ (Swift, Ruby, Kotlin...)
 
 ## 3. Use the API 
 
-Call the API using the SDK:
+<!-- Call the API using the SDK:
 
 ```js
 import { useKeyp } from "@usekeyp/js-sdk";
@@ -155,9 +408,13 @@ const MyApp = () => {
     }
     // ...
 }
-```
+``` -->
 
-Or make calls directly using the user's `AccessToken`:
+Use your App or the Postman Collection to make API calls
+
+### Axios
+
+Grab the user's `AccessToken` to access the API:
 
 ```js
 import axios from 'axios'
@@ -197,12 +454,14 @@ const TransferPage = () => {
 }
 ```
 
-## Resources
+### Postman Collection
 
-
+Grab your own access token from the Dev Portal to use Postman.
 
 - **[Keyp Public Workspace - Postman](https://www.postman.com/speeding-spaceship-663022/workspace/keyp-public-workspace/collection/25667367-e1156fb2-60c3-4a42-b76b-47902a22512e?ctx=documentation)**
+- 
+**Applications and access tokens are network-specific**, so in order to use other networks, besides polygon, you'll need to create your own application.
 
 ![Postman Environment](/img/dev-portal-postman-environment.png)
 
-Now you can begin receiving and sending tokens to your Wallet on Polygon network. Note that **applications and access tokens are network-specific**. In order to use other networks, you'll need to create your own application with your desired network.
+Learn more in [Authentication](/api)

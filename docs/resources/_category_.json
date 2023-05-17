@@ -1,9 +1,5 @@
 {
-  "label": "Resources",
-  "collapsible": false,
+  "label": "📖 Resources",
   "position": 4,
-  "link": {
-    "type": "generated-index",
-    "description": "Additional Resources"
-  }
+  "link": null
 }

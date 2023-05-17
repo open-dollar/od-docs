@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-sidebar_label: "Progressive Decentralization"
+sidebar_label: "Decentralization"
 ---
 
 # Progressive Decentralization

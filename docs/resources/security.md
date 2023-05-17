@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-sidebar_label: "User Account Security"
+sidebar_label: "Security"
 ---
 
 # User Account Security

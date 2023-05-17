@@ -1,9 +1,5 @@
 {
-  "label": "API",
-  "collapsible": false,
+  "label": "🛰️ API",
   "position": 3,
-  "link": {
-    "type": "generated-index",
-    "description": "Keyp API, Postman Workspace, and endpoints"
-  }
+  "link": null
 }

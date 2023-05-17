@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-sidebar_label: "What to build with Keyp"
+sidebar_label: "Ideas to build"
 ---
 
 # App Suggestions

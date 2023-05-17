@@ -31,7 +31,7 @@ For JavaScript apps like React SPAs, we suggest you follow the Passport docs htt
 
 [Redwood](https://redwoodjs.com/) is a javascript framework that uses the same kind of code on the front end as the back end. We love them.
 
-Keyp has open sourced a Redwood implementation of a standard OAuth2 server which you can use to add Keyp logins to your app: https://www.npmjs.com/package/oauth2-server-redwood
+Keyp has open sourced a Redwood implementation of a standard OAuth2 server which you can use to add Keyp logins to your app: https://github.com/usekeyp/oauth2-client-redwood
 
 ### Apps without Backends
 

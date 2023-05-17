@@ -19,8 +19,8 @@ Here are the steps to determine your application's Redirect URL:
 
 A redirect URL is a callback URL that the OAuth2.0 provider (Keyp) uses to redirect the user back to your website after authentication. It is a critical component of the OAuth2.0 flow as it helps protect client credentials and ensure secure access token exchange.
 
-#### Production-ready
+#### Going Live
 
-`APP-DOMAIN` should be the location of your hosted production-ready application eg. `https://example.com/redirect/keyp`
-
-Production applications must use `https://`
+When you're ready to go live, you should create a separate client for production use only.
+  
+Production applications must use `https://` for Redirect URLs.
