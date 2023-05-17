@@ -97,4 +97,4 @@ const data = {
 // ... (same as above)
 ```
 
-For all available providers and ProviderType, see [Social Login Providers](/applications/providers).
+For all available providers and ProviderType, see [Login Providers](/coverage/providers).

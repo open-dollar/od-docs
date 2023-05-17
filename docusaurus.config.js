@@ -107,7 +107,7 @@ const config = {
             items: [
               {
                 label: "Get Started",
-                to: "/get-started/intro",
+                to: "/get-started/quick-start",
               },
             ],
           },

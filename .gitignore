@@ -110,3 +110,4 @@ build/
 
 # Ignore JetBrains IDE files
 .idea/
+build/
