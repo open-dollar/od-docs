@@ -122,67 +122,24 @@ Here's how to authenticate for different frameworks:
 Install dependencies:
 
 ```bash
-yarn add next-auth
+yarn add next-auth @usekeyp/js-sdk
 ```
 
 Add authentication:
 
 ```ts
 // pages/api/auth/[...nextauth].ts
+import { KeypAuth } from "@usekeyp/js-sdk";
 import NextAuth from "next-auth";
-import { OAuthConfig } from "next-auth/providers";
 
-const KEYP_API_DOMAIN = "https://api.usekeyp.com";
-
-const KeypProvider: OAuthConfig<any> = {
-  id: "keyp",
-  name: "Keyp",
-  type: "oauth",
-  version: "2.0",
-  clientId: process.env.KEYP_CLIENT_ID,
-  wellKnown: `${KEYP_API_DOMAIN}/oauth/.well-known/openid-configuration`,
-  checks: ["pkce"],
-  authorization: { params: { scope: "openid email" } },
-  client: { token_endpoint_auth_method: "none" },
-  profile(profile) {
-    return {
-      id: profile.sub,
-      username: profile.username,
-      address: profile.address,
-      email: profile.email,
-      imageSrc: profile.imageSrc,
-    };
-  },
-};
-
-export default NextAuth({
-  secret: process.env.NEXTAUTH_SESSION_COOKIE_SECRET,
-  providers: [KeypProvider],
-  callbacks: {
-    async jwt({ token, account, profile }) {
-      if (account) {
-        // Comes from the returned JWT from Keyp
-        token.accessToken = account.access_token;
-      }
-      if (profile) {
-        // Comes from  the /userinfo endpoint
-        token.username = profile.username;
-        token.address = profile.address;
-      }
-      return token;
-    },
-    async session({ session, token }) {
-      // Send properties to the client, like an access_token from a provider.
-      if (token) {
-        session.user.accessToken = token.accessToken;
-        session.user.username = token.username;
-        session.user.address = token.address;
-        session.user.id = token.sub;
-      }
-      return session;
-    },
-  },
+const NextAuthOptions = KeypAuth({
+    clientId: process.env.KEYP_CLIENT_ID, // From dev portal
+    secret: process.env.KEYP_COOKIE_SECRET, // Random string
+    redirectUrl: "http://localhost:3000/api/auth/callback/keyp",
 });
+
+export default NextAuth(NextAuthOptions);
+
 ```
 
 Create a login page:
@@ -199,25 +156,16 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import { useSession, signIn } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { FaDiscord, FaGoogle } from "react-icons/fa";
+import { signInKeyp } from "@usekeyp/js-sdk"
 
 const Login = () => {
   const [activeBtn, setActiveBtn] = useState<string>();
   const session = useSession();
   const router = useRouter();
-
-  console.log(session);
-
-  const handleGoogleLogin = () => {
-    signIn("keyp", undefined, "login_provider=GOOGLE");
-  };
-
-  const handleDiscordLogin = () => {
-    signIn("keyp", undefined, "login_provider=DISCORD");
-  };
 
   useEffect(() => {
     if (session && session.status === "authenticated") {
@@ -264,7 +212,7 @@ const Login = () => {
           >
             <Button
               variant="login"
-              onClick={() => handleGoogleLogin()}
+              onClick={() => signInKeyp("GOOGLE")}
               _hover={{
                 bg: "googleBlue",
                 color: "white",
@@ -294,7 +242,7 @@ const Login = () => {
           >
             <Button
               variant="login"
-              onClick={() => handleDiscordLogin()}
+              onClick={() => signInKeyp("DISCORD")}
               _hover={{
                 bg: "discordBlue",
                 color: "white",
@@ -420,7 +368,7 @@ Use your App or the Postman Collection to make API calls
 
 ### Axios
 
-Grab the user's `AccessToken` to access the API:
+Grab the user's `Access Token` to access the API:
 
 ```js
 import axios from 'axios'
