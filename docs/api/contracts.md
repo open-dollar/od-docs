@@ -5,6 +5,8 @@ sidebar_label: "/contracts"
 
 # /contracts
 
+> NOTE: You do not need to specify a network since your application is already network-specific.
+
 ## Read  
 
 ### GET `/contracts/method`
