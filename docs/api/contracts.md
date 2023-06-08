@@ -5,7 +5,25 @@ sidebar_label: "/contracts"
 
 # /contracts
 
-> NOTE: You do not need to specify a network since your application is already network-specific.
+Interact with any contract using the contacts API. 
+
+### ABI
+
+To interact with a contract you must provide an abbreviated version of the contract application binary interface (ABI). 
+
+This takes the form of the function name as it appears in the contract, the argument types, and the return types. Heres an example of the proper format: 
+
+`balanceOf(address) public view returns (uint256)`
+
+Only the function used during the API call should be included.
+
+### Arguments
+
+`args` should formatted as an array of strings. If there are no arguments, this variable can be omitted. 
+
+### Network
+
+You do not need to specify a network since your application is  network-specific.
 
 ## Read  
 
