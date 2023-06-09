@@ -5,17 +5,23 @@ sidebar_label: "/contracts"
 
 # /contracts
 
-Interact with any contract using the contacts API. 
+Interact with any contract using the Keyp API. 
+
+## Arguments
 
 ### ABI
 
-To interact with a contract you must provide an abbreviated version of the contract application binary interface (ABI). 
+To interact with a contract you must provide an abbreviated version of the contract application binary interface (ABI). Only the function used during the API call should be included.
 
-This takes the form of the function name as it appears in the contract, the argument types, and the return types. Heres an example of the proper format: 
+Heres an example of the proper format: 
 
-`balanceOf(address) public view returns (uint256)`
+```js
+// Read methods include the "view" keyword 
+balanceOf(address) public view returns (uint256)
 
-Only the function used during the API call should be included.
+// Write method
+pay(uint256,uint256,address) public returns (bool success)
+````
 
 ### Arguments
 
