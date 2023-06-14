@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 sidebar_label: "@usekeyp/js-sdk"
+slug: /js-sdk
 ---
 
 # `@usekeyp/js-sdk`
@@ -9,7 +10,7 @@ Keyp's SDK provides a simple interface for interacting with Keyp's API.
 
 Currently, the SDK supports the following:
 
-- Authenication using NextAuth.js
+- Use the Keyp SDK and ui-kit to quickly set up authentication
 - ERC20 and ERC721 token transfers
 - Read and write smart contracts
 
@@ -20,7 +21,7 @@ Currently, the SDK supports the following:
 
 2. Choose from a variety of SDK plugins and helpers:
 
-### Authenication using NextAuth.js
+### Authentication
 
 Configure using the Keyp [NextAuth provider](https://next-auth.js.org/configuration/providers/oauth#using-a-custom-provider)
 

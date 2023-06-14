@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
 sidebar_label: "@usekeyp/ui-kit"
+slug: /ui-kit
 ---
 
 # `@usekeyp/ui-kit`

@@ -30,92 +30,9 @@ On your developer account page, select "Create Client", which will generate a ne
 
 ![Client Generation](/img/dev-portal-client-gen.gif)
 
-<!-- 
 ## 2. Authenticate with Keyp
 
-Add **`@usekeyp/js-sdk`** to your React or Next.js applications
-
-### Next.js
-
-Install dependencies:
-
-```bash
-yarn add @usekeyp/js-sdk next-auth
-```
-
-Add authentication:
-
-```js
-// pages/api/auth/[...keypauth].ts
-import { KeypAuth } from "@usekeyp/js-sdk";
-
-const keypAuth = new KeypAuth({
-    clientId: process.env.NEXT_PUBLIC_KEYP_CLIENT_ID // From dev portal
-    secret: process.env.NEXT_PUBLIC_KEYP_COOKIE_SECRET, // Random string
-    redirectUrl: "http://localhost:3000/api/auth/callback/keyp",
-})
-
-export default keypAuth;
-```
-
-Create a login page:
-
-```js
-// pages/login.js
-import React, { useState, useEffect } from "react";
-import { LoginPortal } from "@usekeyp/js-sdk";
-
-import { useSession } from "next-auth/react";
-import { useRouter } from "next/router";
-
-const LoginPage = () => {
-  const session = useSession();
-  const router = useRouter();
-
-  useEffect(() => {
-    if (session && session.status === "authenticated") {
-      router.push("/");
-    }
-  }, [session, router]);
-
-  return (
-    <>
-      <LoginPortal
-        providers={["TWITTER", "GITHUB", "APPLE"]}
-        additionalProviders={["DISCORD", "GOOGLE"]}
-      />
-    </>
-  );
-};
-
-export default LoginPage;
-```
-
-### React
-
-
-Install dependencies:
-
-```bash
-yarn add @usekeyp/js-sdk 
-```
-
-Add authentication:
-
-```js
-
-```
-
-Create a login page:
-
-```js
-
-``` -->
-
-
-## 2. Authenticate with Keyp
-
-Here's how to authenticate for different frameworks:
+Use the [`@usekeyp/js-sdk`](/js-sdk) and [`@usekeyp/ui-kit`](/ui-kit) to quickly set up authentication (link to SDK page)
 
 ### Next.js
 
