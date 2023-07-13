@@ -134,3 +134,59 @@ Example response
     }
 }
 ```
+
+### GET `/users/:userId/history`
+
+Get a user's recent transfer transaction history (ERC20, ERC721, and ERC1155)
+
+Example request
+
+```js
+const axios = require('axios')
+const ACCESS_TOKEN = 'USER_ACCESS_TOKEN'
+
+const userId = 'DISCORD-381135787330109441'
+const options = { headers: { Authorization: `Bearer ${ACCESS_TOKEN}` } }
+
+axios
+  .get(`https://api.usekeyp.com/v1/users/${userId}/history`, options)
+  .then((response) => {
+    console.log(response.data)
+  })
+  .catch((error) => {
+    console.error(error)
+  })
+```
+
+Example response
+
+
+```json
+[
+    {
+        "type": "TRANSFER",
+        "to": {
+            "username": "cupojoseph#0",
+            "platform": "DISCORD",
+            "address": "0x3e284f90b1704088f00ba87e8ef779a2d1f7d2f6"
+        },
+        "amount": {
+            "valueBn": {
+                "type": "BigNumber",
+                "hex": "0x0f4240"
+            },
+            "formatted": 1,
+            "decimals": 6,
+            "symbol": "USDC",
+            "name": "USDC",
+            "tokenAddress": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+            "network": "POLYGON",
+            "chainId": 137
+        },
+        "timestamp": "2023-04-28T18:31:29.000Z",
+        "hash": "0x2fa6ce301f63ad706aff2dd59c65cf8dfdc600e1ed6b343ce7a6d52417c80230",
+        "explorerUrl": "https://polygonscan.com/tx/0x2fa6ce301f63ad706aff2dd59c65cf8dfdc600e1ed6b343ce7a6d52417c80230"
+    },
+    //...
+]
+```
