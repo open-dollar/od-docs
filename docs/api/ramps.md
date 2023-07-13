@@ -5,6 +5,10 @@ sidebar_label: "/ramps"
 
 # /ramps
 
+The ramp API is experimental, therefore we recommend using the widget provided in our wallet app. Sending the user there will allow them to quickly add funds to their wallet. 
+
+![Onramper Widget](/img/onramp.png)
+
 ## Ramps Available
 
 | Provider   |  RampType  |  On   | Off |
