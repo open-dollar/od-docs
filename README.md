@@ -1,30 +1,65 @@
----
-description: The what and how of the GEB framework
----
+# Website
 
-# Introduction to GEB
+This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
-[GEB](https://en.wikipedia.org/wiki/G%C3%B6del,\_Escher,\_Bach) is a framework for deploying systems that can issue [stablecoins](https://medium.com/reflexer-labs/stability-without-pegs-8c6a1cbc7fbd). Stablecoins don't look like [this](https://www.coingecko.com/en/coins/usd-coin) (that's a pegged coin), but rather like [this](https://duneanalytics.com/HggqX/Reflexer-RAI). Stablecoins are a great collateral source for other DeFi protocols (compared to ETH or BTC) and are also a store of value with an embedded funding rate.\
-\
-This documentation is meant to explain all the components behind GEB. Before diving in the docs, we recommend reading our original [whitepaper](https://github.com/reflexer-labs/whitepapers/blob/master/English/rai-english.pdf).\
-\
-GEB is a modified fork of [MCD](https://github.com/makerdao/dss) that has several core differences:
+### Installation
 
-* Variable names you [can actually understand](https://docs.reflexer.finance/contract-translation/naming-transition)
-* An autonomous feedback mechanism that changes the incentives of system participants
-* The possibility to add insurance for SAFEs
-* Fixed and increasing discount auctions (instead of English auctions) used to sell off collateral
-* Automatic adjustment of several parameters in the system
-* A set of contracts that bound control over parameters that are governed in the long run
-* The possibility to send stability fees at once to multiple addresses
-* The possibility to switch between surplus auctions and other types of strategies meant to remove surplus from the system
-* Two prices for each `CollateralType`: one used for generating debt, the other one used exclusively when liquidating SAFEs
-* A stability fee treasury that can pay for oracle calls or other contracts that automate the system
+```
+$ yarn
+```
 
-### GEB Overview Diagram
+### Local Development
 
-Explore the diagram in detail [here](https://viewer.diagrams.net/?target=blank\&highlight=0000ff\&layers=1\&nav=1\&title=GEB\_overview.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1nIcaY8N8StVCfyAL\_ztbmETJX2bvY3a9%26export%3Ddownload).
+```
+$ yarn start
+```
 
-![](.gitbook/assets/geb\_overview-1-.png)
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-{% file src=".gitbook/assets/geb_overview (2).svg" %}
+### Build
+
+```
+$ yarn build
+```
+
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+### Deployment
+
+Using SSH:
+
+```
+$ USE_SSH=true yarn deploy
+```
+
+Not using SSH:
+
+```
+$ GIT_USER=<Your GitHub username> yarn deploy
+```
+
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to
+the `gh-pages` branch.
+
+### Using GitHub Codespaces as a CMS
+
+Rather than using a local editor, we can use GitHub Codespaces as a CMS for our Docusaurus site. This allows us to edit
+and publish changes to our docs from the browser.
+Thanks to GitHub Codespaces, we don't need every team member to have a local development environment to contribute to
+the docs.
+</br></br>
+Here's how to get started with Codespaces:
+
+1) In the documentation repository, click on the `Code` button and then the name of the codespace for it to start automatically
+   <img width="420" alt="codespaces tab in repo" src="https://user-images.githubusercontent.com/47253537/209730854-47862a8e-d701-4e4c-b093-39e9ca50515d.png">
+2) Notice that all the directories are on the left side of the screen
+3) If you want to add a post to the blog, right-click on the blog directory and create a new file that ends in `.md`
+4) Use the format of the other blog posts as guidance to add your own
+5) To immediately see the changes you made, navigate to the blog section of the site in the codespace and click on the post you just
+   added
+6) To publish the changes, click on the `Source Control` tab on the left side of the screen, write a description of your
+   change, and press commit and push
+   <img width="344" alt="committing to repo with codespaces" src="https://user-images.githubusercontent.com/47253537/209730956-3554d066-e64a-4fa9-856d-fb42504a830f.png">
+
+
+
