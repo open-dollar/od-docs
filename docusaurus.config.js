@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Keyp Docs",
+  title: "Open Dollar Docs",
   tagline: "The no brainer onboarding stack for web3.",
   url: "https://docs.UseKeyp.com",
   baseUrl: "/",
