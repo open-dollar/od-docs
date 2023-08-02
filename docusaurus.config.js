@@ -29,12 +29,12 @@ const config = {
   themes: [
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
-      ({
+      {
         hashed: true,
         language: ["en"],
         indexPages: true,
         docsRouteBasePath: "/",
-      }),
+      },
     ],
   ],
   presets: [
@@ -65,9 +65,9 @@ const config = {
       image: "img/docs-og-image-1200x630.png",
       navbar: {
         logo: {
-          alt: "Keyp Logo",
-          src: "img/logo.svg",
-          srcDark: "img/logo-white.svg",
+          alt: "Open Dollar Logo",
+          src: "img/full-logo.svg",
+          srcDark: "img/full-logo.svg",
         },
         items: [
           {
