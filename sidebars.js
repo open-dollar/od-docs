@@ -83,6 +83,153 @@ const sidebars = {
             "system-contracts/core/accounting-engine",
           ],
         },
+        {
+          type: "category",
+          label: "Auction Module",
+          collapsible: true,
+          collapsed: true,
+          link: {
+            type: "doc",
+            id: "system-contracts/auction-module/README",
+          },
+          items: [
+            "system-contracts/auction-module/english-collateral-auction-house",
+            "system-contracts/auction-module/fixed-discount-collateral-auction-house",
+            "system-contracts/auction-module/increasing-discount-collateral-auction-house",
+            "system-contracts/auction-module/debt-auction-house",
+            "system-contracts/auction-module/surplus-auction-house",
+          ],
+        },
+        {
+          type: "category",
+          label: "Oracle Module",
+          collapsible: true,
+          collapsed: true,
+          link: {
+            type: "doc",
+            id: "system-contracts/oracle-module/README",
+          },
+          items: [
+            "system-contracts/oracle-module/oracle-relayer",
+            {
+              type: "category",
+              label: "Medianizer",
+              collapsible: true,
+              collapsed: true,
+              link: {
+                type: "doc",
+                id: "system-contracts/oracle-module/medianizer/README",
+              },
+              items: [
+                "system-contracts/oracle-module/medianizer/ds-value",
+                "system-contracts/oracle-module/medianizer/governance-led-median",
+                "system-contracts/oracle-module/medianizer/chainlink-median",
+                "system-contracts/oracle-module/medianizer/uniswap-v2-median",
+              ],
+            },
+            {
+              type: "category",
+              label: "FSM",
+              collapsible: true,
+              collapsed: true,
+              link: {
+                type: "doc",
+                id: "system-contracts/oracle-module/fsm/README",
+              },
+              items: [
+                "system-contracts/oracle-module/fsm/oracle-security-module",
+                "system-contracts/oracle-module/fsm/dampened-security-module",
+                "system-contracts/oracle-module/fsm/fsm-governance-interface",
+              ],
+            },
+          ],
+        },
+        {
+          type: "category",
+          label: "Token Module",
+          collapsible: true,
+          collapsed: true,
+          link: {
+            type: "doc",
+            id: "system-contracts/token-module/README",
+          },
+          items: [
+            "system-contracts/token-module/token-adapters",
+            "system-contracts/token-module/system-coin",
+            "system-contracts/token-module/protocol-token",
+            "system-contracts/token-module/protocol-token-authority",
+            "system-contracts/token-module/protocol-token-printing-permissions",
+          ],
+        },
+
+        {
+          type: "category",
+          label: "Money Market Module",
+          collapsible: true,
+          collapsed: true,
+          link: {
+            type: "doc",
+            id: "system-contracts/money-market-module/README",
+          },
+          items: ["system-contracts/money-market-module/tax-collector"],
+        },
+        {
+          type: "category",
+          label: "Sustainability Module",
+          collapsible: true,
+          collapsed: true,
+          link: {
+            type: "doc",
+            id: "system-contracts/sustainability-module/README",
+          },
+          items: [
+            "system-contracts/sustainability-module/stability-fee-treasury",
+            "system-contracts/sustainability-module/fsm-wrapper",
+            "system-contracts/sustainability-module/increasing-treasury-reimbursement",
+            "system-contracts/sustainability-module/mandatory-fixed-treasury-reimbursement",
+            "system-contracts/sustainability-module/increasing-reward-relayer",
+          ],
+        },
+        {
+          type: "category",
+          label: "Automation Module",
+          collapsible: true,
+          collapsed: true,
+          link: {
+            type: "doc",
+            id: "system-contracts/automation-module/README",
+          },
+          items: [
+            "system-contracts/automation-module/collateral-auction-throttler",
+            "system-contracts/automation-module/single-spot-debt-ceiling-setter",
+            "system-contracts/automation-module/esm-threshold-setter",
+          ],
+        },
+        {
+          type: "category",
+          label: "Governance Module",
+          collapsible: true,
+          collapsed: true,
+          link: {
+            type: "doc",
+            id: "system-contracts/governance-module/README",
+          },
+          items: ["system-contracts/governance-module/ds-pause"],
+        },
+        {
+          type: "category",
+          label: "Shutdown Module",
+          collapsible: true,
+          collapsed: true,
+          link: {
+            type: "doc",
+            id: "system-contracts/shutdown-module/README",
+          },
+          items: [
+            "system-contracts/shutdown-module/global-settlement",
+            "system-contracts/shutdown-module/esm",
+          ],
+        },
       ],
     },
     {
