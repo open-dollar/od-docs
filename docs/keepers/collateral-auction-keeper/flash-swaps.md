@@ -83,9 +83,9 @@ Finally, the _auction-keeper_ finds a third ciritcal SAFE and successfully uses 
 ## Caveats
 
 * Flash swaps are only supported for collateral auctions.
-* _auction-keeper_ will not do flash swaps on critical SAFEs with saviours. Read more about saviours [here](https://docs.reflexer.finance/liquidation-protection/safe-protection).
+* _auction-keeper_ will not do flash swaps on critical SAFEs with saviours. Read more about saviours [here](/liquidation-protection/safe-protection).
 
 ## Possible errors
 
-When liquidity is too low, calls to flash proxys will revert _or_ run out of gas. In this case, the _auction-keeper_ will try to use the next Uniswap pool specified in `--flash-swap-pools`. In the unlikely case where all calls fail \(none of the pools have enough liquidity\), the auction-keeper can be restarted without `--flash-swap` to bid normally using the keeper’s system coin balance inside the [SAFEEngine](https://docs.reflexer.finance/system-contracts/core/safe-engine).
+When liquidity is too low, calls to flash proxys will revert _or_ run out of gas. In this case, the _auction-keeper_ will try to use the next Uniswap pool specified in `--flash-swap-pools`. In the unlikely case where all calls fail \(none of the pools have enough liquidity\), the auction-keeper can be restarted without `--flash-swap` to bid normally using the keeper’s system coin balance inside the [SAFEEngine](/system-contracts/core/safe-engine).
 

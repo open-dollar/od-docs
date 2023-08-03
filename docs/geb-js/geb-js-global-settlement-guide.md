@@ -4,7 +4,7 @@ The following are examples of how you can use geb.js to facilitate the Global Se
 
 ## Example Flow for Global Settlement Using GEB.js
 
-These scripts can help you go throught the steps described on the [Global Settlement](https://docs.reflexer.finance/system-contracts/shutdown-module/global-settlement#the-shutdown-mechanism-9-crucial-steps) page. 
+These scripts can help you go throught the steps described on the [Global Settlement](/system-contracts/shutdown-module/global-settlement#the-shutdown-mechanism-9-crucial-steps) page. 
 
 We first need to setup `geb.js` and `ethers.js`:
 
@@ -28,7 +28,7 @@ const hasGlobalSettlementStarted = shutdownTime.gt(0)
 
 ### Withdraw Excess Collateral
 
-After settlement starts, each collateral needs to be frozen \([Step 2](https://docs.reflexer.finance/system-contracts/shutdown-module/global-settlement#2-cage-ilk)\). This needs to be done only once for every collateral type. 
+After settlement starts, each collateral needs to be frozen \([Step 2](/system-contracts/shutdown-module/global-settlement#2-cage-ilk)\). This needs to be done only once for every collateral type. 
 
 ```typescript
 const tx = geb.contracts.globalSettlement.freezeCollateralType(utils.ETH_A)
@@ -45,7 +45,7 @@ const tx = proxy.freeTokenCollateralGlobalSettlement(wethJoinAddress, 3)
 await wallet.sendTransaction(tx)
 ```
 
-This fulfills [step 3](https://docs.reflexer.finance/system-contracts/shutdown-module/global-settlement#3-skim-ilk-urn) and [step 5](https://docs.reflexer.finance/system-contracts/shutdown-module/global-settlement#5-free-ilk) from the Global Settlement process.
+This fulfills [step 3](/system-contracts/shutdown-module/global-settlement#3-skim-ilk-urn) and [step 5](/system-contracts/shutdown-module/global-settlement#5-free-ilk) from the Global Settlement process.
 
 ### Set the Final COL/COIN Exchange Rates 
 

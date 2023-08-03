@@ -10,7 +10,7 @@ Upon liquidation, the Curve savior will withdraw all underlying liquidity (RAI +
 
 ### Minimum Savior Balance Calculation
 
-We reuse the variable naming and debt/collateral liquidation relationship from the [Uni-v2 savior calculation](https://docs.reflexer.finance/liquidation-protection/uni-v2-rai-eth-savior-math#minimum-savior-balance-formula).&#x20;
+We reuse the variable naming and debt/collateral liquidation relationship from the [Uni-v2 savior calculation](/liquidation-protection/uni-v2-rai-eth-savior-details#minimum-savior-balance-formula).&#x20;
 
 $$
 \frac{C + C_{lp}}{D - D_{lp}}  = \frac{A_{cc}R_{tar}P_{rp}}{P_{liq}}

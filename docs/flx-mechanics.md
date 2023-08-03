@@ -27,4 +27,4 @@ To visualize all this, you can check the diagram below:
 
 ## 3. FLX and the Money God League
 
-FLX is also at the core of the Money God League as seen [here](https://community.reflexer.finance/t/another-new-money-god-introducing-h2o/131) and [here](https://community.reflexer.finance/t/a-new-money-god-introducing-volt/120). The Money God League is presented on [this page](https://docs.reflexer.finance/the-money-god-league/intro-to-the-league).
+FLX is also at the core of the Money God League as seen [here](https://community.reflexer.finance/t/another-new-money-god-introducing-h2o/131) and [here](https://community.reflexer.finance/t/a-new-money-god-introducing-volt/120). The Money God League is presented on [this page](/the-money-god-league/intro-to-the-league).

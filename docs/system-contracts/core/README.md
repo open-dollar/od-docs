@@ -22,17 +22,17 @@ The **Core Module** stores all the SAFE data, allows external actors to trigger 
 
 ## 3. Risks
 
-### Smart Contract Bugs <a href="coding-errors" id="coding-errors"></a>
+### Smart Contract Bugs
 
 * `SAFEEngine` - A bug in the `SAFEEngine` could be fatal and would lead to collateral or debt being stuck in the system
 * `LiquidationEngine` - A bug in the `LiquidationEngine` could lead debt or collateral being assigned to addresses from where they cannot be recovered. Compared to MCD, the `LiquidationEngine` can call external contracts that are meant to save SAFEs by adding more collateral in the system. These "insurance" contracts, if coded incorrectly, can change system state without actually adding any collateral and thus block the engine from starting new auctions. The `liquidateSAFE(bytes32 collateralType, address cdp)` function also uses mutexes to prevent re-entrancy. If a mutex is not unassigned at the end of the call, it can prevent the `LiquidationEngine` from liquidating a specific SAFE in the future.
 * `AccountingEngine` - A bug in the `AccountingEngine` would prevent the system from reaching equilibrium (by auctioning debt or disposing off surplus).
 
-### Price Feeds <a href="feeds" id="feeds"></a>
+### Price Feeds
 
 Both the `SAFEEngine` and the `LiquidationEngine` rely (directly or indirectly) on the `OracleRelayer` which in turn receives price data from multiple trusted sources. If the price feed oracles fail, it's possible that SAFEs will be unfairly liquidated or that users will generate unbacked debt.
 
-### All-Powerful Governance <a href="governance" id="governance"></a>
+### All-Powerful Governance
 
 * `SAFEEngine` - Malicious governance can steal collateral (`modifyCollateralBalance`) or mint unbacked debt for no apparent reason (`createUnbackedDebt`/addition of worthless collateral types).
 * `LiquidationEngine` - Governance could misconfigure liquidation parameters (e.g an extremely low or high `liquidationPenalty`).

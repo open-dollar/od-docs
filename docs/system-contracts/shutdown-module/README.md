@@ -17,7 +17,7 @@ Settlement can be triggered by the `ESM` (Emergency Shutdown Module) where gover
 
 ## 2. Component Descriptions
 
-* `GlobalSettlement` - this contract shuts down GEB and ensures that both SAFE and system coin users receive the net value of assets they are entitled to. The value of collateral that coin holders can redeem will vary depending on the system surplus or deficit at the time of settlement. It is possible that coin holders will receive less or more than [`OracleRelayer.redemptionPrice`](https://docs.reflexer.finance/system-contracts/oracle-module/oracle-relayer) worth of collateral for one coin.
+* `GlobalSettlement` - this contract shuts down GEB and ensures that both SAFE and system coin users receive the net value of assets they are entitled to. The value of collateral that coin holders can redeem will vary depending on the system surplus or deficit at the time of settlement. It is possible that coin holders will receive less or more than [`OracleRelayer.redemptionPrice`](/system-contracts/oracle-module/oracle-relayer) worth of collateral for one coin.
 * `ESM` - this contract can trigger global settlement if enough tokens are deposited (and subsequently burned) in it.
 
 ## 3. Risks

@@ -20,7 +20,7 @@ You probably want to modify the following variables in `models/debt_model.py`:
 
 Then, use `chmod +x debt_staked_model.py`.
 
-For more information about bidding models, see [this](https://docs.reflexer.finance/keepers/bidding-models).
+For more information about bidding models, see [this](/keepers/bidding-models).
 
 ### 3) Modify the keeper run file
 

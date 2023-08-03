@@ -46,7 +46,7 @@ You probably want to modify the following variables in `models/surplus_model.py`
 
 `chmod +x surplus_model.py`
 
-For more information about bidding models, see [Bidding Models](../BiddingModels.md)
+For more information about bidding models, see [Bidding Models](../bidding-models.md)
 
 ## 3. Modify keeper run file
 

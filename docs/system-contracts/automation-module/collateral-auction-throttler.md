@@ -8,7 +8,7 @@ description: A contract that recomputes the on auction system coin limit
 
 The `CollateralAuctionThrottler` is meant to recompute the `onAuctionSystemCoinLimit` for the `LiquidationEngine` according to the latest global debt supply.\
 \
-The throttler inherits functionality from the [IncreasingTreasuryReimbursement](https://docs.reflexer.finance/system-contracts/sustainability-module/increasing-treasury-reimbursement).
+The throttler inherits functionality from the [IncreasingTreasuryReimbursement](/system-contracts/sustainability-module/increasing-treasury-reimbursement).
 
 ## 2. Contract Variables & Functions <a href="#2-contract-details" id="2-contract-details"></a>
 

@@ -4,13 +4,13 @@ description: Setter for a single collateral's debt ceiling
 
 # Single Spot Debt Ceiling Setter
 
-## 1. Summary <a href="1-introduction-summary" id="1-introduction-summary"></a>
+## 1. Summary
 
 The `SingleSpotDebtCeilingSetter` is meant to recompute the `debtCeiling` for a single collateral type inside the `SAFEEngine`.\
 \
-The setter inherits functionality from the [IncreasingTreasuryReimbursement](https://docs.reflexer.finance/system-contracts/sustainability-module/increasing-treasury-reimbursement).
+The setter inherits functionality from the [IncreasingTreasuryReimbursement](/system-contracts/sustainability-module/increasing-treasury-reimbursement).
 
-## 2. Contract Variables & Functions <a href="2-contract-details" id="2-contract-details"></a>
+## 2. Contract Variables & Functions
 
 **Variables**
 
@@ -50,7 +50,7 @@ The setter inherits functionality from the [IncreasingTreasuryReimbursement](htt
 * `UpdateCeiling` - emitted when a new ceiling is computed and set. Contains:
   * `nextCeiling` - the new ceiling
 
-## 3. Walkthrough <a href="2-contract-details" id="2-contract-details"></a>
+## 3. Walkthrough
 
 `autoUpdateCeiling` and `manualUpdateCeiling` can both be used to recompute the debt ceiling for the collateral type with `collateralName, although manualUpdateCeiling` can only be called by whitelisted `manualSetters`. Both `autoUpdateCeiling` and `manualUpdateCeiling` call `getNextCollateralCeiling` to calculate the new ceiling.
 

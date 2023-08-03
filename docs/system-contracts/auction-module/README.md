@@ -24,7 +24,7 @@ The **Auction Module** is meant to incentivize external actors to drive the syst
 * The `DebtAuctionHouse` is used to get rid of the `AccountingEngine`’s debt by auctioning off protocol tokens for a fixed amount of surplus (system coins). After the auction is settled, it sends the received surplus to the `AccountingEngine` in order to cancel out bad debt and it also mints protocol tokens for the winning bidder.
 * The `SurplusAuctionHouse` (all of its `Burning`, `Recycling` and `PostSettlement` versions) is used to get rid of the `AccountingEngine`’s surplus by auctioning off a fixed amount of internal system coins in exchange for protocol tokens. After auction settlement, the auction house either burns the winning protocol token bid or it transfers the bid to an external address and then sends internal system coins to the winning bidder.
 
-## 3. Risks <a href="5-failure-modes-bounds-on-operating-conditions-and-external-risk-factors" id="5-failure-modes-bounds-on-operating-conditions-and-external-risk-factors"></a>
+## 3. Risks
 
 Governance needs to fine-tune auction parameters in order to make the bidding process as efficient as possible. In the case of `English`, `Debt` and `Surplus` auctions there are three main parameters:
 

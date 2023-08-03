@@ -112,10 +112,6 @@ const config = {
                 label: "Quick Start",
                 to: "/",
               },
-              {
-                label: "Postman",
-                to: "api/postman",
-              },
             ],
           },
           {
