@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Open Dollar Docs",
   tagline: "The no brainer onboarding stack for web3.",
-  url: "https://docs.UseKeyp.com",
+  url: "https://docs.opendollar.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
