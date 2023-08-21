@@ -47,7 +47,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/UseKeyp/usekeyp-docs/tree/main",
+          editUrl: "https://github.com/UseKeyp/od-docs/tree/main",
           sidebarCollapsed: false,
           sidebarCollapsible: false,
         },
@@ -71,22 +71,12 @@ const config = {
         },
         items: [
           {
-            href: "https://usekeyp.com",
+            href: "https://opendollar.com",
             label: "Website",
             position: "left",
           },
           {
-            href: "https://dev.usekeyp.com",
-            label: "Dev Portal",
-            position: "left",
-          },
-          {
-            href: "https://app.usekeyp.com",
-            label: "App",
-            position: "left",
-          },
-          {
-            href: "https://usekeyp.com/blog",
+            href: "https://opendollar.com/blog",
             label: "Blog",
             position: "right",
           },
@@ -94,12 +84,7 @@ const config = {
             href: "https://github.com/usekeyp",
             label: "GitHub",
             position: "right",
-          },
-          {
-            href: "https://schedule.usekeyp.com",
-            label: "Partner with us",
-            position: "right",
-          },
+          }
         ],
       },
       footer: {
@@ -109,7 +94,7 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Quick Start",
+                label: "Overview",
                 to: "/",
               },
             ],
@@ -123,7 +108,7 @@ const config = {
               },
               {
                 label: "Twitter",
-                href: "https://twitter.com/usekeyp",
+                href: "https://twitter.com/opendollar",
               },
             ],
           },
@@ -132,7 +117,7 @@ const config = {
             items: [
               {
                 label: "Blog",
-                href: "https://blog.usekeyp.com",
+                href: "https://blog.opendollar.com",
               },
               {
                 label: "GitHub",
@@ -141,7 +126,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Keyp. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Open Dollar. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

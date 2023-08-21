@@ -33,11 +33,6 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "The Money God League",
-      items: ["the-money-god-league/intro-to-the-league"],
-    },
-    {
-      type: "category",
       label: "Ungovernance",
       items: ["ungovernance/governance-minimization-guide"],
     },
