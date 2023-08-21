@@ -1,5 +1,5 @@
 ---
-description: Steps and details for minimizing governance over a GEB deployment
+description: Details for minimizing governance over Open Dollar
 ---
 
 # Governance Minimization Guide

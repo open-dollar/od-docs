@@ -1,6 +1,6 @@
 # Getting Started
 
-Library to interact with the GEB smart contracts. Manage your safes, mint stablecoins, inspect the system state, and much more.
+Library to interact with the GEB smart contracts that Open Dollar is built on. Manage your safes, mint stablecoins, inspect the system state, and much more.
 
 The library is written in Typescript with full typing support. It allows access to the low level API to directly interact with the contracts.
 
@@ -56,7 +56,7 @@ if(globalDebt.add(systemCoinsToDraw).gt(debtCeiling)) {
     throw new Error('Debt ceiling too low, not possible to draw this amount of system coins.')
 }
 
-// We're good to mint some system coins! 
+// We're good to mint some system coins!
 const proxy = await geb.getProxyAction(wallet.address)
 const tx = proxy.openLockETHAndGenerateDebt(
     ethersUtils.parseEther('1'), // Lock 1 Ether
@@ -121,7 +121,7 @@ await wallet.sendTransaction(tx)
 
 ```typescript
 const proxy = await geb.getProxyAction("0xdefidream...")
-// Unlock 1 ETH of collateral from SAFE #4 and transfer it to its owner 
+// Unlock 1 ETH of collateral from SAFE #4 and transfer it to its owner
 const tx = proxy.freeETH(4, ethersUtils.parseEther('1'))
 await wallet.sendTransaction(tx)
 ```
@@ -165,4 +165,3 @@ const [ globalDebt, collateralInfo ] = await geb.multiCall([
     geb.contracts.safeEngine.collateralTypes(utils.ETH_A, true),
 ])
 ```
-

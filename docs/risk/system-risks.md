@@ -1,10 +1,8 @@
-# GEB Risks
+# Protocol Risks
 
-Using a GEB deployment and/or its associated stable asset doesn't come without risk. Before you decide to deposit your assets in the protocol or acquire the stable asset, you should do your research and understand the risks involved.
+Using Open Dollar and/or its associated stable asset, OD, doesn't come without risk. Before you decide to deposit your assets in the protocol or acquire the stable asset, you should do your research and understand the risks involved.
 
-This section will only give an overview of the main risks associated with GEB. If you'd like to dive deeper, you can check out every [module](/system-contracts/core) in the System Contracts section.
-
-You can also check our original [whitepaper](https://github.com/reflexer-labs/whitepapers).
+This section will give an overview of the main risks associated with the protocol. If you'd like to dive deeper, you can check out every [module](/system-contracts/core) in the System Contracts section.
 
 ### Smart Contract Bugs
 
@@ -42,3 +40,6 @@ Governance may set suboptimal parameters for:
 
 There are many more parameters which may be suboptimal. Check the [System Contracts modules](/system-contracts/core) for more details.
 
+### Additional Resources
+
+The [Reflexor whitepaper](https://github.com/reflexer-labs/whitepapers).

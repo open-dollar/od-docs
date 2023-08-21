@@ -24,11 +24,11 @@ const sidebars = {
     "faq",
     {
       type: "category",
-      label: "RAI",
+      label: "OD",
       items: [
-        "rai/rai-use-cases",
-        "rai/multi-chain-rai",
-        "rai/rai-integrations-and-partners",
+        "od/od-use-cases",
+        "od/deployed-addresses-od",
+        "od/od-integrations-and-partners",
       ],
     },
     {

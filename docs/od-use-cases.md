@@ -1,5 +1,5 @@
 ---
-description: An incomplete list of things you can build with or on top of RAI
+description: An incomplete list of things you can build with or on top of OD
 ---
 
 # RAI Use-Cases
@@ -7,15 +7,15 @@ description: An incomplete list of things you can build with or on top of RAI
 ### **Unique Money Markets**
 
 If Alice pays 5% per year to borrow RAI from a money market and the RAI redemption rate is -10% per year, she is effectively earning 5% year. This is because of the expectation that RAI's market price will go down by 10% in one year. On the other hand, Bob might be lending RAI at 4% per year, but if the redemption rate is -10%, his net rate is -6%.  
-  
+
 There's the other scenario where Bob is lending RAI at 4% per year and the redemption rate is 10% per year. In total, Bob is earning 14% annually on his position \(assuming that RAI will appreciate in value by 10% in the next year\). Meanwhile, Alice, who's borrowing RAI at 5% per year, is paying a total of 15% \(5% as the money market borrow rate plus the expected 10% appreciation in RAI's price over one year\).
 
 ### Stacked Funding Rates
 
 If an exchange or protocol decides to offer RAI perpetuals, they will essentially allow traders to stack funding rates on top of each other.   
-  
+
 The redemption rate is similar but not identical to a funding rate. The net funding rate on a RAI perpetual is a combination of the funding rate on the platform/exchange that lists the perpetual and the redemption rate.  
-  
+
 RAI is the first asset ever created that allows this.
 
 ### Options
@@ -39,4 +39,3 @@ Some arbers can offer specialized RAI trading services to pools of capital. They
 ### **Portfolio Management Strategies**
 
 Anyone can create [Set Protocol](https://www.tokensets.com/) sets or [Balancer](https://balancer.finance/) pools that offer diversified exposure to RAI's redemption rate as well as other yield bearing assets \(e.g cTokens, aTokens\).
-

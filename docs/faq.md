@@ -1,14 +1,14 @@
 ---
-description: Frequently asked questions about RAI and GEB
+description: Frequently asked questions about Open Dollar
 ---
 
 # FAQ
 
-### What is RAI?
+### What is OD?
 
-RAI is an ETH backed stable asset with a [managed float regime](https://en.wikipedia.org/wiki/Managed\_float\_regime). The RAIUSD exchange rate is determined by supply and demand while the protocol that issues RAI tries to stabilize its price by constantly de or revaluing it.
+OD is a fully backed stable asset with a [managed float regime](https://en.wikipedia.org/wiki/Managed\_float\_regime). The OD-USD exchange rate is determined by supply and demand while the protocol that issues OD tries to stabilize its price by constantly de or revaluing it with a $1 value goal.
 
-The supply and demand mechanic plays out between two parties: SAFE users (those who generate RAI with their ETH) and RAI holders.
+The supply and demand mechanic plays out between two parties: SAFE users (those who generate OD with their collateral assets) and OD holders.
 
 Compared to protocols that try to defend a [fixed exchange rate](https://www.investopedia.com/terms/f/fixedexchangerate.asp) between their native stable asset (pegged coin) and fiat (DAI/USD, sUSD/USD etc), RAI's monetary policy offers a couple of advantages:
 
