@@ -6,21 +6,15 @@ This section will give an overview of the main risks associated with the protoco
 
 ### Smart Contract Bugs
 
-The core GEB contracts were audited by [OpenZeppelin](https://github.com/reflexer-labs/geb-audits/tree/master/open-zeppelin/core-contracts). Other helper contracts were audited by [Quantstamp](https://github.com/reflexer-labs/geb-audits/tree/master/quantstamp/helper-contracts).
+The core GEB contracts, which Open Dollar is built with, were audited by [OpenZeppelin](https://github.com/reflexer-labs/geb-audits/tree/master/open-zeppelin/core-contracts). Other helper contracts were audited by [Quantstamp](https://github.com/reflexer-labs/geb-audits/tree/master/quantstamp/helper-contracts).
 
-However, security audits do not completely eliminate smart contract risk. We urge you not to put your life savings or money you can't afford to lose into any GEB deployment or its associated stable asset.
+Additional changes were made by the Open Dollar team and will be audited Q4 2023.
 
-### Admin Keys
+Security audits do not completely eliminate smart contract risk. We urge you not to put your life savings or money you can't afford to lose into any defi protocol.
 
-The very first GEB deployment will need to be fully managed in its initial stages because of the risks tied to the PID controller managing the system as well as the need for more infrastructure to be built so the protocol can be automated.
+### DAO Control
 
-Subsequent GEB deployments may or may not be governed, depending on whether the community will want to add more collateral types as time goes by.
-
-While a GEB is fully managed/governed, almost all of its components can be upgraded and manually set up. Once it's governance minimized, only a few components can be upgraded and fewer parameters can be changed.
-
-You can take a look at the [Governance Minimization Guide](ungovernance/governance-minimization-guide) to see what will need to be done so that a GEB can be governance minimized. Stay alert for more updates from the Reflexer team regarding a timeline for RAI governance minimization.
-
-Until most of the RAI protocol is governance minimized, the protocol is managed by [this multisig](https://etherscan.io/address/0x427A277eA53e25143B3b509C684aA4D0EB8bA01b).
+ODG token holders can vote to update the debt ceiling for the protocol, add new collateral types, and choose the over-collateralization rates for new vaults. It's possible that the DAO could create unsafe or unsustainable conditions for the protocol in the future.
 
 ### PID Controller
 

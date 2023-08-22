@@ -6,7 +6,7 @@ description: Details for minimizing governance over Open Dollar
 
 GEB governance minimization is a multi stage process at the end of which governance will not control or be able to upgrade most core contracts and many parameters will be set autonomously by other external contracts.
 
-This guide will go over the requirements needed to governance minimize a GEB, infrastructure needed to automate parameter setting as well as the governance minimization stages that RAI (and possibly other stablecoins) will go through.
+This guide will go over the requirements needed to governance minimize a GEB, infrastructure needed to automate parameter setting as well as the governance minimization stages that OD (and possibly other stablecoins) will go through.
 
 ### &#x20;1. Requirements for Governance Minimization
 
