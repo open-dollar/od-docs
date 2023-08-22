@@ -80,6 +80,14 @@ const sidebars = {
         },
         {
           type: "category",
+          label: "Proxy Infrastructure",
+          items: [
+            "proxy-infrastructure/ds-proxy",
+            "proxy-infrastructure/proxy-registry",
+          ],
+        },
+        {
+          type: "category",
           label: "Auction Module",
           collapsible: true,
           collapsed: true,
@@ -225,14 +233,6 @@ const sidebars = {
             "system-contracts/shutdown-module/esm",
           ],
         },
-      ],
-    },
-    {
-      type: "category",
-      label: "Proxy Infrastructure",
-      items: [
-        "proxy-infrastructure/ds-proxy",
-        "proxy-infrastructure/proxy-registry",
       ],
     },
     {
