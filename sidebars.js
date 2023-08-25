@@ -236,8 +236,8 @@ const sidebars = {
       type: "category",
       label: "Proxy Infrastructure",
       items: [
-        "proxy-infrastructure/ds-proxy",
-        "proxy-infrastructure/proxy-registry",
+        "proxy-infrastructure/od-proxy",
+        "proxy-infrastructure/vault721",
       ],
     },
     {

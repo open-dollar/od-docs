@@ -35,7 +35,7 @@ const tx = geb.contracts.globalSettlement.freezeCollateralType(utils.ETH_A)
 await wallet.sendTransaction(tx)
 ```
 
-Since a SAFE is supposed to be over-collateralized, its owner can already withdraw excess collateral. The following script assumes that the SAFE is owned by a [proxy](https://github.com/reflexer-labs/ds-proxy/blob/master/src/proxy.sol) contract. It also uses the Global Settlement Proxy Actions to pack and atomically execute multiple transactions at once.
+Since a SAFE is supposed to be over-collateralized, its owner can already withdraw excess collateral. The following script assumes that the SAFE is owned by a [proxy](https://github.com/UseKeyp/od-contracts/blob/main/src/contracts/proxies/ODProxy.sol) contract. It also uses the Global Settlement Proxy Actions to pack and atomically execute multiple transactions at once.
 
 ```typescript
 const proxy = await geb.getProxyAction(wallet.address)
