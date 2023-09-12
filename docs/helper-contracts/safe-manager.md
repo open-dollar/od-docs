@@ -4,17 +4,18 @@ description: A central hub for all SAFEs
 
 # SAFE Manager
 
-**Smart contract code:** [**GebSafeManager**](https://github.com/reflexer-labs/geb-safe-manager/blob/master/src/GebSafeManager.sol)****
+**Smart contract code:** [**ODSafeManager**](https://github.com/UseKeyp/od-contracts/blob/main/src/contracts/proxies/ODSafeManager.sol)****
 
 ## 1. Summary <a href="#1-introduction-summary" id="1-introduction-summary"></a>
 
-The SAFE Manager is an abstraction around the `SAFEEngine` that allows anyone to easily manage their GEB positions.
+`ODSafeManager` is an abstraction around the `SAFEEngine` that allows anyone to easily manage their GEB positions. Additionally, it is integrated with `Vault721`, which equates safe ownership to NFT-Vault ownership, making the transferrence of safes as easy as transferring an NFT.
 
 ## 2. Contract Variables & Functions <a href="#2-contract-details" id="2-contract-details"></a>
 
 **Variables**
 
-* `safeEngine` - the address of the `SAFEEngine`
+* `safeEngine` - address of the `SAFEEngine`
+* `vault721` - contract interface of `Vault721`
 * `safei` - auto incrementing nonce
 * `cdps[safeId: uint256]` - mapping between SAFE ids and SAFE
 * `cdpList[safeId: uint256]` - double linked list indicating the previous and next SAFE ids of a provided SAFE&#x20;
@@ -36,8 +37,8 @@ The SAFE Manager is an abstraction around the `SAFEEngine` that allows anyone to
 
 * `allowSAFE(safe: uint256`, `usr: address`, `ok: uint256)` - allow an address to interact with a SAFE with a specific id
 * `allowHandler(usr: address`, `ok: uint256)` - allow an address to interact with a SAFE handler
-* `openSAFE(collateralType: bytes32`, `usr: address)` - create a new SAFE id and handler
-* `transferSAFEOwnership(safe: uint256`, `dst: address)` - transfer a SAFE to another address
+* `openSAFE(collateralType: bytes32`, `usr: address)` - create a new SAFE id and handler, mint NFT-Vault where tokeId is safeId
+* `transferSAFEOwnership(safe: uint256`, `dst: address)` - transfer a SAFE and NFT-Vault to another user's proxy and account, respectively
 * `modifySAFECollateralization(safe: uint256`, `deltaCollateral: int256`, `deltaDebt:` `int256)` - add/remove collateral to and from a SAFE or generate/repay debt
 * `transferCollateral(safe: uint256`, `dst: address`, `wad: uint256)` - transfer collateral from a SAFE to another address
 * `transferInternalCoins(safe: uint256`, `dst: address`, `rad: uint256)` - transfer `SAFEEngine.coinBalance` system coins between addresses
@@ -100,4 +101,5 @@ The SAFE Manager is an abstraction around the `SAFEEngine` that allows anyone to
 
 ## 3. Risks
 
-When `openSAFE` is executed, a new `safeHandler` is created and a `safeId` is assigned to it for a specific `owner`. If the user calls `CollateralJoin.join` to add collateral to the `safeHandler` immediately after the SAFE creation transaction is mined, there is a chance that a chain reorg occurs. This would result in the user losing the ownership of the `safeHandler` and therefore lose their collateral. Users can avoid this issue when using [proxy actions](https://github.com/reflexer-labs/geb-proxy-actions/blob/master/src/GebProxyActions.sol).
+When `openSAFE` is executed, a new `safeHandler` is created and a `safeId` is assigned to it for a specific `owner`. If the user calls `CollateralJoin.join` to add collateral to the `safeHandler` immediately after the SAFE creation transaction is mined, there is a chance that a chain reorg occurs. This would result in the user losing the ownership of the `safeHandler` and therefore lose their collateral. Users can avoid this issue when using [proxy actions](https://github.com/UseKeyp/od-contracts/blob/main/src/contracts/proxies/actions/BasicActions.sol).
+
