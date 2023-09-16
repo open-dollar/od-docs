@@ -23,6 +23,8 @@ const sidebars = {
         label: "Overview",
         items: [
           "README",
+          "faq",
+          "community-resources"
         ],
     },
     {
