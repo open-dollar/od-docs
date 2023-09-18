@@ -1,4 +1,3 @@
-
 # Welcome to Open Dollar Docs
 
 https://docs.opendollar.com/
@@ -18,6 +17,20 @@ $ yarn start
 ```
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+
+### Generate PDF
+
+To generate a PDF, which can be easily indexed, or used for AI training,
+
+```
+npx docusaurus-prince-pdf -u https://docs.opendollar.com
+
+
+# Generate PDF from local Docusaurus instance
+yarn build
+yarn serve
+npx docusaurus-prince-pdf -u http://localhost:3000/
+```
 
 ### Build
 
@@ -53,16 +66,13 @@ the docs.
 </br></br>
 Here's how to get started with Codespaces:
 
-1) In the documentation repository, click on the `Code` button and then the name of the codespace for it to start automatically
+1. In the documentation repository, click on the `Code` button and then the name of the codespace for it to start automatically
    <img width="420" alt="codespaces tab in repo" src="https://user-images.githubusercontent.com/47253537/209730854-47862a8e-d701-4e4c-b093-39e9ca50515d.png">
-2) Notice that all the directories are on the left side of the screen
-3) If you want to add a post to the blog, right-click on the blog directory and create a new file that ends in `.md`
-4) Use the format of the other blog posts as guidance to add your own
-5) To immediately see the changes you made, navigate to the blog section of the site in the codespace and click on the post you just
+2. Notice that all the directories are on the left side of the screen
+3. If you want to add a post to the blog, right-click on the blog directory and create a new file that ends in `.md`
+4. Use the format of the other blog posts as guidance to add your own
+5. To immediately see the changes you made, navigate to the blog section of the site in the codespace and click on the post you just
    added
-6) To publish the changes, click on the `Source Control` tab on the left side of the screen, write a description of your
+6. To publish the changes, click on the `Source Control` tab on the left side of the screen, write a description of your
    change, and press commit and push
    <img width="344" alt="committing to repo with codespaces" src="https://user-images.githubusercontent.com/47253537/209730956-3554d066-e64a-4fa9-856d-fb42504a830f.png">
-
-
-
