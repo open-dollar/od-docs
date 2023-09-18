@@ -1,14 +1,18 @@
-# GEB Risks
+# Protocol Risks
 
-Using a GEB deployment and/or its associated stable asset doesn't come without risk. Before you decide to deposit your assets in the protocol or acquire the stable asset, you should do your research and understand the risks involved.
+Using a Open Dollar and its associated assets doesn't come without risk. Before you decide to deposit your assets in the protocol or acquire the $OD stablecoin asset, you should do your research and understand the risks involved.
 
 This section will only give an overview of the main risks associated with GEB. If you'd like to dive deeper, you can check out every [module](/system-contracts/core) in the System Contracts section.
 
-You can also check our original [whitepaper](https://github.com/reflexer-labs/whitepapers).
+You can also check the original [whitepaper](https://github.com/reflexer-labs/whitepapers) for Reflexer, who created the GEB framework which Open Dollar is built on top of.
 
 ### Smart Contract Bugs
 
 The core GEB contracts were audited by [OpenZeppelin](https://github.com/reflexer-labs/geb-audits/tree/master/open-zeppelin/core-contracts). Other helper contracts were audited by [Quantstamp](https://github.com/reflexer-labs/geb-audits/tree/master/quantstamp/helper-contracts).
+
+Additional security audits were done on HAI Protocol changes that are incorporated in Open Dollar's codebase.
+
+Another further audit was done on Open Dollar's NFT Vaults, ODProxy, and all other improvements and changes made from original GEB code.
 
 However, security audits do not completely eliminate smart contract risk. We urge you not to put your life savings or money you can't afford to lose into any GEB deployment or its associated stable asset.
 
@@ -41,4 +45,3 @@ Governance may set suboptimal parameters for:
 * Global Settlement which may delay SAFE processing and collateral redemption indefinitely
 
 There are many more parameters which may be suboptimal. Check the [System Contracts modules](/system-contracts/core) for more details.
-
