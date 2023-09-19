@@ -1,6 +1,6 @@
 {
-  "name": "feather-docs",
-  "version": "0.0.0",
+  "name": "opendollar-docs",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
