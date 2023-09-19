@@ -11,7 +11,7 @@ const config = {
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.png",
+  favicon: "assets/favicon.png",
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -56,7 +56,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: "img/docs-og-image-1200x630.png",
+      image: "assets/docs-og-image-1200x630.png",
       navbar: {
         logo: {
           alt: "Open Dollar Logo",
@@ -110,7 +110,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Keyp. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Open Dollar`,
       },
       prism: {
         theme: lightCodeTheme,
