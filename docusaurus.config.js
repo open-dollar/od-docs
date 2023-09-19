@@ -56,7 +56,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: "assets/docs-og-image-1200x630.png",
+      image: "assets/docs-og-image.png",
       navbar: {
         logo: {
           alt: "Open Dollar Logo",
