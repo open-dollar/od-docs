@@ -6,42 +6,29 @@ description: Frequently asked questions about Open Dollar
 
 ### What is Open Dollar?
 
-OD is an ETH backed stable asset with a [managed float regime](https://en.wikipedia.org/wiki/Managed\_float\_regime). The ODUSD exchange rate is determined by supply and demand while the protocol that issues OD tries to stabilize its price by constantly de or revaluing it.
+Open Dollar is the protocol that issues OD, a floating $1.00 pegged stablecoin backed by Liquid Staking Tokens with NFT controlled vaults that is built for Arbitrum.
+
+### How does OD stay stable?
+
+OD is an overcollateralized stable asset with a [managed float regime](https://en.wikipedia.org/wiki/Managed\_float\_regime). The OD/USD exchange rate is determined by supply and demand while the protocol that issues OD tries to stabilize its price by constantly de- or revaluing it.
 
 The supply and demand mechanic plays out between two parties: SAFE users (those who generate OD with their ETH) and OD holders.
 
-Compared to protocols that try to defend a [fixed exchange rate](https://www.investopedia.com/terms/f/fixedexchangerate.asp) between their native stable asset (pegged coin) and fiat (DAI/USD, sUSD/USD etc), OD's monetary policy offers a couple of advantages:
+Compared to protocols that try to defend a [fixed exchange rate](https://www.investopedia.com/terms/f/fixedexchangerate.asp) between their native stable asset (pegged coin), OD's monetary policy offers a couple of advantages:
 
 * Flexibility: the protocol can devalue or revalue OD in response to changes in OD's market price. This process transfers value between SAFE users and OD holders and incentivizes both parties to bring the market price back to a target chosen by the protocol. The mechanism is similar to countries [devaluing](https://www.investopedia.com/terms/d/devaluation.asp) or [revaluing](https://www.investopedia.com/terms/r/revaluation.asp) their currencies in order to combat a trade imbalance. The "trade imbalance" in OD's case happens between OD and SAFE users
 * Discretion: the protocol itself is free to change the target exchange rate to its own advantage. It can attract or repel capital whenever it wants.
 
 At the same time, a managed float can cause uncertainty due to the fact that the price varies day by day.
 
-### What
+### What types of collateral are used in Open Dollar?
 
-### How does OD work/behave?
+### How can more collateral types be added?
 
-The long term price trajectory of OD is determined by the demand for ETH leverage. OD tends to appreciate if SAFE users deleverage and/or OD users long and it depreciates in case SAFE users leverage and/or OD users short.
+### How do the NFVs (NFT Vaults) work?
 
-To better understand how OD behaves, we need to analyze its monetary policy which is made out of four elements:
+### What happens to an NFV when the vault is liquidated?
 
-* Redemption price: this is the price that the protocol wants OD to have on the secondary market (e.g on Uniswap). The redemption price is used by SAFE users to mint OD against ETH and it is also used during Global Settlement in order to allow both SAFE and OD users to redeem collateral from the system. The redemption price almost always floats and it does not target any specific peg.
-* Market price: this is the price that OD is traded at on the secondary market (on exchanges).
-* Redemption rate: this is the rate at which OD is being devalued or revalued. The process of devaluing/revaluing OD consists in the redemption rate changing the redemption price.
-* Global Settlement: settlement consists in shutting down the protocol and allowing both SAFE and OD users to redeem collateral from the system. Settlement uses the redemption (and not the market) price to calculate how much collateral can be redeemed by each user.
-
-Let's walk through an example of how OD is revalued in case of ETH capital inflow (aka people are bullish on ETH):
-
-* At time T1: ETH price is $500, OD's market and redemption prices are both $5
-* At time T2: ETH price surges to $1000. OD SAFE users suddenly have more borrowing power and generate more OD against their collateral. SAFE users sell OD on the secondary market (Uniswap), causing OD's market price to crash to $4.
-* At time T3: ETH remains at $1000 and OD's market price is still $4. The system wants the market price to get close to the redemption price. In order to eliminate the imbalance between the market/redemption prices, the system starts to revalue OD. Revaluing consists in setting a positive redemption rate which makes the redemption price grow every second.
-* At time T4: ETH remains at $1000. OD's redemption price is now $5.1. SAFE users are starting to realize that they can now borrow less OD per one ETH, they can redeem less ETH during Settlement (because OD is now more expensive) and that it will be more expensive to close their SAFE once the market price follows the redemption price. At the same time, OD holders are starting to realize that they can redeem more and more ETH during settlement
-* At time T5: ETH remains at $1000. OD's redemption price is now $5.2. OD's market price surged to $5.2 as a result of SAFE users buying OD in order to close their positions as soon as possible instead of later on when OD is more expensive
-
-When OD is devalued (in case of ETH capital outflow), the opposite thing happens:
-
-* SAFE users realize that they can mint more OD against their ETH and that they will be able to buy cheap OD once the market price tanks
-* Token holders realize that they can redeem less ETH during Settlement and they need to short OD
 
 ### Is OD a rebase token?
 
@@ -51,13 +38,9 @@ No. The protocol doesn't change the amount of tokens you have. Rather, it change
 
 This is exactly what the system wants you to ask yourself when it charges a negative redemption rate. The system is trying to incentivize OD holders to sell and bring the market price down and close to the redemption price.
 
-### Isn't OD growth bounded by ETH growth?
+### Isn't OD growth bounded by ETH and LST growth?
 
-Short answer: yes. Nevertheless, we decided to build a pure ETH system for several reasons:
-
-* Social scalability: we believe the most successful DeFi protocols will be the ones that act as a trust minimized operating system. You can build on top of them without the fear that the rules will drastically change and break your application. For this reason we also want to progressively remove control over OD.
-* Simplicity: it is easier to explain OD's behaviour in contrast to ETH as opposed to a basket of assets.
-* Proof of concept: a system backed by a single collateral type is easier to manage than a multi-collateral one. It allows us to test our hypotheses without layering extra risk and overhead
+Short answer: yes. Open Dollar can meet any demand and mint any amount of OD, so long as their is more value of collateral that participants are willing to borrow against.
 
 ### Can you summarize the behavior of the OD redemption rate?
 
@@ -91,3 +74,35 @@ The following is a non-exhaustive list of use-cases we envision for OD:
 ### Will OD always return to the same initial value/peg?
 
 OD is not designed to be pegged to anything, so it may never return to the same value it started at. Similar to many fiat currencies (EUR, GBP etc), OD will float around, being influenced by market forces (supply & demand) and by the incentives that the PID controller offers to SAFE users and OD holders.
+
+### How does the OD price work/behave?
+
+The long term price trajectory of OD is determined by the demand for leverage on the types of tokens Open Dollar allows as collateral. OD tends to appreciate if SAFE users deleverage and/or OD users long and it depreciates in case SAFE users leverage and/or OD users short.
+
+To better understand how OD behaves, we need to analyze its monetary policy which is made out of four elements:
+
+* Redemption price: this is the price that the protocol wants OD to have on the secondary market (e.g on Uniswap). The redemption price is used by SAFE users to mint OD against ETH and it is also used during Global Settlement in order to allow both SAFE and OD users to redeem collateral from the system. The redemption price almost always floats and it does not target any specific peg.
+
+* Market price: this is the price that OD is traded at on the secondary market (on exchanges).
+
+* Redemption rate: this is the rate at which OD is being devalued or revalued. The process of devaluing/revaluing OD consists in the redemption rate changing the redemption price.
+
+* Global Settlement: settlement consists in shutting down the protocol and allowing both SAFE and OD users to redeem collateral from the system. Settlement uses the redemption (and not the market) price to calculate how much collateral can be redeemed by each user.
+
+Let's walk through an example of how OD is revalued in case of capital inflow of some Liquid Staked Token that we can call lstETH (meaning people are bullish on lstETH ):
+
+* At time T1: lstETH price is $500, OD's market and redemption prices are both $1.
+
+* At time T2: lstETH price surges to $1000. Open Dollar vault users suddenly have more borrowing power and generate more OD against their collateral. Those users sell OD on the secondary market (like an exchange), causing OD's market price to drop to $0.95. Users might be selling to create leveraged long positions, or to access capital without having to sell their lstETH.
+
+* At time T3: lstETH remains at $1000 and OD's market price is still $0.95. The system wants the market price to get close to the redemption price. In order to eliminate the imbalance between the market/redemption prices, the system starts to revalue OD. Revaluing consists in setting a positive redemption rate which makes the redemption price grow every second.
+
+* At time T4: lstETH remains at $1000. OD's redemption price is now $1.05. SAFE users are starting to realize that they can now borrow less OD per one lstETH, they can redeem less lstETH during Settlement (because OD is now more expensive) and that it will be more expensive to close their SAFE once the market price follows the redemption price. At the same time, OD holders are starting to realize that they can redeem more and more ETH during settlement.
+
+* At time T5: lstETH remains at $1000. OD's redemption price is now $1.10. OD's market price surged to $1.01 as a result of SAFE users buying OD in order to close their positions as soon as possible instead of later on when OD is more expensive.
+
+When OD is devalued (in case of lstETH capital outflow), the opposite thing happens:
+
+* Vault users realize that they can mint more OD against their ETH and that they will be able to buy cheap OD once the market price goes down.
+
+* Token holders realize that they can redeem less lstETH during Settlement and they need to short OD.
