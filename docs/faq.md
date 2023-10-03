@@ -12,31 +12,50 @@ Open Dollar is the protocol that issues OD, a floating $1.00 pegged stablecoin b
 
 OD is an overcollateralized stable asset with a [managed float regime](https://en.wikipedia.org/wiki/Managed\_float\_regime). The OD/USD exchange rate is determined by supply and demand while the protocol that issues OD tries to stabilize its price by constantly de- or revaluing it.
 
-The supply and demand mechanic plays out between two parties: SAFE users (those who generate OD with their ETH) and OD holders.
+The supply and demand mechanic plays out between two parties: vault users (those who generate OD with their collateral tokens) and OD holders.
 
 Compared to protocols that try to defend a [fixed exchange rate](https://www.investopedia.com/terms/f/fixedexchangerate.asp) between their native stable asset (pegged coin), OD's monetary policy offers a couple of advantages:
 
-* Flexibility: the protocol can devalue or revalue OD in response to changes in OD's market price. This process transfers value between SAFE users and OD holders and incentivizes both parties to bring the market price back to a target chosen by the protocol. The mechanism is similar to countries [devaluing](https://www.investopedia.com/terms/d/devaluation.asp) or [revaluing](https://www.investopedia.com/terms/r/revaluation.asp) their currencies in order to combat a trade imbalance. The "trade imbalance" in OD's case happens between OD and SAFE users
+* Flexibility: the protocol can devalue or revalue OD in response to changes in OD's market price. This process transfers value between vault users and OD holders and incentivizes both parties to bring the market price back to a target chosen by the protocol. The mechanism is similar to countries [devaluing](https://www.investopedia.com/terms/d/devaluation.asp) or [revaluing](https://www.investopedia.com/terms/r/revaluation.asp) their currencies in order to combat a trade imbalance. The "trade imbalance" in OD's case happens between OD and vault users
+
 * Discretion: the protocol itself is free to change the target exchange rate to its own advantage. It can attract or repel capital whenever it wants.
 
 At the same time, a managed float can cause uncertainty due to the fact that the price varies day by day.
 
 ### What types of collateral are used in Open Dollar?
+Initially, popular Liquid Staking Tokens and some Arbitrum native assets can be used to borrow OD against:
+- [wstETH](https://www.coingecko.com/en/coins/wrapped-steth)
+- [rETH](https://www.coingecko.com/en/coins/rocket-pool-eth)
+- [cbETH](https://www.coingecko.com/en/coins/coinbase-wrapped-staked-eth)
+- [ARB](https://www.coingecko.com/en/coins/arbitrum)
+- [MAGIC](https://www.coingecko.com/en/coins/magic)
+
+More assets will be added as the community sees fit. We aim to be extremely flexible and fast to adopt new LSTs and high quality collateral.
 
 ### How can more collateral types be added?
+A DAO controlled by Open Dollar Governance (ODG) token holders can add more types of collateral at any time through voting.
 
-### How do the NFVs (NFT Vaults) work?
+### What does governance minimization mean?
+Open Dollar is guided by the idea that to ensure the longevity and long term security of the protocol, as few parameters as possible should be governed by people and token holders. Instead, the system reacting to market rates should control nearly everything. The ODG holders can create new vault types with different kinds of collateral, change the system debt limit, decide where a portion of the fees but very few other things.
 
-### What happens to an NFV when the vault is liquidated?
+### How do NFVs (NFT Vaults) work?
+Where other lending protocols in DeFi tie debt to a user's account, NFVs allow us to tie the debt and collateral to a particular Non-Fungible Token that is easy to transfer, view in a wallet, and buy or sell. There is 1 NFT for each vault and their IDs correspond.
 
+### What happens if I send my NFV to someone else?
+The owner of a particular NFV owns both the debt and the collateral tokens for that particular vault. Be extremely cautious when transfering, buying, and selling NFVs, as the NFV controls both the debt and the tokens inside it.
 
-### Is OD a rebase token?
+### What is the advantage of NFVs?
+You probably would never take out a 30 year loan to buy a house if you could not sell your house at some point during the life of the loan. But that is how lending mostly works in DeFi today. By making the ownership of vaults, debt, and collateral more easily tradable users can sell their positions easily without having to close them out first. Use cases could include market participants redeeming OD by buying NFVs to access high quality collateral, liquidation protection through selling NFVs with limit orders, and use of any existing NFT infrastructure.
 
-No. The protocol doesn't change the amount of tokens you have. Rather, it changes the target price that the protocol wants OD to have on exchanges.
+### What happens to an NFV when a vault is liquidated?
+Liquidated vaults still exist and so does the corresponding NFV. They just have 0 debt and 0 value of collateral in them after liquidation has completed.
 
-### Why would I hold OD when the system devalues the token?
+### Is OD a rebase token that changes my balance over time?
 
-This is exactly what the system wants you to ask yourself when it charges a negative redemption rate. The system is trying to incentivize OD holders to sell and bring the market price down and close to the redemption price.
+No. The protocol doesn't change the amount of tokens you have. Rather, it changes the target price that the protocol wants OD to have on exchanges. This makes it easier to use OD throughout DeFi.
+
+### How do fees work?
+Open Dollar earns fees by charging a transparent and low interest rate on the amount of OD borrowed from the protocol. This is the stability fee. A portion of OD revenue is sent directly to the ODG governed DAO treasury, and a portion is auctioned off to buy and burn ODG tokens.
 
 ### Isn't OD growth bounded by ETH and LST growth?
 
@@ -52,28 +71,25 @@ Short answer: yes. Open Dollar can meet any demand and mint any amount of OD, so
 
 A system like OD has two types of rates:
 
-* The borrow rate which is an interest rate charged on open SAFEs. The borrow rate will usually be fixed or bounded
-* The redemption rate: this is the rate at which OD (or OD-like assets) are devalued or revalued
+* The borrow rate which is an interest rate charged on open vaults. The borrow is fixed for different types of collateral and also has a max cap.
+
+* The redemption rate: this is the rate at which OD tokens are devalued or revalued in the system.
 
 ### Why would I want to mint OD?
 
-* Getting paid for opening and managing SAFEs: when OD is devalued, SAFE users are "paid" because the value of their debt shrinks compared to the value of their collateral
-* Capped borrow rate: in the long run, OD will have a capped (and small) borrow rate which makes the cost of maintaining a SAFE more predictable. Governance can, in theory, set the borrow rate to 0% although this prevents the system from accruing surplus that's [used to incentivize keepers](/system-contracts/sustainability-module/stability-fee-treasury) to update core components such as oracles and the PID. A 0% borrow rate would also prevent the protocol from building a surplus buffer meant to settle bad debt that couldn't be covered by collateral auctions
-* Insurance for SAFEs: in the long run we can allow SAFE users to attach a wide variety of insurance contracts meant to protect their positions against liquidation
+* Getting paid for opening and managing vaults: when OD is devalued, vault users are "paid" because the value of their debt shrinks compared to the value of their collateral
+
+* Capped borrow rate: in the long run, OD will have a capped (and small) borrow rate which makes the cost of maintaining a vault more predictable. Governance can, in theory, set the borrow rate to 0% although this prevents the system from accruing surplus that's used to incentivize to update core components such as oracles and the PID.
+
+* Insurance for vaults: in the long run we can allow SAFE users to attach a wide variety of insurance contracts meant to protect their positions against liquidation
+
 * No exposure to assets with counterparty risk: OD will only be backed by ETH. Borrowers are not exposed to riskier crypto assets or real world collateral
+
 * Superior collateral factors: as we improve the efficiency of our [collateral auctions](/system-contracts/auction-module/fixed-discount-collateral-auction-house) and add insurance contracts for SAFEs, we can lower the collateral requirements for borrowing OD
-
-### What are OD's use-cases?
-
-The following is a non-exhaustive list of use-cases we envision for OD:
-
-* Portfolio diversification: OD offers dampened exposure to ETH's price moves
-* DeFi collateral: OD can be used as an ETH supplement or alternative collateral in DeFi protocols due to the fact that it dampens ether's price moves and gives users more time to react to market shifts
-* DAO reserve asset: DAOs can keep OD on their balance sheet and get exposure to ETH without being affected by its full market swings
 
 ### Will OD always return to the same initial value/peg?
 
-OD is not designed to be pegged to anything, so it may never return to the same value it started at. Similar to many fiat currencies (EUR, GBP etc), OD will float around, being influenced by market forces (supply & demand) and by the incentives that the PID controller offers to SAFE users and OD holders.
+OD is not designed to be pegged to anything, so it may never return to the exact same value it started at. Similar to many fiat currencies (EUR, USD, etc), OD's price will float, being influenced by market forces (supply & demand) and by the incentives that the PID controller offers to vault users and OD holders. Those incentives are designed to target a $1.00 market price but the actual price will fluctuate up or down.
 
 ### How does the OD price work/behave?
 
@@ -106,3 +122,7 @@ When OD is devalued (in case of lstETH capital outflow), the opposite thing happ
 * Vault users realize that they can mint more OD against their ETH and that they will be able to buy cheap OD once the market price goes down.
 
 * Token holders realize that they can redeem less lstETH during Settlement and they need to short OD.
+
+### Why would I hold OD when the system devalues the token?
+
+This is exactly what the system wants you to ask yourself when it charges a negative redemption rate. The system is trying to incentivize OD holders to sell and bring the market price down and close to the redemption price.
