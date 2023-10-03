@@ -42,7 +42,7 @@ Open Dollar is guided by the idea that to ensure the longevity and long term sec
 Where other lending protocols in DeFi tie debt to a user's account, NFVs allow us to tie the debt and collateral to a particular Non-Fungible Token that is easy to transfer, view in a wallet, and buy or sell. There is 1 NFT for each vault and their IDs correspond.
 
 ### What happens if I send my NFV to someone else?
-The owner of a particular NFV owns both the debt and the collateral tokens for that particular vault. Be extremely cautious when transfering, buying, and selling NFVs, as the NFV controls both the debt and the tokens inside it.
+The owner of a particular NFV owns both the debt and the collateral tokens for that particular vault. Be extremely cautious when transfering, buying, and selling NFVs, as the new owner is responsible for both the debt and the tokens inside.
 
 ### What is the advantage of NFVs?
 You probably would never take out a 30 year loan to buy a house if you could not sell your house at some point during the life of the loan. But that is how lending mostly works in DeFi today. By making the ownership of vaults, debt, and collateral more easily tradable users can sell their positions easily without having to close them out first. Use cases could include market participants redeeming OD by buying NFVs to access high quality collateral, liquidation protection through selling NFVs with limit orders, and use of any existing NFT infrastructure.
