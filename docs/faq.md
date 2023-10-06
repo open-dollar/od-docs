@@ -48,7 +48,22 @@ The owner of a particular NFV owns both the debt and the collateral tokens for t
 You probably would never take out a 30 year loan to buy a house if you could not sell your house at some point during the life of the loan. But that is how lending mostly works in DeFi today. By making the ownership of vaults, debt, and collateral more easily tradable users can sell their positions easily without having to close them out first. Use cases could include market participants redeeming OD by buying NFVs to access high quality collateral, liquidation protection through selling NFVs with limit orders, and use of any existing NFT infrastructure.
 
 ### What happens to an NFV when a vault is liquidated?
-Liquidated vaults still exist and so does the corresponding NFV. They just have 0 debt and 0 value of collateral in them after liquidation has completed.
+Vaults are up for liquidation if the value of their collateral ever falls below the required collateralization for the amount of debt minted against it. Liquidated vaults still exist and so does the corresponding NFV. They just have 0 debt and 0 value of collateral in them after liquidation has completed.
+
+### Can I add more collateral to my vault?
+Yes, you can add more collateral to your vault at any time. Depending on your collateralization ratio you can then also borrow more.
+
+### How should I avoid liquidation?
+Each type of vault has its own collateralization ratio that is required. The “collateralization ratio” is the ratio of the value of the collateral deposited in your vault to the value of the OD borrowed against it. When borrowing OD be sure to leave a margin that accounts for market volatility and top up your vault with more collateral as needed.
+
+### Where can I use my OD tokens?
+OD is a standard ERC-20 token which can be used accross any bridge, DeFi protocols, exchanges, etc. that support it. Have an idea for an OD integration? Let us know in [discord](https://discord.opendollar.com/)!
+
+### What networks is Open Dollar deployed on?
+Open Dollar is currently only deployed on Arbitrum. There's also a testnet version deployed on Arbtrium-Goerli.
+
+### Where can I trade my NFV?
+You can trade your vaults on any NFT marketplace, like [OpenSea](https://opensea.io/) for example. Keep in mind that when you sell your Non-Fungible Vault you’re also selling all collateral and debt associated with it. Any app or tool which supports the ERC-721 token standard will also support Open Dollar NFVs.
 
 ### Is OD a rebase token that changes my balance over time?
 
@@ -56,6 +71,9 @@ No. The protocol doesn't change the amount of tokens you have. Rather, it change
 
 ### How do fees work?
 Open Dollar earns fees by charging a transparent and low interest rate on the amount of OD borrowed from the protocol. This is the stability fee. A portion of OD revenue is sent directly to the ODG governed DAO treasury, and a portion is auctioned off to buy and burn ODG tokens.
+
+### What is the "Vault Facilitator"? 
+When you connect to Open Dollar’s app for the first time you are asked to create a Vault Facilitator. This Vault Facilitator is a DSProxy allows you to batch transactions, such as depositing collateral and borrowing OD, into one transaction. We use the same DSProxy as Maker, Balancer, and many other protocols, but renamed it to be easier to understand.
 
 ### Isn't OD growth bounded by ETH and LST growth?
 
@@ -93,7 +111,7 @@ OD is not designed to be pegged to anything, so it may never return to the exact
 
 ### How does the OD price work/behave?
 
-The long term price trajectory of OD is determined by the demand for leverage on the types of tokens Open Dollar allows as collateral. OD tends to appreciate if SAFE users deleverage and/or OD users long and it depreciates in case SAFE users leverage and/or OD users short.
+The long term price trajectory of OD is determined by the demand for leverage on the types of tokens Open Dollar allows as collateral. OD tends to appreciate if vault users deleverage and/or OD users long and it depreciates in case vault users leverage and/or OD users short.
 
 To better understand how OD behaves, we need to analyze its monetary policy which is made out of four elements:
 
@@ -111,7 +129,7 @@ Let's walk through an example of how OD is revalued in case of capital inflow of
 
 * At time T2: lstETH price surges to $1000. Open Dollar vault users suddenly have more borrowing power and generate more OD against their collateral. Those users sell OD on the secondary market (like an exchange), causing OD's market price to drop to $0.95. Users might be selling to create leveraged long positions, or to access capital without having to sell their lstETH.
 
-* At time T3: lstETH remains at $1000 and OD's market price is still $0.95. The system wants the market price to get close to the redemption price. In order to eliminate the imbalance between the market/redemption prices, the system starts to revalue OD. Revaluing consists in setting a positive redemption rate which makes the redemption price grow every second.
+* At time T3: lstETH remains at $1000 and OD's market price is still $0.95. The protocol wants the market price to get close to the redemption price. In order to eliminate the imbalance between the market/redemption prices, the system starts to revalue OD. Revaluing consists in setting a positive redemption rate which makes the redemption price grow every second.
 
 * At time T4: lstETH remains at $1000. OD's redemption price is now $1.05. SAFE users are starting to realize that they can now borrow less OD per one lstETH, they can redeem less lstETH during Settlement (because OD is now more expensive) and that it will be more expensive to close their SAFE once the market price follows the redemption price. At the same time, OD holders are starting to realize that they can redeem more and more ETH during settlement.
 
