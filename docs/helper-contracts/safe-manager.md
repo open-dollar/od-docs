@@ -8,7 +8,7 @@ description: A central hub for all SAFEs
 
 ## 1. Summary <a href="#1-introduction-summary" id="1-introduction-summary"></a>
 
-`ODSafeManager` is an abstraction around the `SAFEEngine` that allows anyone to easily manage their GEB positions. Additionally, it is integrated with `Vault721`, which equates safe ownership to NFT-Vault ownership, making the transferrence of safes as easy as transferring an NFT.
+`ODSafeManager` is an abstraction around the `SAFEEngine` that allows anyone to easily manage their GEB positions. Additionally, it is integrated with `Vault721`, which equates safe ownership to NFT-Vault ownership, making the transferrence of safes as easy as transferring an NFT; safes are only transferred via token transfers of NFT-Vaults called on Vault721.
 
 ## 2. Contract Variables & Functions <a href="#2-contract-details" id="2-contract-details"></a>
 
@@ -38,7 +38,7 @@ description: A central hub for all SAFEs
 * `allowSAFE(safe: uint256`, `usr: address`, `ok: uint256)` - allow an address to interact with a SAFE with a specific id
 * `allowHandler(usr: address`, `ok: uint256)` - allow an address to interact with a SAFE handler
 * `openSAFE(collateralType: bytes32`, `usr: address)` - create a new SAFE id and handler, mint NFT-Vault where tokeId is safeId
-* `transferSAFEOwnership(safe: uint256`, `dst: address)` - transfer a SAFE and NFT-Vault to another user's proxy and account, respectively
+* `transferSAFEOwnership(safe: uint256`, `dst: address)` - transfer a SAFE and NFT-Vault to another user's proxy and account, respectively (access protected to Vault721 only, via token transfer of NFT-Vault)
 * `modifySAFECollateralization(safe: uint256`, `deltaCollateral: int256`, `deltaDebt:` `int256)` - add/remove collateral to and from a SAFE or generate/repay debt
 * `transferCollateral(safe: uint256`, `dst: address`, `wad: uint256)` - transfer collateral from a SAFE to another address
 * `transferInternalCoins(safe: uint256`, `dst: address`, `rad: uint256)` - transfer `SAFEEngine.coinBalance` system coins between addresses
@@ -58,7 +58,7 @@ description: A central hub for all SAFEs
   * `sender` - the `msg.sender`
   * `usr` - the handler
   * `ok` - whether it is allowed or not
-* `TransferSAFEOwnership` - emitted when `transferSAFEOwnership` is called. Contains:
+* `TransferSAFEOwnership` - emitted when `transferSAFEOwnership` is called by Vault721 via token transfer of NFT-Vault. Contains:
   * `sender` - the `msg.sender`
   * `safe` - the SAFE id
   * `dst` - the new owner
