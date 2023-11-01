@@ -24,6 +24,7 @@ const sidebars = {
         items: [
           "README",
           "faq",
+          "glossary",
           "community-resources"
         ],
     },
