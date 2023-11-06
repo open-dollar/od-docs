@@ -99,7 +99,7 @@ A system like OD has two types of rates:
 
 * Capped borrow rate: in the long run, OD will have a capped (and small) borrow rate which makes the cost of maintaining a vault more predictable. Governance can, in theory, set the borrow rate to 0% although this prevents the system from accruing surplus that's used to incentivize to update core components such as oracles and the PID.
 
-* Insurance for vaults: in the long run we can allow SAFE users to attach a wide variety of insurance contracts meant to protect their positions against liquidation
+* Insurance for vaults: in the long run we can allow Vault users to attach a wide variety of insurance contracts meant to protect their positions against liquidation
 
 * No exposure to assets with counterparty risk: OD will only be backed by ETH. Borrowers are not exposed to riskier crypto assets or real world collateral
 
