@@ -60,7 +60,7 @@ Each type of vault has its own collateralization ratio that is required. The “
 OD is a standard ERC-20 token which can be used across any bridge, DeFi protocols, exchanges, etc. that support it. Have an idea for an OD integration? Let us know in [discord](https://discord.opendollar.com/)!
 
 ### What networks is Open Dollar deployed on?
-Open Dollar is currently only deployed on Arbitrum. There's also a testnet version deployed on Arbitrum-Goerli.
+Open Dollar is currently only deployed on Arbitrum. There's also a testnet version deployed on Arbitrum-Sepolia.
 
 ### Where can I trade my NFV?
 You can trade your vaults on any NFT marketplace, like [OpenSea](https://opensea.io/) for example. Keep in mind that when you sell your Non-Fungible Vault you’re also selling all collateral and debt associated with it. Any app or tool which supports the ERC-721 token standard will also support Open Dollar NFVs.
