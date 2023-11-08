@@ -57,13 +57,16 @@ Yes, you can add more collateral to your vault at any time. Depending on your co
 Each type of vault has its own collateralization ratio that is required. The “collateralization ratio” is the ratio of the value of the collateral deposited in your vault to the value of the OD borrowed against it. When borrowing OD be sure to leave a margin that accounts for market volatility and top up your vault with more collateral as needed.
 
 ### Where can I use my OD tokens?
-OD is a standard ERC-20 token which can be used accross any bridge, DeFi protocols, exchanges, etc. that support it. Have an idea for an OD integration? Let us know in [discord](https://discord.opendollar.com/)!
+OD is a standard ERC-20 token which can be used across any bridge, DeFi protocols, exchanges, etc. that support it. Have an idea for an OD integration? Let us know in [discord](https://discord.opendollar.com/)!
 
 ### What networks is Open Dollar deployed on?
-Open Dollar is currently only deployed on Arbitrum. There's also a testnet version deployed on Arbtrium-Goerli.
+Open Dollar is currently only deployed on Arbitrum. There's also a testnet version deployed on Arbitrum-Goerli.
 
 ### Where can I trade my NFV?
 You can trade your vaults on any NFT marketplace, like [OpenSea](https://opensea.io/) for example. Keep in mind that when you sell your Non-Fungible Vault you’re also selling all collateral and debt associated with it. Any app or tool which supports the ERC-721 token standard will also support Open Dollar NFVs.
+
+### How do I update my NFV image metadata?
+If you’ve altered your vault on the OD Protocol, changes reflect in the Open Dollar vault dashboard immediately. On NFT marketplaces the vault image and data in the description may be cached and require refreshing of the metadata to view the most current data. On OpenSea, look in the top right of the screen, click the 3 horizontal dots ( … ) directly underneath the “List for sale” button, & select “Refresh metadata”.
 
 ### Is OD a rebase token that changes my balance over time?
 
@@ -77,7 +80,7 @@ When you connect to Open Dollar’s app for the first time you are asked to crea
 
 ### Isn't OD growth bounded by ETH and LST growth?
 
-Short answer: yes. Open Dollar can meet any demand and mint any amount of OD, so long as their is more value of collateral that participants are willing to borrow against.
+Short answer: yes. Open Dollar can meet any demand and mint any amount of OD, so long as there is more value of collateral that participants are willing to borrow against.
 
 ### Can you summarize the behavior of the OD redemption rate?
 
@@ -99,11 +102,11 @@ A system like OD has two types of rates:
 
 * Capped borrow rate: in the long run, OD will have a capped (and small) borrow rate which makes the cost of maintaining a vault more predictable. Governance can, in theory, set the borrow rate to 0% although this prevents the system from accruing surplus that's used to incentivize to update core components such as oracles and the PID.
 
-* Insurance for vaults: in the long run we can allow SAFE users to attach a wide variety of insurance contracts meant to protect their positions against liquidation
+* Insurance for vaults: in the long run we can allow vault users to attach a wide variety of insurance contracts meant to protect their positions against liquidation
 
 * No exposure to assets with counterparty risk: OD will only be backed by ETH. Borrowers are not exposed to riskier crypto assets or real world collateral
 
-* Superior collateral factors: as we improve the efficiency of our [collateral auctions](/system-contracts/auction-module/fixed-discount-collateral-auction-house) and add insurance contracts for SAFEs, we can lower the collateral requirements for borrowing OD
+* Superior collateral factors: as we improve the efficiency of our [collateral auctions](/system-contracts/auction-module/fixed-discount-collateral-auction-house) and add insurance contracts for vaults, we can lower the collateral requirements for borrowing OD
 
 ### Will OD always return to the same initial value/peg?
 
@@ -115,13 +118,13 @@ The long term price trajectory of OD is determined by the demand for leverage on
 
 To better understand how OD behaves, we need to analyze its monetary policy which is made out of four elements:
 
-* Redemption price: this is the price that the protocol wants OD to have on the secondary market (e.g on Uniswap). The redemption price is used by SAFE users to mint OD against ETH and it is also used during Global Settlement in order to allow both SAFE and OD users to redeem collateral from the system. The redemption price almost always floats and it does not target any specific peg.
+* Redemption price: this is the price that the protocol wants OD to have on the secondary market (e.g on Uniswap). The redemption price is used by vault users to mint OD against ETH and it is also used during Global Settlement in order to allow both vault and OD users to redeem collateral from the system. The redemption price almost always floats and it does not target any specific peg.
 
 * Market price: this is the price that OD is traded at on the secondary market (on exchanges).
 
 * Redemption rate: this is the rate at which OD is being devalued or revalued. The process of devaluing/revaluing OD consists in the redemption rate changing the redemption price.
 
-* Global Settlement: settlement consists in shutting down the protocol and allowing both SAFE and OD users to redeem collateral from the system. Settlement uses the redemption (and not the market) price to calculate how much collateral can be redeemed by each user.
+* Global Settlement: settlement consists in shutting down the protocol and allowing both vault and OD users to redeem collateral from the system. Settlement uses the redemption (and not the market) price to calculate how much collateral can be redeemed by each user.
 
 Let's walk through an example of how OD is revalued in case of capital inflow of some Liquid Staked Token that we can call lstETH (meaning people are bullish on lstETH ):
 
@@ -131,9 +134,9 @@ Let's walk through an example of how OD is revalued in case of capital inflow of
 
 * At time T3: lstETH remains at $1000 and OD's market price is still $0.95. The protocol wants the market price to get close to the redemption price. In order to eliminate the imbalance between the market/redemption prices, the system starts to revalue OD. Revaluing consists in setting a positive redemption rate which makes the redemption price grow every second.
 
-* At time T4: lstETH remains at $1000. OD's redemption price is now $1.05. SAFE users are starting to realize that they can now borrow less OD per one lstETH, they can redeem less lstETH during Settlement (because OD is now more expensive) and that it will be more expensive to close their SAFE once the market price follows the redemption price. At the same time, OD holders are starting to realize that they can redeem more and more ETH during settlement.
+* At time T4: lstETH remains at $1000. OD's redemption price is now $1.05. Vault users are starting to realize that they can now borrow less OD per one lstETH, they can redeem less lstETH during Settlement (because OD is now more expensive) and that it will be more expensive to close their vault once the market price follows the redemption price. At the same time, OD holders are starting to realize that they can redeem more and more ETH during settlement.
 
-* At time T5: lstETH remains at $1000. OD's redemption price is now $1.10. OD's market price surged to $1.01 as a result of SAFE users buying OD in order to close their positions as soon as possible instead of later on when OD is more expensive.
+* At time T5: lstETH remains at $1000. OD's redemption price is now $1.10. OD's market price surged to $1.01 as a result of vault users buying OD in order to close their positions as soon as possible instead of later on when OD is more expensive.
 
 When OD is devalued (in case of lstETH capital outflow), the opposite thing happens:
 
