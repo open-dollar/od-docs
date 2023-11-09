@@ -1,0 +1,85 @@
+---
+description: A guide for using the Open Dollar testnet application.
+---
+
+# **Testnet App Walkthrough**
+
+## Getting Test Tokens
+
+1. Begin by navigating to [https://opendollar.com/testnet](https://opendollar.com/testnet) in your browser.
+2. Click the Discord icon in the menu bar or Discord link on the page to join our server.
+3. In the server, click the "🤖｜open-bot" channel, type "/claim", and paste your wallet address.
+4. After a few seconds you will see a message confirming the deposit of the tokens.
+
+## Connecting to the App
+
+1. Navigate back to [https://opendollar.com/testnet](https://opendollar.com/testnet) in your browser.
+2. Click the blue button on top of the page "Launch Testnet" leading to the app page [https://app.dev.opendollar.com](https://app.dev.opendollar.com/)
+3. Connect your wallet by clicking the "Connect Wallet" button.
+4. Add the "Arbitrum Sepolia" testnet to your wallet & switch networks. [https://chainlist.org/?search=arbitrum+sepolia&testnets=true](https://chainlist.org/?search=arbitrum+sepolia&testnets=true)
+5. Click "Create Vault Facilitator" and complete the transaction.
+
+## Creating a Vault
+
+1. Click "Create Vault".
+2. Select the collateral type to deposit.
+3. Enter the amount to deposit and how much $OD to borrow.
+4. Click "Approve (Token)", this will initiate a transaction.
+5. Click "Review Transaction" to see an overview of your vault.
+6. Click "Confirm Transaction" to create your Open Dollar vault.
+
+## Viewing your NFVs in Metamask
+
+Once your NFV is minted, you can view it in your Metamask wallet by adding the contract.
+
+1. Open Metamask and select the NFT tab.
+2. Click "Import NFT".
+3. Input the contract address: 0x677Bd90AB6A27552D0744a0Af196DA127f014656
+4. Input the Token ID, which is your your vault number without the "#" symbol.
+5. Click "Import".
+
+## More Vault Functions
+
+### Deposit collateral
+
+1. On the app page [https://app.dev.opendollar.com/#/](https://app.dev.opendollar.com/#/) click on your vault.
+2. Click "Deposit & Borrow" at the bottom of the menu.
+3. Enter the amount of new collateral to deposit.
+4. Click "Unlock (Token)" & sign the transaction to approve adding more collateral.
+5. Click "Review Transaction" to preview your updated vault.
+6. Click "Confirm Transaction" & sign the transaction to update your Open Dollar Vault.
+
+### Borrow $OD
+
+1. On the app page [https://app.dev.opendollar.com/#/](https://app.dev.opendollar.com/#/) click on your vault.
+2. Click "Deposit & Borrow" at the bottom of the menu.
+3. Enter the amount of $OD to borrow.
+4. Click "Review Transaction" to see your updated vault.
+5. Click "Confirm Transaction" & sign the transaction to update your vault.
+
+### Withdraw Collateral
+
+1. On the app page [https://app.dev.opendollar.com/#/](https://app.dev.opendollar.com/#/) click your vault for other actions.
+2. Click "Repay & Withdraw" at the bottom of the menu.
+3. Enter how much new collateral you'll withdraw & how much $OD you'll repay.
+4. Click "Review Transaction" to preview your updated vault.
+5. Click "Confirm Transaction" & sign the transaction to update your vault.
+
+### Repay $OD
+
+1. On the app page [https://app.dev.opendollar.com/#/](https://app.dev.opendollar.com/#/) click your vault for other actions.
+2. Click "Repay & Withdraw" at the bottom of the menu.
+3. Enter the amount of $OD to repay.
+4. Click "Unlock OD" & sign the transaction to approve the use of your $OD.
+5. Click "Review Transaction" to preview your updated vault.
+6. Click "Confirm Transaction" & sign the transaction to update your vault.
+
+### Closing a Vault
+
+1. On the app page [https://app.dev.opendollar.com/#/](https://app.dev.opendollar.com/#/) click your vault for other actions.
+2. Click "Repay & Withdraw" at the bottom of the menu.
+3. Enter the total amount of collateral you have deposited into this vault.
+4. Enter the total amount of outstanding $OD you have borrowed from this vault.
+5. Click "Unlock OD" & sign the transaction to approve the use of your $OD.
+6. Click "Review Transaction" to see your updated vault.
+7. Click "Confirm Transaction" & sign the transaction to close your vault.
