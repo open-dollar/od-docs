@@ -7,7 +7,6 @@ description: List of talks and articles about RAI and Reflexer
 ### Videos
 
 * [ChainLeak Podcast](https://youtube.com/watch?v=AFZYf-Z_r0E) October 2023
-* [Testnet App Walkthrough](https://www.youtube.com/watch?v=CIhJiP7ldk4) November 2023
 
 ### Articles 
 
