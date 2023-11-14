@@ -6,7 +6,7 @@ description: Steps and details for minimizing governance over a GEB deployment
 
 GEB governance minimization is a multi stage process at the end of which governance will not control or be able to upgrade most core contracts and many parameters will be set autonomously by other external contracts.
 
-This guide will go over the requirements needed to governance minimize a GEB, infrastructure needed to automate parameter setting as well as the governance minimization stages that RAI (and possibly other stablecoins) will go through.
+This guide will go over the requirements needed to governance minimize a GEB, infrastructure needed to automate parameter setting as well as the governance minimization stages that OD (and possibly other stablecoins) will go through.
 
 ### &#x20;1. Requirements for Governance Minimization
 
@@ -22,7 +22,7 @@ Each component in GEB has varying degrees of governance minimization potential. 
 
 * **Accounting Engine** - governance may need to keep control over setting `systemStakingPool` until the pool is governance minimized; `initialDebtAuctionMintedTokens` and `debtAuctionBidSize` will need to be set by an external contract which will be connected to oracles (thus this external contract will not be fully gov minimized); an optional contract may set `surplusBuffer` so that it covers a specific percentage of the outstanding supply of system coins minus the surplus from the Accounting Engine and the one from the Stability Fee Treasury/ies; another external contract should reward addresses that call `popDebtFromQueue`
 * **Collateral Token Adapters** - governance can completely remove control from these contracts
-* **Coin** - governance can completely remove control from this contract
+* **ODG** - governance can completely remove control from this contract
 * **Collateral Auction House** - governance can completely remove control from these contracts
 * **Debt Auction House** - governance can completely remove control from this contract
 * **Surplus Auction House** - governance can completely remove control from this contract
@@ -43,7 +43,7 @@ Each component in GEB has varying degrees of governance minimization potential. 
 * **PID Controller** - governance may need to keep some control over this component in the long run; the community will have more insight into how much control it will need after a GEB has been running for at least 1 year on mainnet; one reason for maintaining (bounded) control is the fact that the controller should be paused when the system's stablecoin doesn't have enough liquidity on exchanges; **NOTE**: even if governance keeps some control over the PID, the `OracleRelayer` will have upper and lower bounds for the redemption rate so that a potential governance attack cannot immediately destroy the protocol
 * **Saviour Contracts** - governance will need to keep maintaining these contracts in the long run because they are connected to external components
 * **SAFE Saviour Registry** - governance will need to keep maintaining this contract in the long run because it's meant to whitelist/blacklist saviour contracts
-* Treasury Reward Adjuster & RAI Fee Reward Adjusters - governance will need to keep maintaining these contracts as they manage treasury funds used to rewards addresses that update RAI & ETH oracles,&#x20;
+* Treasury Reward Adjuster & OD Fee Reward Adjusters - governance will need to keep maintaining these contracts as they manage treasury funds used to rewards addresses that update OD & ETH oracles,&#x20;
 
 ### 3. Infrastructure for Automation
 
@@ -59,7 +59,7 @@ Lastly, contracts that pull funds from the **Stability Fee Treasury** may need t
 
 ### 4. Governance Minimization Levels
 
-There are three levels (or stages) of governance minimization that a GEB (like the one for RAI) will go through:
+There are three levels (or stages) of governance minimization that a GEB (like the one for OD) will go through:
 
 #### Level 1 - Deadline 14 Months Post Launch
 
@@ -70,7 +70,7 @@ In this stage, governance will remove control from:
 * SurplusAuctionHouse
 * Collateral Auction Houses
 * OracleRelayer
-* Coin (ERC20)
+* ODG (ERC20)
 * CollateralJoin contracts
 * Contracts that automate param setting in the protocol (besides Auto Surplus Buffer Setter)
 * TaxCollector
@@ -84,7 +84,7 @@ In this stage, governance will remove control from:
 * AccountingEngine
 * GlobalSettlement
 * Lender of First Resort Pool (and adjacent contracts)
-* RAI Controller
+* OD Controller
 * ProtocolTokenAuthority (and as a result give up on the possibility to authorize/deauthorize new or old DebtAuctionHouses to print tokens)
 * ProtocolTokenPrintingPermissions
 * Auto Surplus Buffer Setter

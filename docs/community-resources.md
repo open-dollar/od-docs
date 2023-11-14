@@ -4,34 +4,16 @@ description: List of talks and articles about RAI and Reflexer
 
 # Community Resources
 
-### Podcasts
+### Videos
 
-* [Yield TV Episode 93 - Stefan Ionescu Interview](https://www.youtube.com/watch?v=usKEpLUukW8) March 2021
-* [Defiant - Ameen Soleimani Interview](https://thedefiant.substack.com/p/we-were-idiots-and-we-were-poor-then-037) March 2021
-* [Bankless - Stefan Ionescu Interview](https://www.youtube.com/watch?v=5Fm5xNwfqNo) July 2020
+* [ChainLeak Podcast](https://youtube.com/watch?v=AFZYf-Z_r0E) October 2023
 
 ### Articles 
 
-* [Reflexer and RAI Explained, defiprime.com](https://defiprime.com/reflexer) April 2021
-* [Solange Gueiros - Reflexer.finance tutorial for beginners: how to get started](https://solangegueiros.medium.com/reflexer-finance-tutorial-how-to-create-an-account-and-a-safe-on-kovan-testnet-f5aa2fdc2092) March 2021
-* [Ameen Soleimani - A Money God RAIses](https://ameensol.medium.com/a-money-god-raises-rai-is-live-on-ethereum-mainnet-f9aff2b1d331) February 2021
-* [Defi Pulse - Crypto-Native Stability Built for DeFi](https://defipulse.com/blog/reflexer/) Febrary 2021
-* [Bankless - DeFi needs trust minimized money - Stefan Ionescu](https://newsletter.banklesshq.com/p/defi-needs-trust-minimized-money) February 2021
-* [Crypto AMA by Spencer Noon](https://crypto-ama.herokuapp.com/messages_reflexer.html) - February 2021
-
-### Talks
-
-* [EthCC 2021 - Control Theory & Cryptoeconomics](https://www.youtube.com/watch?v=Gr_8p2IpT8A) - Guillaume Felley July 2021
-* [ETH Denver - The Centralized Risk of DeFi - Guillaume Felley](https://www.youtube.com/watch?v=AvtJ6P60r4w) February 2021
-* [ETH Online - Rai: Building a Money God - Ameen Soleimani](https://www.youtube.com/watch?v=kDCqiZd4xkI) October 2020
-
-### Press
-
-* [Messari - The Art of Central Banking on Blockchains: Non Pegged Stablecoins March](https://messari.io/article/the-art-of-central-banking-on-blockchains-non-pegged-stablecoins) 2021
-* [Decrypt - Reflexer Launches Alternative to Ethereum Stablecoin DAI, Called RAI](https://decrypt.co/58101/reflexer-launches-alternative-to-ethereum-stablecoin-dai-called-rai) February 2021
-* [TheBlock - Reflex indexes for more stable collateral assets in DeFi](https://www.theblockcrypto.com/genesis/90930/reflex-indexes-for-more-stable-collateral-assets-in-defi) January 2021
-* [Coindesk - Reflexer Labs Raises $1.7M to Build a Somewhat-Stable Coin for DeFi](https://www.coindesk.com/eth-lite-reflexer-labs-raises-1-7m-to-build-a-somewhat-stable-coin-for-defi) August 2021
-
+* [How OD Makes Every Token Count](https://mirror.xyz/0x8a81CEeb0a12998616F1aB932cDbc941F0d539E9/Eu51D-5NlJQNSQwOc4twxOT8H_kCoPEJrV_UQrSw6wY) September 2023
+* [How OD Stays Stable](https://mirror.xyz/0x8a81CEeb0a12998616F1aB932cDbc941F0d539E9/bpgJSu4JIMS3HYspKahU9CK3o6KwgYk7f-e7kVfrPbE) September 2023
+* [A primer on NFVs](https://mirror.xyz/0x8a81CEeb0a12998616F1aB932cDbc941F0d539E9/eHkUevK2ssPvwOTweAQBTO5nWxVN_io0FJ8AOPFW7H8) September 2023
+* [What is Ungovernance](https://mirror.xyz/0x8a81CEeb0a12998616F1aB932cDbc941F0d539E9/hOuSqMOx6rtkLV5pY1KcM4B0k_7UmEDRnE8D91N6jLA) October 2023
 
 
 

@@ -44,10 +44,10 @@ In this scenario there are three possible solutions:
 
 ## Failure Prevention
 
-In order to make market manipulation as expensive as possible, we propose the following liquidity thresholds for the RAI stablecoin:
+In order to make market manipulation as expensive as possible, we propose the following liquidity thresholds for the OD stablecoin:
 
-* There must be at least $2M worth of liquidity on the exchange/s that the RAI oracle is pulling a price feed from
-* At least 3% of the RAI supply must be on the exchange/s from which the system is pulling a price feed from
+* There must be at least $2M worth of liquidity on the exchange/s that the OD oracle is pulling a price feed from
+* At least 3% of the OD supply must be on the exchange/s from which the system is pulling a price feed from
 
-In addition to this, the PID controller should not be set to its full force right when RAI is launched as it may destabilize the system.
+In addition to this, the PID controller should not be set to its full force right when OD is launched as it may destabilize the system.
 
