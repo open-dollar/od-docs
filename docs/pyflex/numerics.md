@@ -23,9 +23,9 @@ Wad(1200000000000000000)
 '1.200000000000000000'
 ```
 
-{% hint style="warning" %}
+:::warning
 Constructors will add a specific precision to a number  eg. `Wad(1)` is not equal to `1` but to 10^18.
-{% endhint %}
+:::
 
 ```python
 >>> Wad(10) == Wad.from_number(10)
@@ -77,9 +77,9 @@ The result is the type of the first number:
 Rad(10000000000000000000000000000)
 ```
 
-{% hint style="warning" %}
+:::warning
 During conversion \(`Rad` to `Ray`/`Wad` or `Ray` to `Wad`\) you may lose precision!
-{% endhint %}
+:::
 
 ```python
 >>> Wad(Rad(10))

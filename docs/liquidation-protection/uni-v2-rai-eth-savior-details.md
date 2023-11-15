@@ -84,9 +84,7 @@ $$
 
 We need to solve the equation above for $$K_{LP}$$.
 
-Using Wolfram Alpha:
-
-{% embed url="https://www.wolframalpha.com/input?i=solve%5C%2840%29Divide%5Bc%2BSqrt%5Bk*p%5D%2Cd-Sqrt%5Bk*%5C%2840%29Divide%5B1%2Cp%5D%5C%2841%29%5D%5D%3Dj%5C%2844%29k%5C%2841%29&i2d=true" %}
+Using Wolfram Alpha
 
 ​We get 2 solutions:
 
@@ -100,9 +98,4 @@ $$
 Bal_{LPmin}= \sqrt{\frac{p(C-Dj)^2}{(j+p)^2}}=\sqrt{p} \frac{|C-Dj|}{j+p}
 $$
 
-Done! To that we have to add the flat $2000 keeper fee. Below is a calculation example:
-
-{% embed url="https://docs.google.com/spreadsheets/d/1flg9LidXvxcAInw4-AtDCEFniMGoZg9fIgm-x36S3CA/edit#gid=0" %}
-
-The spreadsheet is available here, make a copy to test your own parameters: [https://docs.google.com/spreadsheets/d/1flg9LidXvxcAInw4-AtDCEFniMGoZg9fIgm-x36S3CA/edit#gid=0](https://docs.google.com/spreadsheets/d/1flg9LidXvxcAInw4-AtDCEFniMGoZg9fIgm-x36S3CA/edit#gid=0)
-
+Done! To that we have to add the flat $2000 keeper fee.

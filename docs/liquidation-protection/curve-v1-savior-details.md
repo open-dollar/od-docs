@@ -29,7 +29,3 @@ K = 2P_{rp}D- \frac{2CP_{liq}}{A_{acc}R_{tar}} =  2P_{rp}D-\frac{2DP_{rp}R_{liq}
 $$
 
 To this we have to add the $2000 liquidator fee.&#x20;
-
-To help with the whole calculation, you can use the following spreadsheet:
-
-{% embed url="https://docs.google.com/spreadsheets/d/1GeY8B6RW01GeQiM1FIFBIlgA5bV6Qdzv1XsvYKwVU4Y/edit#gid=0" %}

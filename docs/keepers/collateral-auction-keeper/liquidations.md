@@ -36,15 +36,15 @@ Transaction FixedDiscountCollateralAuctionHouse('0xF8AAD33Cb9291Da4FF51377a6F1aB
 7966969218961926) was successful (tx_hash=0x2f63ae43a46ae777f31a0977363a4d1ebd5fb8486d68fd70987b199281c36e3a)
 ```
 
-{% hint style="info" %}
-**Bidding Gotchas**
+:::info Bidding Gotchas
 
 1\) By default, the keeper submits a bid using all of its available system coins. This ensures the keeper gets the maximum amount of discounted collateral in one go.
 
 2\) If there are multiple ongoing auctions, you might see this error until the first `buyCollateral` transaction is finished:
 
 `Bid cost 5025.307970008628887936000000000000000000000000000 exceeds reservoir level of 0.000000000000000000411195000000000000000000000; bid will not be submitted`
-{% endhint %}
+
+:::
 
 ## Swapping Bought Collateral for System Coins
 
@@ -56,9 +56,9 @@ To set the max allowable slippage percentage on Uniswap V2, set this flag:
 
 `--max-swap-slippage <float>, default: 0.01`
 
-{% hint style="info" %}
+:::info
 Use `--swap-collateral` with `--safe-engine-system-coin-target ALL`\(the default\) to ensure won collateral is automatically converted to system coins
-{% endhint %}
+:::
 
 ## Exiting Collateral from the System
 

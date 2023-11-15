@@ -110,11 +110,9 @@ Fixed discount collateral auctions are similar to their `English` counterpart in
 
 The fixed discount auction is a straightforward way (compared to `English` auctions) to put SAFE collateral up for sale in exchange for system coins used to settle bad debt. Bidders are only required to allow the auction house to transfer their `safeEngine.coinBalance` and can then call`buyCollateral(id: uint256`, `wad: uint256)` in order to exchange their system coins for collateral which is sold at a `discount` compared to its latest recorded market price. Bidders can also review the amount of collateral they can get from a specific auction by calling `getCollateralBought(id: uint256`, `wad: uint256)` or `getApproximateCollateralBought(id: uint256`, `wad: uint256)`. Note that `getCollateralBought` is not marked as `view` because it reads (and also updates) the `redemptionPrice` from the `OracleRelayer` whereas `getApproximateCollateralBought` uses the`lastReadRedemptionPrice`.
 
-{% hint style="info" %}
-**Bids as WAD Amounts**
-
+:::info Bids as WAD Amounts
 As opposed to `English` auctions where bidders submit bids with `RAD` amounts of system coins (using `increaseBidSize` and `decreaseSoldAmount`), `buyCollateral` requires a `WAD` amount of coins that are then multiplied by `RAY` in order to correctly scale the amount to `RAD` and transfer coins from the bidder's `safeEngine.coinBalance.`
-{% endhint %}
+:::
 
 There are several parameters that come together when the contract calculates the amount of collateral to send to a bidder:
 

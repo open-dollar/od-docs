@@ -93,10 +93,8 @@ Governance is in charge with setting up authorized addresses that can `pullFunds
 
 `transferSurplusFunds` is the way the treasury recalculates the amount of funds it should keep in reserves and transfers any surplus to the `extraSurplusReceiver`. Note that there is a `surplusTransferDelay` time delay between recalculating the optimum and transferring surplus out of the contract.
 
-{% hint style="info" %}
-**Sending Funds to** `extraSurplusReceiver`**or to the Treasury Itself**
-
+:::info Sending Funds to `extraSurplusReceiver` or to the Treasury Itself
 In case governance wants to send funds to `extraSurplusReceiver` using `giveFunds`, `expensesAccumulator` will not increase. In case an address wants to `pullFunds` and send them to the `extraSurplusReceiver`, `pullFunds` will revert.\
 \
 `pullFunds` will silently fail if the `dstAccount` is the treasury contract itself, whereas `giveFunds` will revert.
-{% endhint %}
+:::

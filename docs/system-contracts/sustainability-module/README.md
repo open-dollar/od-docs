@@ -58,8 +58,7 @@ The `FSMWrapper` may need to have leftover governance (depending on how much gov
 
 `IncreasingTreasuryReimbursement` and `MandatoryFixedTreasuryReimbursement` are meant to be inherited by other contracts and so the contracts that inherit them will determine how much they can be governance minimized.
 
-{% hint style="info" %}
-**Keeping Governance Over** `takeFunds`
-
+:::info Keeping Governance Over `takeFunds`
 Given that `StabilityFeeTreasury.takeFunds` has very simple and clearly defined behaviour, it can be governed in the long run.&#x20;
-{% endhint %}
+:::
+

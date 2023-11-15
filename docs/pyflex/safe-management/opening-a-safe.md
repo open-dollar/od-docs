@@ -45,9 +45,9 @@ Currently `ETH-A` is the only supported collateral:
 
 Setup your approvals in order to `join/exit` collateral and system coins in and out of the system.
 
-{% hint style="info" %}
+:::info
 These `approve` calls only need to be done once per address!
-{% endhint %}
+:::
 
 ```python
 >>> collateral.approve(our_address)
