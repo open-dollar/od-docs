@@ -82,7 +82,4 @@ If the `SAFE` is underwater, you can also liquidate it:
 >>> geb.liquidation_engine.liquidate_safe(collateral_type, safe).transact()
 ```
 
-These are just a few examples. To see all supported functions,  view the source code:
-
-{% embed url="https://github.com/reflexer-labs/pyflex/blob/master/pyflex/gf.py" %}
-
+These are just a few examples. To see all supported functions, view the source code: [pyflex/gf.py](https://github.com/reflexer-labs/pyflex/blob/master/pyflex/gf.py)
