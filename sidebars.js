@@ -23,6 +23,7 @@ const sidebars = {
         label: "Overview",
         items: [
           "README",
+          "testnet-guide",
           "faq",
           "glossary",
           "community-resources"
