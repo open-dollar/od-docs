@@ -23,6 +23,7 @@ const sidebars = {
         label: "Overview",
         items: [
           "README",
+          "testnet-guide",
           "faq",
           "glossary",
           "community-resources"
@@ -32,8 +33,7 @@ const sidebars = {
         type: "category",
         label: "Governance",
         items: [
-          "ungovernance/governance-minimization-guide",
-          "ungovernance/ungovernance-process"
+          "ungovernance/governance-minimization-guide"
         ],
     },
     {
