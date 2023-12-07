@@ -5,9 +5,9 @@ description: Running a surplus auction-keeper on a host
 
 # Running on a Host
 
-:::info
+\:::info
 In order to participate in surplus auctions you need to bid with protocol tokens
-:::
+\:::
 
 ## Prerequisites
 
@@ -33,15 +33,15 @@ This creates a virtual environment and installs requirements:
 
 ## 2. Modify model file as needed
 
-A basic surplus auction bidding model can be found in `models/surplus_model.py`. This model retrieves the latest FLX/USD price from coingecko and will automatically place bids in an auction.
+A basic surplus auction bidding model can be found in `models/surplus_model.py`. This model retrieves the latest ODG/USD price from coingecko and will automatically place bids in an auction.
 
 You probably want to modify the following variables in `models/surplus_model.py`:
 
-`STARTING_FLX_MULTIPLIER`: The maximum acceptable FLX price to use when bidding. This value will be used when bidding on a new auction with no previous bids. Default: `1.50` meaning the maxiimum price to accept for FLX(in RAI) is 150% of the current FLX/USD market price
+`STARTING_ODG_MULTIPLIER`: The maximum acceptable ODG price to use when bidding. This value will be used when bidding on a new auction with no previous bids. Default: `1.50` meaning the maxiimum price to accept for ODG(in OD) is 150% of the current ODG/USD market price
 
-`MINIMUM_FLX_MULTIPLIER`: The minimum acceptable FLX price to use when bidding. Default: `1.10` meaning the minimum price to accept for FLX(in RAI) is 110% of the current FLX/USD market price
+`MINIMUM_ODG_MULTIPLIER`: The minimum acceptable ODG price to use when bidding. Default: `1.10` meaning the minimum price to accept for ODG(in OD) is 110% of the current ODG/USD market price
 
-`MY_BID_INCREASE`: The amount of bid increase(in FLX) to make when outbidding another bidder. If value is less than the auction house' `bidIncrease`, then it will use the auction house setting. Example: A value of `1.10` will create bid increases of 10%. Note: Current `bidIncrease` on mainnet is `1.03`. Default: `1.03`
+`MY_BID_INCREASE`: The amount of bid increase(in ODG) to make when outbidding another bidder. If value is less than the auction house' `bidIncrease`, then it will use the auction house setting. Example: A value of `1.10` will create bid increases of 10%. Note: Current `bidIncrease` on mainnet is `1.03`. Default: `1.03`
 
 ### Ensure script is executable
 
@@ -83,7 +83,7 @@ Password for /keystore/key.json:
 
 #### Start a Surplus Auction
 
-If enough surplus exists in the system, the surplus _auction-keeper_ will call `auctionSurplus` to start a surplus auction.
+If enough surplus exists in the system, the surplus *auction-keeper* will call `auctionSurplus` to start a surplus auction.
 
 ```
 2021-01-19 21:15:20,644 INFO     Initiating a surplus auction with coin balance=857.460939042493680361118426229210746756033227844
@@ -92,7 +92,7 @@ If enough surplus exists in the system, the surplus _auction-keeper_ will call `
 
 #### Bid on a Surplus Auction
 
-If the surplus _auction-keeper_ has FLX, it will bid on surplus auctions by calling `increaseBidSize`
+If the surplus *auction-keeper* has ODG, it will bid on surplus auctions by calling `increaseBidSize`
 
 ```
 2021-01-19 21:15:33,578 INFO     Sending new bid @100.000000000000000000 for auction 16
