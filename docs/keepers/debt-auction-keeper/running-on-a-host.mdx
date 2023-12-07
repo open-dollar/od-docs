@@ -9,9 +9,9 @@ description: Running a debt auction keeper directly on a host
 
 Python 3.6+
 
-### Get RAI
+### Get OD
 
-Buy RAI from Uniswap v2 or [open a SAFE](https://app.gitbook.com/@reflexer-labs/s/geb/pyflex/safe-management/opening-a-safe) and generate it.
+Buy OD from Uniswap v2 or [open a SAFE](https://app.gitbook.com/@reflexer-labs/s/geb/pyflex/safe-management/opening-a-safe) and generate it.
 
 ### Clone
 
@@ -33,13 +33,13 @@ This creates a virtual environment and installs all the keeper dependencies:
 
 ## 2) Modify model file as needed
 
-A basic debt auction bidding model can be found in `models/debt_model.py`. This model retrieves the latest FLX/USD price from coingecko and will automatically place bids in an auction.
+A basic debt auction bidding model can be found in `models/debt_model.py`. This model retrieves the latest ODG/USD price from coingecko and will automatically place bids in an auction.
 
 You probably want to modify the following variables in `models/debt_model.py`:
 
-`MAXIMUM_FLX_MULTIPLIER`: The maximum acceptable FLX price to use when bidding. Default: `0.90` meaning the maximum price to pay when buying FLX(in RAI) is 90% of the current FLX/USD market price
+`MAXIMUM_ODG_MULTIPLIER`: The maximum acceptable ODG price to use when bidding. Default: `0.90` meaning the maximum price to pay when buying ODG(in OD) is 90% of the current ODG/USD market price
 
-`MY_BID_DECREASE`: The amount of bid decrease(in FLX) to make when outbidding another bidder. If value is less than the auction house' `bidDecrease`, then it will use the auction house setting. Example: A value of `1.10` will create bid decreases of 10%. Note: Current `bidDecrease` on mainnet is `1.03`. Default: `1.03`
+`MY_BID_DECREASE`: The amount of bid decrease(in ODG) to make when outbidding another bidder. If value is less than the auction house' `bidDecrease`, then it will use the auction house setting. Example: A value of `1.10` will create bid decreases of 10%. Note: Current `bidDecrease` on mainnet is `1.03`. Default: `1.03`
 
 ### Then:
 
@@ -58,8 +58,6 @@ Modify the following variables in `run_debt_keeper_host.sh`
 `KEYSTORE_DIR` - the full path of the directory where your keystore file is
 
 `MODEL_DIR` - the full path of directory where your `debt_model.py` file is
-
-
 
 `KEYSTORE_FILE` - your Ethereum UTC JSON keystore filename
 
@@ -87,7 +85,7 @@ Password for /keystore/key.json:
 
 #### Pop Debt from the Queue
 
-If debt from collateral auctions still exists after `AccountingEngine.pop_debt_delay()`, the surplus _auction-keeper_ will call `popDebtFromQueue()`
+If debt from collateral auctions still exists after `AccountingEngine.pop_debt_delay()`, the surplus *auction-keeper* will call `popDebtFromQueue()`
 
 ```
 2021-01-20 04:16:22,462 INFO     Sent transaction AccountingEngine('0x73EC2a627655134886477D10A41275f54556E0e2').popDebtFromQueue(1611116032) with nonce=1519, gas=159390, gas_price=10000000000 (tx_hash=0x7266984842ce52d8df52a775d889bb7040e0bac742d51f369e0c23e3e89dd560)
@@ -104,7 +102,7 @@ Before starting a debt auction, the keeper will use any surplus to offset any ex
 
 #### Starting a Debt Auction
 
-Finally, if debt still exists and is enough to start an auction, the _auction-keeper_ will call `auctionDebt`
+Finally, if debt still exists and is enough to start an auction, the *auction-keeper* will call `auctionDebt`
 
 ```
 2021-01-20 04:16:40,596 INFO     Initiating a debt auction with unqueued_unauctioned_debt=493.847533519600184184235424734624945830526550734
