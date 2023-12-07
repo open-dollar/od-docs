@@ -1,15 +1,15 @@
 ---
 title: Accounting Engine
-description: The protocol's accountant, keeping track of surplus and deficit
+description: 'The protocol''s accountant, keeping track of surplus and deficit'
 ---
 
 # Accounting Engine
 
-## 1. Summary <a href="#1-introduction-summary" id="1-introduction-summary"></a>
+## 1. Summary <a href="#1-introduction-summary" id="1-introduction-summary" />
 
 The `AccountingEngine` receives both system surplus and system debt. It covers deficits via debt auctions and disposes off surplus via auctions (`Burning/RecyclingSurplusAuctionHouse`) or transfers (to `extraSurplusReceiver`).
 
-## 2. Contract Variables & Functions <a href="#2-contract-details" id="2-contract-details"></a>
+## 2. Contract Variables & Functions <a href="#2-contract-details" id="2-contract-details" />
 
 **Variables**
 
@@ -20,9 +20,9 @@ The `AccountingEngine` receives both system surplus and system debt. It covers d
 * `debtAuctionHouse` - address of the `DebtAuctionHouse`.
 * `systemStakingPool` - the system's staking pool acting as lender of first resort.
 * `extraSurplusReceiver` - address that receives surplus in case the strategy to get rid of excessive surplus is transfer instead of auction.
-*   `debtQueue[timestamp: uint256]`- the system debt queue. The `LiquidationEngine` adds a new debt block every time it starts a new collateral auction. Each block can be popped out of the list after&#x20;
+* `debtQueue[timestamp: uint256]`- the system debt queue. The `LiquidationEngine` adds a new debt block every time it starts a new collateral auction. Each block can be popped out of the list after 
 
-    `popDebtDelay`seconds.
+  `popDebtDelay`seconds.
 * `debtPoppers[timestamp: uint256]` - mapping that records the addresses which pop debt out of `debtQueue`.
 * `lastSurplusTransferTime` - the last timestamp when the engine transferred extra surplus out.
 * `lastSurplusAuctionTime` - the last timestamp when the engine auctioned extra surplus.
@@ -30,7 +30,7 @@ The `AccountingEngine` receives both system surplus and system debt. It covers d
 * `surplusAuctionDelay` - the minimum delay between two consecutive extra surplus auctions.
 * `extraSurplusIsTransferred` - `0` if extra surplus is auctioned, `1` if it's transferred.
 * `postSettlementSurplusDrain`- contract meant to auction/dispose off any remaining surplus after the `AccountingEngine` is disabled (and in case surplus couldn't be settled with bad debt because of a bug).
-* `protocolTokenAuthority` **** - address of **** authority contract that says which addresses are able to mint an burn protocol tokens.
+* `protocolTokenAuthority` \*\*\*\* - address of \*\*\*\* authority contract that says which addresses are able to mint an burn protocol tokens.
 * `totalQueuedDebt`- the total amount of debt in the queue.
 * `totalOnAuctionDebt`- the total amount of debt being auctioned in the `DebtAuctionHouse`.
 * `popDebtDelay`- length of time for which a debt block must stay in the `debtQueue`.
@@ -44,7 +44,7 @@ The `AccountingEngine` receives both system surplus and system debt. It covers d
 
 **Modifiers**
 
-* `isAuthorized` **** - checks whether an address is part of `authorizedAddresses` (and thus can call authed functions).
+* `isAuthorized` \*\*\*\* - checks whether an address is part of `authorizedAddresses` (and thus can call authed functions).
 
 **Functions**
 
@@ -87,7 +87,7 @@ The `AccountingEngine` receives both system surplus and system debt. It covers d
   * `rad` - amount of auctioned debt to settle
   * `totalOnAuctionDebt` - remaining amount of debt being auctioned
   * `coinBalance` - the `AccountingEngine`'s coin balance after the debt is settled
-  * `debtBalance` - remaining amount of debt&#x20;
+  * `debtBalance` - remaining amount of debt 
 * `AuctionDebt` - emitted when a new debt auction starts. Contains:
   * `id` - the ID of the new debt auction
   * `totalOnAuctionDebt` - total debt being auctioned across all debt auctions
@@ -112,7 +112,7 @@ The `AccountingEngine` receives both system surplus and system debt. It covers d
 
 When a SAFE is liquidated, the seized debt is put in a queue in the `AccountingEngine`. This occurs at the block timestamp of the `liquidateSAFE` action (`debtQueue[timestamp]`). It can be released with the help of `popDebtFromQueue` once `AccountingEngine.popDebtDelay` has expired. Once released, it can be settled using the surplus gathered from the SAFE's liquidation or, if there wasn't enough surplus gathered, the debt can be auctioned using the `DebtAuctionHouse`. **NOTE**: the `AccountingEngine` can start a new debt auction only if `canPrintProtocolTokens` returns `true` and if `canPrintProtocolTokens` also doesn't unexpectedly revert.
 
-The main risk is related to `popDebtDelay` < `CollateralAuctionHouse.totalAuctionLength` which would result in debt auctions starting before the associated collateral auctions could complete.
+The main risk is related to `popDebtDelay` \< `CollateralAuctionHouse.totalAuctionLength` which would result in debt auctions starting before the associated collateral auctions could complete.
 
 ### Auctioning Surplus
 
@@ -124,7 +124,7 @@ When the `AccountingEngine` has a surplus balance above the `surplusBuffer` (`sa
 
 ### Disabling the Accounting Engine
 
-When an authorized address calls `AccountingEngine.disableContract` the system will try to settle as much remaining `safeEngine.debtBalance[accountingEngine]` as possible.&#x20;
+When an authorized address calls `AccountingEngine.disableContract` the system will try to settle as much remaining `safeEngine.debtBalance[accountingEngine]` as possible. 
 
 ## 4. Gotchas (Potential source of user error)
 
@@ -145,11 +145,11 @@ When an authorized address calls `AccountingEngine.disableContract` the system w
 * A failure mode could arise if a user does not call `auctionSurplus`or `auctionDebt` to kick off auctions.
 * `AccountingEngine.popDebtDelay`, when set too high (`popDebtDelay` is too long), the `auctionDebt` auctions can no longer occur. This provides a risk of undercollateralization.
 * `AccountingEngine.popDebtDelay`, when set too low, can cause too many `auctionDebt` auctions, while preventing `auctionSurplus` auctions from occurring.
-* `AccountingEngine.surplusAuctionAmountToSell`, when set too high, can result in no `auctionSurplus` auctions being possible. Thus, if no `auctionSurplus` auction takes place, there will be no FLX bidding as part of that process and, accordingly, no automated FLX burn as a result of a successful auction.
-* `AccountingEngine.surplusAuctionAmountToSell`, when set too low, results in `auctionSurplus` auctions not being profitable for participants (`amountToSell` size is worth less than gas cost). Thus, no FLX will be bid during a `auctionSurplus` auction and, as a result, there will be no automated FLX burn.
+* `AccountingEngine.surplusAuctionAmountToSell`, when set too high, can result in no `auctionSurplus` auctions being possible. Thus, if no `auctionSurplus` auction takes place, there will be no ODG bidding as part of that process and, accordingly, no automated ODG burn as a result of a successful auction.
+* `AccountingEngine.surplusAuctionAmountToSell`, when set too low, results in `auctionSurplus` auctions not being profitable for participants (`amountToSell` size is worth less than gas cost). Thus, no ODG will be bid during a `auctionSurplus` auction and, as a result, there will be no automated ODG burn.
 * `AccountingEngine.debtAuctionBidSize`, when set too high, no `auctionDebt` auctions are possible. This results in the system not being able to recover from an undercollateralized state.
-* `AccountingEngine.debtAuctionBidSize`, when set too low, `auctionDebt` auctions are not profitable for participants (where the `amountToSell` size is worth less than gas cost). This results in FLX inflation due to automated FLX minting.
-* `AccountingEngine.initialDebtAuctionMintedTokens`, when set too high, `auctionDebt` auctions risk not being able to close or mint a large amount of FLX, creating a risk of FLX dilution and the possibility of a governance attack.
+* `AccountingEngine.debtAuctionBidSize`, when set too low, `auctionDebt` auctions are not profitable for participants (where the `amountToSell` size is worth less than gas cost). This results in ODG inflation due to automated ODG minting.
+* `AccountingEngine.initialDebtAuctionMintedTokens`, when set too high, `auctionDebt` auctions risk not being able to close or mint a large amount of ODG, creating a risk of ODG dilution and the possibility of a governance attack.
 * `AccountingEngine.initialDebtAuctionMintedTokens`, when set too low, `auctionDebt` auctions have to be `startAuction`ed many times before they will be interesting to keepers.
-* `AccountingEngine.surplusBuffer`, when set too high, the `auctionSurplus` auctions would never occur. If a `auctionSurplus` auction does not occur, there is no sale of surplus, and thus, no burning of bid FLX.
+* `AccountingEngine.surplusBuffer`, when set too high, the `auctionSurplus` auctions would never occur. If a `auctionSurplus` auction does not occur, there is no sale of surplus, and thus, no burning of bid ODG.
 * `AccountingEngine.surplusBuffer`, if set too low, can cause surplus to be auctioned off via `auctionSurplus` auctions before it is used to cancel `debtBalance` from liquidations, necessitating `auctionDebt` auctions and making the system run inefficiently.
