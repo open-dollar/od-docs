@@ -9,9 +9,9 @@ description: Running a staked token auction keeper directly on a host
 
 Python 3.6+
 
-### Get RAI
+### Get OD
 
-Buy RAI from Uniswap v2 or [open a SAFE](https://app.gitbook.com/@reflexer-labs/s/geb/pyflex/safe-management/opening-a-safe) and generate it.
+Buy OD from Uniswap v2 or [open a SAFE](https://app.gitbook.com/@reflexer-labs/s/geb/pyflex/safe-management/opening-a-safe) and generate it.
 
 ### Clone
 
@@ -33,13 +33,13 @@ This creates a virtual environment and installs all the keeper dependencies:
 
 ## 2) Modify model file as needed
 
-A basic debt staked auction bidding model can be found in `models/debt_staked_model.py`. This model retrieves the latest FLX/USD price from Coingecko and will automatically place bids in an auction.
+A basic debt staked auction bidding model can be found in `models/debt_staked_model.py`. This model retrieves the latest ODG/USD price from Coingecko and will automatically place bids in an auction.
 
 You probably want to modify the following variables in `models/debt_staked_model.py`:
 
-* `MAXIMUM_FLX_MULTIPLIER`: the maximum acceptable FLX price to use when bidding. Default: `0.90` meaning the maximum price to pay when biding for FLX (with RAI) is 90% of the current FLX/USD market price coming from Coingecko
-* `MINIMUM_FLX_MULTIPLIER`: the minimumum FLX price to use when bidding. This will determine your opening bid. Default: `0.50` meaning the minimumm price to pay when biding for FLX (with RAI) is 50% of the current FLX/USD market price from Coingecko
-* `MY_BID_INCREASE`: the bid increase (in RAI) to propose when outbidding another bidder. If the value is smaller than the staked token auction house's `bidIncrease`, then it will use the value set in the staked token auction house. Example: a value of `1.10` will use bid increases of 10%. Note: the current `bidIncrease` on mainnet is `1.05`
+* `MAXIMUM_ODG_MULTIPLIER`: the maximum acceptable ODG price to use when bidding. Default: `0.90` meaning the maximum price to pay when biding for ODG (with OD) is 90% of the current ODG/USD market price coming from Coingecko
+* `MINIMUM_ODG_MULTIPLIER`: the minimum ODG price to use when bidding. This will determine your opening bid. Default: `0.50` meaning the minimum price to pay when biding for ODG (with OD) is 50% of the current ODG/USD market price from Coingecko
+* `MY_BID_INCREASE`: the bid increase (in OD) to propose when outbidding another bidder. If the value is smaller than the staked token auction house's `bidIncrease`, then it will use the value set in the staked token auction house. Example: a value of `1.10` will use bid increases of 10%. Note: the current `bidIncrease` on mainnet is `1.05`
 
 #### Then:
 
@@ -73,7 +73,7 @@ Password for /keystore/key.json:
 
 ## Staked Token Auction Output
 
-If debt from collateral auctions still exists after `AccountingEngine.pop_debt_delay()`, the debt staked _auction-keeper_ will call `popDebtFromQueue()`:
+If debt from collateral auctions still exists after `AccountingEngine.pop_debt_delay()`, the debt staked *auction-keeper* will call `popDebtFromQueue()`:
 
 ```
 2021-01-20 04:16:22,462 INFO     Sent transaction AccountingEngine('0x73EC2a627655134886477D10A41275f54556E0e2').popDebtFromQueue(1611116032) with nonce=1519, gas=159390, gas_price=10000000000 (tx_hash=0x7266984842ce52d8df52a775d889bb7040e0bac742d51f369e0c23e3e89dd560)
@@ -91,7 +91,7 @@ Before starting a staked token auction, the keeper will use any surplus to offse
 
 ### Starting a Staked Token Auction
 
-Finally, if debt still exists and is enough to start a staked token auction, the _auction-keeper_ will call `auctionAncestorTokens()` in the `StakingPool`:
+Finally, if debt still exists and is enough to start a staked token auction, the *auction-keeper* will call `auctionAncestorTokens()` in the `StakingPool`:
 
 ```
 2022-07-11 20:49:09,467 INFO     Sent transaction <pyflex.gf.GebStaking object at 0x7f7bf8ddc190>.auctionAncestorTokens() with nonce=5503, gas=428111, gas_price=2500000007 (tx_hash=0xba5e1523fc60666010554b644a69e826375a28ed393a2498982db0eb2097e751)
@@ -100,7 +100,7 @@ Finally, if debt still exists and is enough to start a staked token auction, the
 
 ### Bidding in a Staked Token Auction
 
-To bid in staked token auctions, the _auction-keeper_ calls `increaseBidSize()`:
+To bid in staked token auctions, the *auction-keeper* calls `increaseBidSize()`:
 
 ```
 2022-07-11 20:49:13,106 INFO     Started monitoring auction #11
@@ -115,7 +115,7 @@ To bid in staked token auctions, the _auction-keeper_ calls `increaseBidSize()`:
 
 ### Settling a Staked Token Auction
 
-To settle a staked token auction, the _auction-keeper_ calls `settleAuction()`:
+To settle a staked token auction, the *auction-keeper* calls `settleAuction()`:
 
 ```
 2022-07-11 20:59:51,693 INFO     Sent transaction StakedTokenAuctionHouse('0x328BCbF2d4c2D78936f52172c741456136FA7e92').settleAuction(11) with nonce=55
