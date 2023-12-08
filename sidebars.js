@@ -350,16 +350,6 @@ const sidebars = {
               "keepers/bidding-models",
             ],
           },
-          {
-            type: "category",
-            label: "Liquidation Protection",
-            items: [
-              "liquidation-protection/safe-protection",
-              "liquidation-protection/liquidation-protection-guide",
-              "liquidation-protection/uni-v2-rai-eth-savior-details",
-              "liquidation-protection/curve-v1-savior-details",
-            ],
-          },
       ]
     }
   ],
