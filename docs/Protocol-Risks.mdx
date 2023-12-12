@@ -14,6 +14,10 @@ You can also check the original [whitepaper](https://github.com/reflexer-labs/w
 
 * The core GEB contracts were audited by [OpenZeppelin](https://github.com/reflexer-labs/geb-audits/tree/master/open-zeppelin/core-contracts). Other helper contracts were audited by [Quantstamp](https://github.com/reflexer-labs/geb-audits/tree/master/quantstamp/helper-contracts). Open Dollar’s changes and additions to this base protocol and those concerning NFVs have been audited by [Code4rena](https://code4rena.com/contests/2023-10-open-dollar). While thorough audits are necessary and assist in improving the security of a protocol, contract risk can never be entirely ruled out.
 
+### Admin Keys
+
+* In its initial stages, the first GEB deployment requires full management due to the risks tied to the PID controller and the need for more infrastructure for automation. Governance will have control over most components, which will gradually decrease as the protocol moves towards governance minimization. Until this process is complete, the protocol is managed by a specific Multisig wallet whose signers are known independent entities.
+
 ### PID Controller
 
 * The PID controller, while a tested concept in DeFi, can still present challenges within the Open Dollar protocol. Its primary role is to manage the system's stability, but its performance is sensitive to how it's calibrated. An overly cautious setting might render it ineffective, failing to stabilize the OD or other stablecoins as intended. Conversely, an overly aggressive setting might lead to system destabilization. This delicate balance makes the management of the PID controller a critical aspect of the protocol's overall health and efficacy.
