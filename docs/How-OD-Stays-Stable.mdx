@@ -2,23 +2,29 @@
 title: How $OD Stays Stable
 ---
 
-If the price of $OD deviates from its $1.00 peg, the PID Controller adjusts the redemption rate upwards or downwards in order to incentivize vault managers to restore it.
+If the price of \$OD deviates from its $1.00 peg, the PID Controller adjusts the redemption rate upwards or downwards in order to incentivize vault managers to restore it.
 
-The following are two scenarios and how this works:\
-![](</img/How OD stays stable Image 1.png>)![](</img/How OD stays Stable Image 2.png>)\
+The following are two scenarios and how this works:
+
+<img src="./img/How OD stays stable Image 1.png" alt="How OD stays stable Image 1" />
+<img src="./img/How OD stays Stable Image 2.png" alt="How OD stays Stable Image 2" />
+
 If the market price is greater than the redemption price, the redemption rate turns negative. A negative redemption rate lowers the redemption price.
 
-Since $OD is now cheaper inside the protocol compared to the market, borrowing power increases. Users are incentivized to borrow more $OD and/or sell it at market price as an arbitrage opportunity. The increased sell pressure lowers the market price and the redemption price continues to lower until the market price reaches it.
+Since \$OD is now cheaper inside the protocol compared to the market, borrowing power increases. Users are incentivized to borrow more \$OD and/or sell it at market price as an arbitrage opportunity. The increased sell pressure lowers the market price and the redemption price continues to lower until the market price reaches it.
 
-Example: If the redemption price of $OD decreases by 0.2%, users can leverage their collateral to borrow 0.2% more $OD from Open Dollar. They then sell their $OD at market price, earning a profit from the price deviation, and protecting themselves from a drop in the token’s value following the negative redemption rate.\
-\
-![](</img/How OD stays Stable Image 3.png>)![](</img/How OD stays Stable Image 4.png>)\
-This process also works in reverse. If the market price of $OD falls below the redemption price, the redemption rate turns positive. This increases the price of accumulated debt which causes users to buy more $OD from secondary markets to pay it down. It also incentivizes them to buy more $OD with the expectation that the market price will follow a similar trajectory to the redemption price.
+Example: If the redemption price of \$OD decreases by 0.2%, users can leverage their collateral to borrow 0.2% more \$OD from Open Dollar. They then sell their \$OD at market price, earning a profit from the price deviation, and protecting themselves from a drop in the token’s value following the negative redemption rate.\
 
-Example: If the redemption price of $OD increases by 0.2%, users need to buy 0.2% more $OD to redeem their collateral. They can also buy more $OD at market price and sell it when the market price matches the redemption price (+0.2%).
+<img src="./img/How OD stays stable Image 3.png" alt="How OD stays stable Image 3" />
+<img src="./img/How OD stays Stable Image 4.png" alt="How OD stays Stable Image 4" />
+
+This process also works in reverse. If the market price of \$OD falls below the redemption price, the redemption rate turns positive. This increases the price of accumulated debt which causes users to buy more \$OD from secondary markets to pay it down. It also incentivizes them to buy more \$OD with the expectation that the market price will follow a similar trajectory to the redemption price.
+
+Example: If the redemption price of \$OD increases by 0.2%, users need to buy 0.2% more \$OD to redeem their collateral. They can also buy more \$OD at market price and sell it when the market price matches the redemption price (+0.2%).
 
 In both scenarios, the process continues until the deviation between the market and redemption price is reduced to 0.\
 \
-Note: Open Dollar doesn't change the amount of $OD you hold. It only changes the target price that the protocol wants $OD to have on exchanges. Therefore, it is not a rebase token, but rather a stablecoin with a floating redemption price.
+Note: Open Dollar doesn't change the amount of \$OD you hold. It only changes the target price that the protocol wants
+\$OD to have on exchanges. Therefore, it is not a rebase token, but rather a stablecoin with a floating redemption price.
 
 For more details and a simplified example, [see our blog article](https://mirror.xyz/0x8a81CEeb0a12998616F1aB932cDbc941F0d539E9/bpgJSu4JIMS3HYspKahU9CK3o6KwgYk7f-e7kVfrPbE).
