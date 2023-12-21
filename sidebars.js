@@ -20,37 +20,85 @@ const sidebars = {
   customSidebar: [
     {
         type: "category",
-        label: "Overview",
+        label: "🌟 Open Dollar Introduction",
         items: [
           "README",
-          "testnet-guide",
-          "faq",
-          "glossary",
-          "community-resources"
-        ],
-    },
-    {
-        type: "category",
-        label: "Governance",
-        items: [
-          "ungovernance/governance-minimization-guide"
-        ],
-    },
-    {
-        type: "category",
-        label: "Risks",
-        items: [
-          "risk/geb-risks",
-          "risk/pid-failure-modes-and-responses"
+          "Who-is-Open-Dollar-built-for",
         ],
     },
     {
       type: "category",
-      label: "Developers",
+      label: "📜 Getting Started",
+      items: [
+        "testnet-guide",
+      ],
+    },
+    {
+      type: "category",
+        label: "💡 Open Dollar Protocol",
+        items: [
+            "Open-Dollar-Protocol-Overview",
+            "Borrowing",
+          {
+            type: "category",
+            label: "Auctions",
+            collapsible: true,
+            items: [
+                "Auctions",
+                "CollateralAuctions",
+                "Surplus-Auctions",
+                "DebtAuctions",
+            ]
+          },
+            "Liquidations",
+            "Fees",
+        ],
+    },
+    {
+      type: "category",
+        label: "🏦 NFT Vaults",
+      items: [
+          "NFT-Vaults-Overview",
+          "Supported-Collaterals",
+      ],
+    },
+    {
+      type: "category",
+      label: "🖼️ Stablecoin",
+      items: [
+        "What-is-OD",
+        "How-OD-Stays-Stable",
+        "PID-Controller",
+      ],
+    },
+    {
+      type: "category",
+      label: "🗳️ Governance",
+      items: [
+        "Governance-introduction",
+        "Proposals-and-Voting---Coming-soon",
+        "The-ODG-Token---Coming-soon",
+        "Tokenomics",
+      ],
+    },
+    {
+      type: "category",
+      label: "🔒 Security and Risks",
+      items: [
+        "Security-Measures-",
+        "Protocol-Risks",
+        "PID-Failure-Modes--Responses",
+      ],
+    },
+    {
+      type: "category",
+      label: "👨‍💻 Developers Resources",
+      collapsible: true,
       items: [
         {
             type: "category",
             label: "Contract Variables Translation",
+            collapsible: true,
             items: [
               "contract-translation/naming-transition",
               "contract-translation/governance-contracts-naming-transition",
@@ -60,6 +108,7 @@ const sidebars = {
           {
             type: "category",
             label: "System Contracts",
+            collapsible: true,
             items: [
               {
                 type: "category",
@@ -228,6 +277,7 @@ const sidebars = {
           {
             type: "category",
             label: "Proxy Infrastructure",
+            collapsible: true,
             items: [
               "proxy-infrastructure/od-proxy",
               "proxy-infrastructure/vault721",
@@ -236,11 +286,13 @@ const sidebars = {
           {
             type: "category",
             label: "Helper Contracts",
+            collapsible: true,
             items: ["helper-contracts/safe-manager"],
           },
           {
             type: "category",
             label: "GEB.js",
+            collapsible: true,
             items: [
               "geb-js/getting-started",
               "geb-js/geb-js-global-settlement-guide",
@@ -262,11 +314,13 @@ const sidebars = {
           {
             type: "category",
             label: "APIs",
+            collapsible: true,
             items: ["api/api-endpoints"],
           },
           {
             type: "category",
             label: "Pyflex",
+            collapsible: true,
             items: [
               {
                 type: "category",
@@ -296,6 +350,7 @@ const sidebars = {
           {
             type: "category",
             label: "Keepers",
+            collapsible: true,
             items: [
               "keepers/overview",
               {
@@ -350,6 +405,18 @@ const sidebars = {
               "keepers/bidding-models",
             ],
           },
+        {
+            type: "category",
+            label: "📚 Resources",
+            items: [
+                "Official-Links",
+                "community-resources",
+                "faq",
+                "glossary",
+                "Audits",
+                "Brand-Assets",
+            ],
+        },
       ]
     }
   ],
