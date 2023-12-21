@@ -84,10 +84,23 @@ const sidebars = {
     {
       type: "category",
       label: "🔒 Security and Risks",
+      collapsible: true,
       items: [
         "Security-Measures-",
         "Protocol-Risks",
         "PID-Failure-Modes--Responses",
+      ],
+    },
+    {
+      type: "category",
+      label: "📚 Resources",
+      items: [
+        "Official-Links",
+        "community-resources",
+        "faq",
+        "glossary",
+        "Audits",
+        "Brand-Assets",
       ],
     },
     {
@@ -319,36 +332,6 @@ const sidebars = {
           },
           {
             type: "category",
-            label: "Pyflex",
-            collapsible: true,
-            items: [
-              {
-                type: "category",
-                label: "Getting Started",
-                link: { type: "doc", id: "pyflex/getting-started/README" },
-                collapsible: true,
-                collapsed: true,
-                items: [
-                  "pyflex/getting-started/configuration",
-                  "pyflex/getting-started/basics",
-                ],
-              },
-              {
-                type: "category",
-                label: "SAFE Management",
-                link: { type: "doc", id: "pyflex/safe-management/README" },
-                collapsible: true,
-                collapsed: true,
-                items: [
-                  "pyflex/safe-management/opening-a-safe",
-                  "pyflex/safe-management/closing-a-safe",
-                ],
-              },
-              "pyflex/numerics",
-            ],
-          },
-          {
-            type: "category",
             label: "Keepers",
             collapsible: true,
             items: [
@@ -405,20 +388,8 @@ const sidebars = {
               "keepers/bidding-models",
             ],
           },
-        {
-            type: "category",
-            label: "📚 Resources",
-            items: [
-                "Official-Links",
-                "community-resources",
-                "faq",
-                "glossary",
-                "Audits",
-                "Brand-Assets",
-            ],
-        },
       ]
-    }
+    },
   ],
 
   //Forked RAI sidebar. TODO: delete the below when all files are included in current sidebar.
