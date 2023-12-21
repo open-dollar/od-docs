@@ -31,6 +31,7 @@ const sidebars = {
       type: "category",
       label: "📜 Getting Started",
       collapsible: true,
+      collapsed: true,
       items: [
         "testnet-guide",
       ],
@@ -39,6 +40,7 @@ const sidebars = {
       type: "category",
         label: "💡 Open Dollar Protocol",
         collapsible: true,
+        collapsed: true,
         items: [
             "Open-Dollar-Protocol-Overview",
             "Borrowing",
@@ -46,6 +48,7 @@ const sidebars = {
             type: "category",
             label: "Auctions",
             collapsible: true,
+            collapsed: true,
             items: [
                 "Auctions",
                 "CollateralAuctions",
@@ -61,6 +64,7 @@ const sidebars = {
       type: "category",
       label: "🏦 NFT Vaults",
       collapsible: true,
+      collapsed: true,
       items: [
           "NFT-Vaults-Overview",
           "Supported-Collaterals",
@@ -70,6 +74,7 @@ const sidebars = {
       type: "category",
       label: "🖼️ Stablecoin",
       collapsible: true,
+      collapsed: true,
       items: [
         "What-is-OD",
         "How-OD-Stays-Stable",
@@ -80,6 +85,7 @@ const sidebars = {
       type: "category",
       label: "🗳️ Governance",
       collapsible: true,
+      collapsed: true,
       items: [
         "Governance-introduction",
         "Proposals-and-Voting---Coming-soon",
@@ -91,6 +97,7 @@ const sidebars = {
       type: "category",
       label: "🔒 Security and Risks",
       collapsible: true,
+      collapsed: true,
       items: [
         "Security-Measures-",
         "Protocol-Risks",
@@ -101,6 +108,7 @@ const sidebars = {
       type: "category",
       label: "📚 Resources",
       collapsible: true,
+      collapsed: true,
       items: [
         "Official-Links",
         "community-resources",
@@ -114,11 +122,13 @@ const sidebars = {
       type: "category",
       label: "👨‍💻 Developer Resources",
       collapsible: true,
+      collapsed: true,
       items: [
         {
             type: "category",
             label: "Contract Variables Translation",
             collapsible: true,
+            collapsed: true,
             items: [
               "contract-translation/naming-transition",
             ],
@@ -127,6 +137,7 @@ const sidebars = {
             type: "category",
             label: "System Contracts",
             collapsible: true,
+            collapsed: true,
             items: [
               {
                 type: "category",
@@ -296,6 +307,7 @@ const sidebars = {
             type: "category",
             label: "Proxy Infrastructure",
             collapsible: true,
+            collapsed: true,
             items: [
               "proxy-infrastructure/od-proxy",
               "proxy-infrastructure/vault721",
@@ -304,6 +316,7 @@ const sidebars = {
           {
             type: "category",
             label: "Helper Contracts",
+            collapsed: true,
             collapsible: true,
             items: ["helper-contracts/safe-manager"],
           },
@@ -311,6 +324,7 @@ const sidebars = {
             type: "category",
             label: "GEB.js",
             collapsible: true,
+            collapsed: true,
             items: [
               "geb-js/getting-started",
               "geb-js/geb-js-global-settlement-guide",
@@ -333,12 +347,14 @@ const sidebars = {
             type: "category",
             label: "APIs",
             collapsible: true,
+            collapsed: true,
             items: ["api/api-endpoints"],
           },
           {
             type: "category",
             label: "Keepers",
             collapsible: true,
+            collapsed: true,
             items: [
               "keepers/overview",
               {
