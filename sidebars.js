@@ -21,6 +21,7 @@ const sidebars = {
     {
         type: "category",
         label: "🌟 Open Dollar Introduction",
+        collapsible: true,
         items: [
           "README",
           "Who-is-Open-Dollar-built-for",
@@ -29,6 +30,7 @@ const sidebars = {
     {
       type: "category",
       label: "📜 Getting Started",
+      collapsible: true,
       items: [
         "testnet-guide",
       ],
@@ -36,6 +38,7 @@ const sidebars = {
     {
       type: "category",
         label: "💡 Open Dollar Protocol",
+        collapsible: true,
         items: [
             "Open-Dollar-Protocol-Overview",
             "Borrowing",
@@ -56,7 +59,8 @@ const sidebars = {
     },
     {
       type: "category",
-        label: "🏦 NFT Vaults",
+      label: "🏦 NFT Vaults",
+      collapsible: true,
       items: [
           "NFT-Vaults-Overview",
           "Supported-Collaterals",
@@ -65,6 +69,7 @@ const sidebars = {
     {
       type: "category",
       label: "🖼️ Stablecoin",
+      collapsible: true,
       items: [
         "What-is-OD",
         "How-OD-Stays-Stable",
@@ -74,6 +79,7 @@ const sidebars = {
     {
       type: "category",
       label: "🗳️ Governance",
+      collapsible: true,
       items: [
         "Governance-introduction",
         "Proposals-and-Voting---Coming-soon",
@@ -94,6 +100,7 @@ const sidebars = {
     {
       type: "category",
       label: "📚 Resources",
+      collapsible: true,
       items: [
         "Official-Links",
         "community-resources",
