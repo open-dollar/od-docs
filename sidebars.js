@@ -121,8 +121,6 @@ const sidebars = {
             collapsible: true,
             items: [
               "contract-translation/naming-transition",
-              "contract-translation/governance-contracts-naming-transition",
-              // "contract-translation/safe-management-contract-naming-transition",
             ],
           },
           {
