@@ -92,7 +92,7 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "👨‍💻 Developers Resources",
+      label: "👨‍💻 Developer Resources",
       collapsible: true,
       items: [
         {
