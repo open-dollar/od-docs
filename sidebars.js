@@ -20,46 +20,124 @@ const sidebars = {
   customSidebar: [
     {
         type: "category",
-        label: "Overview",
+        label: "🌟 Open Dollar Introduction",
+        collapsible: true,
         items: [
           "README",
-          "testnet-guide",
-          "faq",
-          "glossary",
-          "community-resources"
-        ],
-    },
-    {
-        type: "category",
-        label: "Governance",
-        items: [
-          "ungovernance/governance-minimization-guide"
-        ],
-    },
-    {
-        type: "category",
-        label: "Risks",
-        items: [
-          "risk/geb-risks",
-          "risk/pid-failure-modes-and-responses"
+          "Who-is-Open-Dollar-built-for",
         ],
     },
     {
       type: "category",
-      label: "Developers",
+      label: "📜 Getting Started",
+      collapsible: true,
+      collapsed: true,
+      items: [
+        "testnet-guide",
+      ],
+    },
+    {
+      type: "category",
+        label: "💡 Open Dollar Protocol",
+        collapsible: true,
+        collapsed: true,
+        items: [
+            "Open-Dollar-Protocol-Overview",
+            "Borrowing",
+          {
+            type: "category",
+            label: "Auctions",
+            collapsible: true,
+            collapsed: true,
+            items: [
+                "Auctions",
+                "CollateralAuctions",
+                "Surplus-Auctions",
+                "DebtAuctions",
+            ]
+          },
+            "Liquidations",
+            "Fees",
+        ],
+    },
+    {
+      type: "category",
+      label: "🏦 NFT Vaults",
+      collapsible: true,
+      collapsed: true,
+      items: [
+          "NFT-Vaults-Overview",
+          "Supported-Collaterals",
+      ],
+    },
+    {
+      type: "category",
+      label: "🖼️ Stablecoin",
+      collapsible: true,
+      collapsed: true,
+      items: [
+        "What-is-OD",
+        "How-OD-Stays-Stable",
+        "PID-Controller",
+      ],
+    },
+    {
+      type: "category",
+      label: "🗳️ Governance",
+      collapsible: true,
+      collapsed: true,
+      items: [
+        "Governance-introduction",
+        "Proposals-and-Voting---Coming-soon",
+        "The-ODG-Token---Coming-soon",
+        "Tokenomics",
+      ],
+    },
+    {
+      type: "category",
+      label: "🔒 Security and Risks",
+      collapsible: true,
+      collapsed: true,
+      items: [
+        "Security-Measures-",
+        "Protocol-Risks",
+        "PID-Failure-Modes--Responses",
+      ],
+    },
+    {
+      type: "category",
+      label: "📚 Resources",
+      collapsible: true,
+      collapsed: true,
+      items: [
+        "Official-Links",
+        "community-resources",
+        "faq",
+        "glossary",
+        "Audits",
+        "Brand-Assets",
+      ],
+    },
+    {
+      type: "category",
+      label: "👨‍💻 Developer Resources",
+      collapsible: true,
+      collapsed: true,
       items: [
         {
             type: "category",
             label: "Contract Variables Translation",
+            collapsible: true,
+            collapsed: true,
             items: [
               "contract-translation/naming-transition",
-              "contract-translation/governance-contracts-naming-transition",
-              // "contract-translation/safe-management-contract-naming-transition",
             ],
           },
           {
             type: "category",
             label: "System Contracts",
+            collapsible: true,
+            collapsed: true,
             items: [
               {
                 type: "category",
@@ -228,6 +306,8 @@ const sidebars = {
           {
             type: "category",
             label: "Proxy Infrastructure",
+            collapsible: true,
+            collapsed: true,
             items: [
               "proxy-infrastructure/od-proxy",
               "proxy-infrastructure/vault721",
@@ -236,11 +316,15 @@ const sidebars = {
           {
             type: "category",
             label: "Helper Contracts",
+            collapsed: true,
+            collapsible: true,
             items: ["helper-contracts/safe-manager"],
           },
           {
             type: "category",
             label: "GEB.js",
+            collapsible: true,
+            collapsed: true,
             items: [
               "geb-js/getting-started",
               "geb-js/geb-js-global-settlement-guide",
@@ -262,40 +346,15 @@ const sidebars = {
           {
             type: "category",
             label: "APIs",
+            collapsible: true,
+            collapsed: true,
             items: ["api/api-endpoints"],
           },
           {
             type: "category",
-            label: "Pyflex",
-            items: [
-              {
-                type: "category",
-                label: "Getting Started",
-                link: { type: "doc", id: "pyflex/getting-started/README" },
-                collapsible: true,
-                collapsed: true,
-                items: [
-                  "pyflex/getting-started/configuration",
-                  "pyflex/getting-started/basics",
-                ],
-              },
-              {
-                type: "category",
-                label: "SAFE Management",
-                link: { type: "doc", id: "pyflex/safe-management/README" },
-                collapsible: true,
-                collapsed: true,
-                items: [
-                  "pyflex/safe-management/opening-a-safe",
-                  "pyflex/safe-management/closing-a-safe",
-                ],
-              },
-              "pyflex/numerics",
-            ],
-          },
-          {
-            type: "category",
             label: "Keepers",
+            collapsible: true,
+            collapsed: true,
             items: [
               "keepers/overview",
               {
@@ -351,7 +410,7 @@ const sidebars = {
             ],
           },
       ]
-    }
+    },
   ],
 
   //Forked RAI sidebar. TODO: delete the below when all files are included in current sidebar.
