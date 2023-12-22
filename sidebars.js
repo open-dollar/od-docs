@@ -20,46 +20,125 @@ const sidebars = {
   customSidebar: [
     {
         type: "category",
-        label: "Overview",
+        label: "🌟 Open Dollar Introduction",
+        collapsible: true,
         items: [
           "README",
-          "testnet-guide",
-          "faq",
-          "glossary",
-          "community-resources"
-        ],
-    },
-    {
-        type: "category",
-        label: "Governance",
-        items: [
-          "ungovernance/governance-minimization-guide"
-        ],
-    },
-    {
-        type: "category",
-        label: "Risks",
-        items: [
-          "risk/geb-risks",
-          "risk/pid-failure-modes-and-responses"
+          "Who-is-Open-Dollar-built-for",
         ],
     },
     {
       type: "category",
-      label: "Developers",
+      label: "📜 Getting Started",
+      collapsible: true,
+      collapsed: false,
       items: [
+        "testnet-guide",
+      ],
+    },
+    {
+      type: "category",
+        label: "💡 Open Dollar Protocol",
+        collapsible: true,
+        collapsed: true,
+        items: [
+            "Open-Dollar-Protocol-Overview",
+            "Borrowing",
+          {
+            type: "category",
+            label: "Auctions",
+            collapsible: true,
+            collapsed: true,
+            items: [
+                "Auctions",
+                "CollateralAuctions",
+                "Surplus-Auctions",
+                "DebtAuctions",
+            ]
+          },
+            "Liquidations",
+            "Fees",
+        ],
+    },
+    {
+      type: "category",
+      label: "🏦 NFT Vaults",
+      collapsible: true,
+      collapsed: true,
+      items: [
+          "NFT-Vaults-Overview",
+          "Supported-Collaterals",
+      ],
+    },
+    {
+      type: "category",
+      label: "🖼️ Stablecoin",
+      collapsible: true,
+      collapsed: true,
+      items: [
+        "What-is-OD",
+        "How-OD-Stays-Stable",
+        "PID-Controller",
+      ],
+    },
+    {
+      type: "category",
+      label: "🗳️ Governance",
+      collapsible: true,
+      collapsed: true,
+      items: [
+        "Governance-introduction",
+        "Proposals-and-Voting---Coming-soon",
+        "The-ODG-Token---Coming-soon",
+        "Tokenomics",
+      ],
+    },
+    {
+      type: "category",
+      label: "🔒 Security and Risks",
+      collapsible: true,
+      collapsed: true,
+      items: [
+        "Security-Measures-",
+        "Protocol-Risks",
+        "PID-Failure-Modes--Responses",
+      ],
+    },
+    {
+      type: "category",
+      label: "📚 Resources",
+      collapsible: true,
+      collapsed: true,
+      items: [
+        "Official-Links",
+        "community-resources",
+        "faq",
+        "glossary",
+        "Audits",
+        "Brand-Assets",
+      ],
+    },
+    {
+      type: "category",
+      label: "👨‍💻 Developer Resources",
+      collapsible: true,
+      collapsed: false,
+      items: [
+          "developer-readme",
         {
             type: "category",
             label: "Contract Variables Translation",
+            collapsible: true,
+            collapsed: true,
             items: [
               "contract-translation/naming-transition",
-              "contract-translation/governance-contracts-naming-transition",
-              // "contract-translation/safe-management-contract-naming-transition",
             ],
           },
           {
             type: "category",
             label: "System Contracts",
+            collapsible: true,
+            collapsed: true,
             items: [
               {
                 type: "category",
@@ -228,6 +307,8 @@ const sidebars = {
           {
             type: "category",
             label: "Proxy Infrastructure",
+            collapsible: true,
+            collapsed: true,
             items: [
               "proxy-infrastructure/od-proxy",
               "proxy-infrastructure/vault721",
@@ -236,14 +317,17 @@ const sidebars = {
           {
             type: "category",
             label: "Helper Contracts",
+            collapsed: true,
+            collapsible: true,
             items: ["helper-contracts/safe-manager"],
           },
           {
             type: "category",
             label: "GEB.js",
+            collapsible: true,
+            collapsed: true,
             items: [
               "geb-js/getting-started",
-              "geb-js/geb-js-global-settlement-guide",
               {
                 type: "category",
                 label: "API Reference",
@@ -254,7 +338,6 @@ const sidebars = {
                   "geb-js/api-reference/geb",
                   "geb-js/api-reference/safe",
                   "geb-js/api-reference/gebproxyactions",
-                  "geb-js/api-reference/gebadmin",
                 ],
               },
             ],
@@ -262,96 +345,12 @@ const sidebars = {
           {
             type: "category",
             label: "APIs",
+            collapsible: true,
+            collapsed: true,
             items: ["api/api-endpoints"],
           },
-          {
-            type: "category",
-            label: "Pyflex",
-            items: [
-              {
-                type: "category",
-                label: "Getting Started",
-                link: { type: "doc", id: "pyflex/getting-started/README" },
-                collapsible: true,
-                collapsed: true,
-                items: [
-                  "pyflex/getting-started/configuration",
-                  "pyflex/getting-started/basics",
-                ],
-              },
-              {
-                type: "category",
-                label: "SAFE Management",
-                link: { type: "doc", id: "pyflex/safe-management/README" },
-                collapsible: true,
-                collapsed: true,
-                items: [
-                  "pyflex/safe-management/opening-a-safe",
-                  "pyflex/safe-management/closing-a-safe",
-                ],
-              },
-              "pyflex/numerics",
-            ],
-          },
-          {
-            type: "category",
-            label: "Keepers",
-            items: [
-              "keepers/overview",
-              {
-                type: "category",
-                label: "Collateral Auction Keeper",
-                link: { type: "doc", id: "keepers/collateral-auction-keeper/README" },
-                collapsible: true,
-                collapsed: true,
-                items: [
-                  "keepers/collateral-auction-keeper/running-in-docker",
-                  "keepers/collateral-auction-keeper/running-on-a-host",
-                  "keepers/collateral-auction-keeper/liquidations",
-                  "keepers/collateral-auction-keeper/flash-swaps",
-                ],
-              },
-              {
-                type: "category",
-                label: "Debt Auction Keeper",
-                link: { type: "doc", id: "keepers/debt-auction-keeper/README" },
-                collapsible: true,
-                collapsed: true,
-                items: [
-                  "keepers/debt-auction-keeper/running-in-docker",
-                  "keepers/debt-auction-keeper/running-on-a-host",
-                ],
-              },
-              {
-                type: "category",
-                label: "Staked Token Auction Keeper",
-                link: {
-                  type: "doc",
-                  id: "keepers/staked-token-auction-keeper/README",
-                },
-                collapsible: true,
-                collapsed: true,
-                items: [
-                  "keepers/staked-token-auction-keeper/running-in-docker",
-                  "keepers/staked-token-auction-keeper/running-on-a-host",
-                ],
-              },
-              {
-                type: "category",
-                label: "Surplus Auction Keeper",
-                link: { type: "doc", id: "keepers/surplus-auction-keeper/README" },
-                collapsible: true,
-                collapsed: true,
-                items: [
-                  "keepers/surplus-auction-keeper/running-in-docker",
-                  "keepers/surplus-auction-keeper/running-on-a-host",
-                ],
-              },
-              "keepers/bidding-models",
-            ],
-          },
       ]
-    }
+    },
   ],
 
   //Forked RAI sidebar. TODO: delete the below when all files are included in current sidebar.
