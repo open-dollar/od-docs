@@ -31,7 +31,7 @@ const sidebars = {
       type: "category",
       label: "📜 Getting Started",
       collapsible: true,
-      collapsed: true,
+      collapsed: false,
       items: [
         "testnet-guide",
       ],
@@ -122,8 +122,9 @@ const sidebars = {
       type: "category",
       label: "👨‍💻 Developer Resources",
       collapsible: true,
-      collapsed: true,
+      collapsed: false,
       items: [
+          "developer-readme",
         {
             type: "category",
             label: "Contract Variables Translation",
@@ -327,7 +328,6 @@ const sidebars = {
             collapsed: true,
             items: [
               "geb-js/getting-started",
-              "geb-js/geb-js-global-settlement-guide",
               {
                 type: "category",
                 label: "API Reference",
@@ -338,7 +338,6 @@ const sidebars = {
                   "geb-js/api-reference/geb",
                   "geb-js/api-reference/safe",
                   "geb-js/api-reference/gebproxyactions",
-                  "geb-js/api-reference/gebadmin",
                 ],
               },
             ],
@@ -349,65 +348,6 @@ const sidebars = {
             collapsible: true,
             collapsed: true,
             items: ["api/api-endpoints"],
-          },
-          {
-            type: "category",
-            label: "Keepers",
-            collapsible: true,
-            collapsed: true,
-            items: [
-              "keepers/overview",
-              {
-                type: "category",
-                label: "Collateral Auction Keeper",
-                link: { type: "doc", id: "keepers/collateral-auction-keeper/README" },
-                collapsible: true,
-                collapsed: true,
-                items: [
-                  "keepers/collateral-auction-keeper/running-in-docker",
-                  "keepers/collateral-auction-keeper/running-on-a-host",
-                  "keepers/collateral-auction-keeper/liquidations",
-                  "keepers/collateral-auction-keeper/flash-swaps",
-                ],
-              },
-              {
-                type: "category",
-                label: "Debt Auction Keeper",
-                link: { type: "doc", id: "keepers/debt-auction-keeper/README" },
-                collapsible: true,
-                collapsed: true,
-                items: [
-                  "keepers/debt-auction-keeper/running-in-docker",
-                  "keepers/debt-auction-keeper/running-on-a-host",
-                ],
-              },
-              {
-                type: "category",
-                label: "Staked Token Auction Keeper",
-                link: {
-                  type: "doc",
-                  id: "keepers/staked-token-auction-keeper/README",
-                },
-                collapsible: true,
-                collapsed: true,
-                items: [
-                  "keepers/staked-token-auction-keeper/running-in-docker",
-                  "keepers/staked-token-auction-keeper/running-on-a-host",
-                ],
-              },
-              {
-                type: "category",
-                label: "Surplus Auction Keeper",
-                link: { type: "doc", id: "keepers/surplus-auction-keeper/README" },
-                collapsible: true,
-                collapsed: true,
-                items: [
-                  "keepers/surplus-auction-keeper/running-in-docker",
-                  "keepers/surplus-auction-keeper/running-on-a-host",
-                ],
-              },
-              "keepers/bidding-models",
-            ],
           },
       ]
     },
