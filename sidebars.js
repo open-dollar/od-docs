@@ -88,8 +88,8 @@ const sidebars = {
       collapsed: true,
       items: [
         "Governance-introduction",
-        "Proposals-and-Voting---Coming-soon",
-        "The-ODG-Token---Coming-soon",
+        "Proposals-and-Voting",
+        "The-ODG-Token",
         "Tokenomics",
       ],
     },
