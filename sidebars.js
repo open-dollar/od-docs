@@ -25,6 +25,7 @@ const sidebars = {
         items: [
           "README",
           "Who-is-Open-Dollar-built-for",
+          "faq",
         ],
     },
     {
@@ -112,7 +113,6 @@ const sidebars = {
       items: [
         "Official-Links",
         "community-resources",
-        "faq",
         "glossary",
         "Audits",
         "Brand-Assets",
