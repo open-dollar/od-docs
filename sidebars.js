@@ -112,6 +112,7 @@ const sidebars = {
       collapsed: true,
       items: [
         "Official-Links",
+        "Ambassador-Program",
         "community-resources",
         "glossary",
         "Audits",
