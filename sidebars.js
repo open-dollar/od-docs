@@ -10,7 +10,6 @@
  */
 
 // @ts-check
-
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
@@ -25,6 +24,7 @@ const sidebars = {
         items: [
           "README",
           "Who-is-Open-Dollar-built-for",
+          "Supported-Collaterals",
           "faq",
         ],
     },
@@ -68,7 +68,7 @@ const sidebars = {
       collapsed: true,
       items: [
           "NFT-Vaults-Overview",
-          "Supported-Collaterals",
+          "Leverage",
       ],
     },
     {
