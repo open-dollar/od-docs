@@ -7,13 +7,13 @@ description: A case study on leveraging a vault with Open Dollar
 
 Leveraging a vault position involves using borrowed funds to purchase more of the collateral asset with the goal of increasing yields. This process can be repeated a number of times until the desired values are reached. With each step of leverage, a number of key values change, usually in the same direction after step 1.
 
-Below is a case study of the leverage process using a position of wstETH on Open Dollar, the recent average value of wstETH at the time of writing ($4,000) and it’s [historical](https://dune.com/queries/570874/4069098) average APY, both of which fluctuate. The user’s objective in this scenario is to maximize their yield while maintaining a collateralization ratio of at least 140%.
+Below is a case study of the leverage process using a position of wstETH on Open Dollar, the recent average value of wstETH at the time of writing (\$4,000) and it’s [historical](https://dune.com/queries/570874/4069098) average APY, both of which fluctuate. The user’s objective in this scenario is to maximize their yield while maintaining a collateralization ratio of at least 140%.
 
 **Disclaimer:** This is not financial advice.
 
-Initial Funds: 10 wstETH ($40,000)
+Initial Funds: 10 wstETH (\$40,000)
 
-Net APY: $1,520 (10 wstETH x 3.8% APY)
+Net APY: \$1,520 (10 wstETH x 3.8% APY)
 
 Example vault parameters for wstETH:
 
@@ -25,15 +25,15 @@ Example vault parameters for wstETH:
 
 User deposits the full amount of collateral, 10 wstETH, and borrows the maximum amount of OD, which they then use to purchase the maximum amount of wstETH and deposit it into the vault.
 
-* Current Collateral Value (Before Borrowing): 10.00 wstETH ($40,000)
-* OD Borrowed: $32,000
-* Total Borrowed Value (OD): $32,000
+* Current Collateral Value (Before Borrowing): 10.00 wstETH (\$40,000)
+* OD Borrowed: \$32,000
+* Total Borrowed Value (OD): \$32,000
 * wstETH Purchased: 8.00
-* New Collateral Value: 18.00 wstETH ($72,000)
+* New Collateral Value: 18.00 wstETH (\$72,000)
 * New Collateralization Ratio: 225.00%
 * Leverage Multiple: 1.80x
-* Liquidation Threshold: $1,481.48 per wstETH
-* Net APY: 5.36% ($2,144)
+* Liquidation Threshold: \$1,481.48 per wstETH
+* Net APY: 5.36% (\$2,144)
 
 Upon the first step of leverage, the user has nearly doubled their deposited collateral value and built a position with a very high collateralization ratio, very low liquidation threshold relative to the current price of wstETH, and increased their net APY by 41.05% compared to their original yield. While leveraging a position typically carries more risk, the collateral ratio upon this step is relatively safe compared to un-levered CDPs.
 
@@ -41,17 +41,17 @@ Upon the first step of leverage, the user has nearly doubled their deposited col
 
 In the second step of leverage, the same process is repeated: The user borrows the maximum amount of OD after depositing the newly purchased wstETH collateral.
 
-* Current Collateral Value (Before Borrowing): 18.00 wstETH ($72,000)
-* OD Borrowed: $25,600
-* Total Borrowed Value (OD): $57,600
+* Current Collateral Value (Before Borrowing): 18.00 wstETH (\$72,000)
+* OD Borrowed: \$25,600
+* Total Borrowed Value (OD): \$57,600
 * wstETH Purchased: 6.40
-* New Collateral Value: 24.40 wstETH ($97,600)
+* New Collateral Value: 24.40 wstETH (\$97,600)
 * New Collateralization Ratio: 169.44%
 * Leverage Multiple: 2.44x
-* Liquidation Threshold: $1,967.21 per wstETH
-* Net APY: 6.61% ($2,644)
+* Liquidation Threshold: \$1,967.21 per wstETH
+* Net APY: 6.61% (\$2,644)
 
-With the position now leveraged to a multiple of 2.44x, the net APY of 6.61%($2,644) is an increase of 73.95% of the original of 3.8%($1,520), inclusive of borrowing fees. Note that the liquidation threshold has also risen and the collateralization ratio has dropped relative to the previous step.
+With the position now leveraged to a multiple of 2.44x, the net APY of 6.61%(\$2,644) is an increase of 73.95% of the original of 3.8%(\$1,520), inclusive of borrowing fees. Note that the liquidation threshold has also risen and the collateralization ratio has dropped relative to the previous step.
 
 ## The Trend
 
@@ -78,26 +78,26 @@ As more collateral is purchased from additional borrowing, the net yield, liquid
 
 In the third step of leverage, the same process is repeated: 
 
-* Current Collateral Value (Before Borrowing): 24.40 wstETH ($97,600)
-* OD Borrowed: $20,480
-* Total Borrowed Value (OD): $78,080.00
+* Current Collateral Value (Before Borrowing): 24.40 wstETH (\$97,600)
+* OD Borrowed: \$20,480
+* Total Borrowed Value (OD): \$78,080.00
 * wstETH Purchased: 5.12
-* New Collateral Value: 29.52 wstETH ($118,080)
+* New Collateral Value: 29.52 wstETH (\$118,080)
 * New Collateralization Ratio: 151.23%
 * Leverage Multiple: 2.95x
-* Liquidation Threshold: $2,204.16 per wstETH
-* Net APY: 7.61% ($3,044)
+* Liquidation Threshold: \$2,204.16 per wstETH
+* Net APY: 7.61% (\$3,044)
 
 ## Step 4 - Target Reached
 
-* Current Collateral Value (Before Borrowing): 29.52 wstETH ($118,080)
-* OD Borrowed: $18,816
-* Total Borrowed Value (OD): $94,464
+* Current Collateral Value (Before Borrowing): 29.52 wstETH (\$118,080)
+* OD Borrowed: \$18,816
+* Total Borrowed Value (OD): \$94,464
 * wstETH Purchased: 4.10
-* New Collateral Value: 33.62 wstETH ($134,464)
+* New Collateral Value: 33.62 wstETH (\$134,464)
 * New Collateralization Ratio: 142.34%
 * Leverage Multiple: 3.36x
-* Liquidation Threshold: $2,341.74 per wstETH
+* Liquidation Threshold: \$2,341.74 per wstETH
 * Net APY: 8.41% ($3,364)
 
 In the final step, the user reaches their target collateralization ratio with a leveraged position of 3.36x more wstETH collateral than their original amount of 10 wstETH. They now have nearly $118,080 in wstETH and a 121.32% greater net yield of 8.41% ($3,364) versus their original yield of only 3.8% ($1,520), inclusive of the 1.85% APR borrowing fees.
