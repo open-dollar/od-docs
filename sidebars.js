@@ -113,6 +113,7 @@ const sidebars = {
       items: [
         "Official-Links",
         "Ambassador-Program",
+        "Adding-Liquidity-for-OD-or-ODG",
         "community-resources",
         "glossary",
         "Audits",
