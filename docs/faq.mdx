@@ -7,7 +7,7 @@ description: Frequently asked questions about Open Dollar
 
 ### What is Open Dollar?
 
-Open Dollar is the protocol that issues OD, a floating $1.00 pegged stablecoin backed by Liquid Staking Tokens and other deep liquidity tokens such as ARB with NFT-controlled vaults that are built for Arbitrum.
+Open Dollar is the protocol that issues OD, a floating \\$1.00 pegged stablecoin backed by Liquid Staking Tokens and other deep liquidity tokens such as ARB with NFT-controlled vaults built on Arbitrum.
 
 ### How does OD stay stable?
 
@@ -63,7 +63,7 @@ The owner of a particular NFV owns both the debt and the collateral tokens for t
 
 ### What is the advantage of NFVs?
 
-You probably would never take out a 30-year loan to buy a house if you could not sell your house at some point during the life of the loan. But that is how lending mostly works in DeFi today. By making the ownership of vaults, debt, and collateral more easily tradable users can sell their positions easily without having to close them out first. Use cases could include market participants redeeming OD by buying NFVs to access high-quality collateral, liquidation protection through selling NFVs with limited orders, and use of any existing NFT infrastructure.
+You probably would never take out a 30-year loan to buy a house if you could not sell your house at some point during the life of the loan. But that is how lending mostly works in DeFi today. By making the ownership of vaults, debt, and collateral more easily tradable users can sell their positions easily without having to close them out first. Use cases could include market participants redeeming OD by buying NFVs to access high-quality collateral, liquidation protection through selling NFVs with limit orders, and use of any existing NFT infrastructure.
 
 ### What happens to an NFV when a vault is liquidated?
 
@@ -143,11 +143,11 @@ To better understand how OD behaves, we need to analyze its monetary policy whic
 
 Let's walk through an example of how OD is revalued in case of capital inflow of some Liquid Staked Token that we can call lstETH (meaning people are bullish on lstETH ):
 
-* At time T1: lstETH price is $500, OD's market and redemption prices are both $1.
-* At time T2: lstETH price surges to $1000. Open Dollar vault users suddenly have more borrowing power and generate more OD against their collateral. Those users sell OD on the secondary market (like an exchange), causing OD's market price to drop to $0.95. Users might be selling to create leveraged long positions or to access capital without having to sell their lstETH.
-* At time T3: lstETH remains at $1000 and OD's market price is still $0.95. The protocol wants the market price to get close to the redemption price. In order to eliminate the imbalance between the market/redemption prices, the system starts to revalue OD. Revaluing consists in setting a positive redemption rate which makes the redemption price grow every second.
-* At time T4: lstETH remains at $1000. OD's redemption price is now $1.05. Vault users are starting to realize that they can now borrow less OD per one lstETH, they can redeem less lstETH during Settlement (because OD is now more expensive), and that it will be more expensive to close their vault once the market price follows the redemption price. At the same time, OD holders are starting to realize that they can redeem more and more ETH during settlement.
-* At time T5: lstETH remains at $1000. OD's redemption price is now $1.10. OD's market price surged to $1.01 as a result of vault users buying OD in order to close their positions as soon as possible instead of later on when OD is more expensive.
+* At time T1: lstETH price is \\$500, OD's market and redemption prices are both \\$1.
+* At time T2: lstETH price surges to \\$1000. Open Dollar vault users suddenly have more borrowing power and generate more OD against their collateral. Those users sell OD on the secondary market (like an exchange), causing OD's market price to drop to \\$0.95. Users might be selling to create leveraged long positions or to access capital without having to sell their lstETH.
+* At time T3: lstETH remains at \\$1000 and OD's market price is still \\$0.95. The protocol wants the market price to get close to the redemption price. In order to eliminate the imbalance between the market/redemption prices, the system starts to revalue OD. Revaluing consists in setting a positive redemption rate which makes the redemption price grow every second.
+* At time T4: lstETH remains at \\$1000. OD's redemption price is now \\$1.05. Vault users are starting to realize that they can now borrow less OD per one lstETH, they can redeem less lstETH during Settlement (because OD is now more expensive), and that it will be more expensive to close their vault once the market price follows the redemption price. At the same time, OD holders are starting to realize that they can redeem more and more ETH during settlement.
+* At time T5: lstETH remains at \\$1000. OD's redemption price is now \\$1.10. OD's market price surged to \\$1.01 as a result of vault users buying OD in order to close their positions as soon as possible instead of later on when OD is more expensive.
 
 When OD is devalued (in the case of lstETH capital outflow), the opposite happens:
 
