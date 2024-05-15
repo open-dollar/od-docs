@@ -34,7 +34,7 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        "testnet-guide",
+        "Mainnet-App-Guide",
       ],
     },
     {
@@ -113,6 +113,8 @@ const sidebars = {
       items: [
         "Official-Links",
         "Ambassador-Program",
+        "Adding-Liquidity-for-OD-or-ODG",
+        "testnet-guide",
         "community-resources",
         "glossary",
         "Audits",
