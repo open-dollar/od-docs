@@ -69,6 +69,7 @@ const sidebars = {
       items: [
           "NFT-Vaults-Overview",
           "Leverage",
+          "NFV-Information"
       ],
     },
     {
@@ -125,7 +126,7 @@ const sidebars = {
       type: "category",
       label: "👨‍💻 Developer Resources",
       collapsible: true,
-      collapsed: false,
+      collapsed: true,
       items: [
           "developer-readme",
         {
