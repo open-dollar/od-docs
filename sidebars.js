@@ -69,6 +69,7 @@ const sidebars = {
       items: [
           "NFT-Vaults-Overview",
           "Leverage",
+          "NFV-Information"
       ],
     },
     {
