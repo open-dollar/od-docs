@@ -126,7 +126,7 @@ const sidebars = {
       type: "category",
       label: "👨‍💻 Developer Resources",
       collapsible: true,
-      collapsed: false,
+      collapsed: true,
       items: [
           "developer-readme",
         {
