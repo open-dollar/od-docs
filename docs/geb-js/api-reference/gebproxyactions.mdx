@@ -6,6 +6,8 @@ title: Geb Proxy Actions
 
 Convenience class to call functions from [GebProxyActions](https://github.com/UseKeyp/od-contracts/tree/main/src/contracts/proxies/actions) through a proxy contract registered in the [Vault721](https://github.com/UseKeyp/od-contracts/blob/main/src/contracts/proxies/Vault721.sol). These actions bundle multiple actions in one (e.g: open a safe + lock some ETH + draw some system coins).
 
+Testing 1234
+
 ## Constructors
 
 \+ **new GebProxyActions**(`proxyAddress`: string, `network`: GebDeployment, `chainProvider`: GebProviderInterface): [_GebProxyActions_](gebproxyactions.md)
@@ -105,9 +107,9 @@ _Defined in_ [_packages/geb/src/proxy-action.ts:130_](https://github.com/open-do
 
 **Returns:** _TransactionRequest_
 
-### coinJoin\_join
+### coinJoin_join
 
-▸ **coinJoin\_join**(`apt`: string, `safeHandler`: string, `wad`: BigNumberish): _TransactionRequest_
+▸ **coinJoin_join**(`apt`: string, `safeHandler`: string, `wad`: BigNumberish): _TransactionRequest_
 
 _Defined in_ [_packages/geb/src/proxy-action.ts:136_](https://github.com/open-dollar/od-sdk/blob/dev/src/proxy-action.ts#L136)
 
@@ -833,9 +835,9 @@ _Defined in_ [_packages/geb/src/proxy-action.ts:655_](https://github.com/open-do
 
 **Returns:** _TransactionRequest_
 
-### tokenCollateralJoin\_join
+### tokenCollateralJoin_join
 
-▸ **tokenCollateralJoin\_join**(`apt`: string, `safe`: string, `amt`: BigNumberish, `transferFrom`: boolean): _TransactionRequest_
+▸ **tokenCollateralJoin_join**(`apt`: string, `safe`: string, `amt`: BigNumberish, `transferFrom`: boolean): _TransactionRequest_
 
 _Defined in_ [_packages/geb/src/proxy-action.ts:671_](https://github.com/open-dollar/od-sdk/blob/dev/src/proxy-action.ts#L671)
 
