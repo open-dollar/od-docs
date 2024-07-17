@@ -1,0 +1,75 @@
+---
+title: Governance Simulator
+description: >-
+  The following is a page for Governance Simulator documentation. The
+  documentation below will explain what the Open Dollar Governance Simulator is,
+  How it works, and How members of the Open Dollar community can use it to
+  streamline proposals.
+---
+
+# Open Dollar Governance Simulator
+
+## Key benefits
+
+The Open Dollar Governance Simulator offers a streamlined, secure, and error-reducing method for managing on-chain proposals.
+
+1. Interactive Proposal Submission: Easily submit on-chain proposals through an interactive UI.
+2. Proposal Preview: Preview the effects of proposals on the protocol before implementation.
+3. Error Reduction: Reduce errors and streamline product upgrades by simulating proposals and verifying their outcomes.
+
+### How the Governance Simulator Works
+
+[od-gov-proposal-short.mp4](https://prod-files-secure.s3.us-west-2.amazonaws.com/80f41330-2af6-4889-a289-db0e72940d01/2f949f6f-0c9c-463a-b6eb-632b29d10976/od-gov-proposal-short.mp4)
+
+## Understanding the Governance Simulator
+
+The Governance Simulator front-end application pulls proposals directly from GitHub allowing DAO members to streamline creating, verifying, and simulating proposals in a secure fashion before they are officially submitted on-chain.
+
+### Simulation Features
+
+* Simulate Transactions: Sequentially simulate all transactions and retrieve transaction lists.
+* Virtual Test-Net Fork: Create a virtual test-net to simulate the proposal's future impact.
+
+### Engagement and Transparency
+
+Once a proposal is submitted, it can be shared on social media to engage delegates and ensure high participation. The proposal will then display on the DAO’s Governance page.
+
+Once the proposal is verified and satisfactory, it can be submitted to the DAO, provided the user meets the voting requirements for Open Dollar Governance.
+
+## Leveraging the Governance Simulator Open Dollar DAO
+
+### Submitting Proposals via Governance
+
+1. Submit via Open Dollar App: Use the [Open Dollar app](https://gov.opendollar.com/) to submit proposals.
+2. Programmatic Submission: Submit proposals programmatically via [GitHub](https://github.com/open-dollar/od-governance-manager/tree/main).
+3. Virtual Testnet App: Utilize the virtual testnet for proposal simulation.
+
+## Github Overview of the Governance Simulator App
+
+## Key Benefits
+
+1. Version Control: All files are checked into Git for version control.
+2. Review and Testing: Proposals can be reviewed and tested by others, reducing human error.
+3. Deterministic Output: The script generates call data, targets, and values, providing a clear understanding of the proposal's impact.
+
+[gov\_proposal\_long-term.mp4](https://prod-files-secure.s3.us-west-2.amazonaws.com/80f41330-2af6-4889-a289-db0e72940d01/5f97db4f-fba9-4e44-b945-6378b1511c3f/gov_proposal_long-term.mp4) 
+
+1. Proposal Creation: New proposals are created using a secure script in GitHub, ensuring a verifiable and secure process.
+2. Submission and Simulation: Proposals are submitted to the Governance Simulator application, where delegates can verify proposal details and simulate each transaction. This includes creating a fork of the proposal as if it had passed on Mainnet.
+3. Verification Process:
+   * Visit the dashboard.
+   * Grab the RPC and input it into your wallet.
+   * Review the results of the passed proposal to ensure it is adequate.
+
+### How It Works
+
+1. Script Execution: Run yarn propose g -a to pass your proposal script.
+2. Proposal Details: Pass the path of your proposal details file.
+
+### Links
+
+* [Open Dollar Governance App](https://propose.opendollar.com/)
+* [Gov Proposal App Repo](https://github.com/open-dollar/od-gov-proposal-app)
+* [Gov Manager Repo](https://github.com/open-dollar/od-governance-manager/tree/main)
+* [WETH Collateral Addition Proposal Simulation on Tenderly](https://dashboard.tenderly.co/explorer/vnet/5ef62578-e1c5-4624-a255-ecf743d7b3ee/transactions)
+* [Open Dollar DAO Governance Dashboard](https://gov.opendollar.com/dao)
