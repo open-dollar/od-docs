@@ -93,6 +93,7 @@ const sidebars = {
         "Proposals-and-Voting",
         "The-ODG-Token",
         "Tokenomics",
+        "Governance-Simulator",
       ],
     },
     {
