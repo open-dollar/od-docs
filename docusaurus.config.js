@@ -69,7 +69,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: "assets/docs-og-image.png",
+      image: "assets/docs-og-image.jpg",
       navbar: {
         logo: {
           alt: "Open Dollar Logo",
